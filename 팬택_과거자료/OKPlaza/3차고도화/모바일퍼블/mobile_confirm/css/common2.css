@@ -1,0 +1,21 @@
+.list-top{ margin-top: 25px; margin-bottom: 27px; text-align: center;}
+.list-top h2{background-image:url("../images/check-box.png");background-repeat: no-repeat;background-size: 13px;background-position: left 3px;height: 16px;padding-left: 22px;color: #f23c43;font-weight: 600;display: inline-block;margin: 10px 10px 10px 10px;}
+.sh-grad{ width: 200px; display: flex;}
+.sh-grad input{ border: #5a647f 2px solid; height: 27px; line-height: 24px; width: 75%; padding: 0 7px;}
+.sh-grad button{ background: #5a647f; color: #fff; border: #5a647f 1px solid; width: 25%;}
+
+input[type="checkbox"]{width:18px; height:18px;}
+
+.ds-ib{display:inline-block;}
+
+.btn-3{ background: #fff; padding: 3px 5px; border: #333 1px solid; color: #333;}
+
+.tstyle-6{ width: 100%; border-top: #333 2px solid;}
+.tstyle-6 tr{}
+.tstyle-6 tr th{ border-top: #e8e8e8 1px solid; border-bottom: #e8e8e8 1px solid; text-align: center; background-color: #f6f6f6; letter-spacing: -1px; font-size: 0.8rem;}
+.tstyle-6 tr th.th_left{text-align:left; font-weight:600; padding-left:10px;}
+.tstyle-6 tr td{ border-bottom: #e8e8e8 1px solid; font-size: 0.7rem; letter-spacing: -1px; padding: 15px 0 15px 5px; line-height: 18px;}
+.tstyle-6 tr td.td-va{ min-height:200px; vertical-align:top;}
+.tstyle-6 tr td.td-text{ padding-left:18px;}
+.tstyle-6 tr td.td-fr{background-image:url("../images/arr-line.png");background-repeat: no-repeat;background-position: right center;}
+.tstyle-6 tr td.line{ border-bottom:0px;}

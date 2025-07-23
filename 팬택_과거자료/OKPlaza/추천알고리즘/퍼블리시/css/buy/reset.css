@@ -1,0 +1,38 @@
+@charset "utf-8";
+@import url(./font.css);
+
+/*
+	Author : SMCHO (2019.07)
+	Comment : reset.css
+	Modify : 
+*/
+
+/* reset */
+html,body{height:100%;-webkit-text-size-adjust:none;font-size:100%}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,table,th,td,form,fieldset,legend,textarea,input,select,textarea,button,figure,figcaption{margin:0;padding:0;font-family:'Noto Sans KR','Nanum Gothic','맑은 고딕','MalgunGothic','Dotum','돋움','AppleSDGothic',sans-serif;font-size:12px}
+fieldset,li,img{border:0;vertical-align:top}
+ul,ol{list-style:none}
+h1,h2,h3,h4,h5,h6{font-weight: 400;}
+button{overflow:visible;border:0;background-color:transparent;cursor:pointer}
+button::-moz-focus-inner{padding:0;}
+select,input,button{-webkit-appearance:none;-moz-appearance:none;appearance:none}
+select{vertical-align:top}
+address,caption,em{font-style:normal}
+a,a:focus,a:active,a:hover{color:#000;text-decoration:none}
+hr{display:none}
+table{border-collapse:collapse;width:100%}
+legend,.blind{overflow:hidden;position:absolute;top:0;left:0;width:1px;height:1px;font-size:1px;line-height:100px;white-space:nowrap}
+caption{height:1px;overflow:hidden;font:0;line-height:0;text-indent:-9999px}
+html{overflow-y:scroll}
+.clear{display:block;clear:both;content:''}
+.clear:after{content:"";display:block;clear:both;*zoom:1;}
+img{max-width:100%;height:auto}
+
+select::-ms-expand{display:none;}
+input[type="text"],input[type="password"]{background:#fff;border:1px solid #DDDDDD;border-radius:3px;height:28px;line-height:28px;vertical-align:top;padding:0 10px}
+
+/* placeholder */
+::-webkit-input-placeholder{color:#B4B4B4}
+:-moz-placeholder{color:#B4B4B4;opacity:1}
+::-moz-placeholder{color:#B4B4B4;opacity:1}
+:-ms-input-placeholder{color:#B4B4B4}

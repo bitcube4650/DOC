@@ -1,0 +1,22 @@
+SELECT	A.USER_ID 
+,		'$2a$10$oDBdqqq4OgB3qcjVullmr.TeTXpaCdMW.PkGseMZipw0AZOuSlA/i' AS USER_PWD --iljin 암호화
+,		A.USER_NAME 
+,		CASE WHEN A.USER_AUTH = '9' THEN '3' ELSE A.USER_AUTH END AS USER_AUTH
+,		A.USER_EMAIL 
+,		A.USER_HP 
+,		A.USER_POSITION 
+,		A.USER_TEL 
+,		A.CREATE_USER 
+,		A.CREATE_DATE 
+,		A.UPDATE_USER 
+,		A.UPDATE_DATE 
+,		A.PWD_EDIT_YN 
+,		NULL AS PWD_EDIT_DATE --로그인 시 암호변경 
+,		A.DEPT_NAME 
+,		A.INTERRELATED_CUST_CODE 
+,		A.OPENAUTH 
+,		CASE WHEN A.USER_AUTH = '9' THEN 'N' ELSE 'Y' END AS USE_YN
+FROM 	T_CO_USER A
+
+
+-- To-Be 실서버에서 사용자 암호를 [로그인ID]+"!@#" 로 일괄변경 Application 실행

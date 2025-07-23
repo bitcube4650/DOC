@@ -1,0 +1,16 @@
+url 	: http://localhost/mobile/homesLogin.home
+id/pw : hnsDir/Bitcube#123
+
+
+
+1. 실제 앱 테스트시 주석 풀고 처리해야 되는 것
+	- homesIndex.jsp	
+			<!-- Jameskang 퍼블을 위해 주석처리, 실제 개발시엔 주석을 풀고 Function으로 처리 -->
+			<!-- 	<a href="javascript:void(0);" onclick="fnDirectBarcode(barcodeDevice , '/m/logi/barcodeGood.sys');"> -->
+					<a href="javascript:void(0);" onclick="location.href='/m/logi/homesBarcodeGood.sys?barcode=112214551'">
+				
+				
+	- homesDeliveryList.jsp
+					<!-- Jameskang 퍼블을 위해 주석처리, 실제 개발시엔 주석을 풀고 fnCallbackBarcode Function으로 처리 -->
+			<!--	<button type="button" class="float-left width-20" onclick="fnCallbackBarcode('APP' ,'fnBarcodeCallback');"><i class="fa fa-barcode small-110 width-30" style=""></i></button> -->
+					<button type="button" class="float-left width-20" onclick="fnBarcodeCallback();"><i class="fa fa-barcode small-110 width-30" style=""></i></button>

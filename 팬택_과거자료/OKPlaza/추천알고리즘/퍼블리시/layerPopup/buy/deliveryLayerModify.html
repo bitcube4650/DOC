@@ -1,0 +1,53 @@
+<div class="dialog_content" title="배송지 수정" style="width:700px;">
+	<div class="tableSection">
+		<div class="tableWrap">
+			<table width="100%">
+				<colgroup>
+					<col style="width:90px"/>
+					<col style="width:auto"/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><label for="shippingPlaceManageDiv">배송지명</label></th>
+						<td><input id="shippingPlaceManageDiv" name="shippingPlaceManageDiv" type="text" size="30" maxlength="50"></td>
+					</tr>
+					<tr>
+						<th><label for="btnShippingPostManageDiv">주소</label></th>
+						<td>
+							<span style="display:block">
+								<input id="shippingPostManageDiv" name="shippingPostManageDiv" type="text" size="7" disabled="disabled" style="width:132px;margin-right:7px">
+								<button type="button" id="btnShippingPostManageDiv" class="grayBtn"><i class="fas fa-search"></i> 검색</button>
+							</span>
+							<input id="shippingAddressManageDiv" name="shippingAddressManageDiv" type="text" size="50" class="input_text_none" disabled="disabled" readonly="readonly" style="width: 525px;margin-top:10px">
+							<input id="shippingAddressDescManageDiv" name="shippingAddressDescManageDiv" type="text" size="50" maxlength="50" style=" width: 525px;margin-top:10px">
+						</td>
+					</tr>
+					<tr>
+						<th><label for="tranUserNameDiv">인수자</label></th>
+						<td><input id="tranUserNameDiv" name="tranUserNameDiv" type="text" size="30" maxlength="20" style="width:525px"></td>
+					</tr>
+					<tr>
+						<th><label for="tranTeleNumbDiv">인수자 전화번호</label></th>
+						<td><input id="tranTeleNumbDiv" name="tranTeleNumbDiv" type="text" size="30" maxlength="13" style="width:525px"></td>
+					</tr>
+					<tr>
+						<th><label for="isDefaultDiv">기본 배송지 여부</label></th>
+						<td>
+							<select class="ui_select" name="isDefaultDiv" id="isDefaultDiv" style="width:150px">
+								<option value="0">아니오</option>
+								<option value="1">예</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		
+		<div class="btnWrap">
+			<button type="button" class="c_red">저장</button>
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+	</div>
+
+</div> <!-- // .dialog_content -->

@@ -1,0 +1,36 @@
+- log4j 2.X를 위한 lib 추가 (jre7은 log4j-2.13.0 X)
+log4j-api-2.12.0.jar
+log4j-core-2.12.0.jar
+
+// Log4jServletContextListener
+log4j-web-2.12.0.jar
+
+// org.springframework debug 
+log4j-jcl.jar
+
+// 기존 logger 사용
+slf4j-api-1.7.29.jar
+log4j-1.2-api-2.12.0.jar
+log4j-slf4j-impl-2.12.0.jar
+
+==================================================
+
+- log4j2 logger
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger; 
+
+private Logger logger = LogManager.getLogger(getClass());
+
+==================================================
+
+- web.xml
+// listener
+<listener>
+    <listener-class>org.apache.logging.log4j.web.Log4jServletContextListener</listener-class>
+</listener>
+
+// log4j2.xml 위치
+<context-param>
+    <param-name>log4jConfiguration</param-name>
+    <param-value>classpath:config/log4j2.xml</param-value>
+</context-param>

@@ -1,0 +1,62 @@
+
+CREATE TABLE MCCONTRACT
+( 
+	CONTRACT_NO          int  NOT NULL ,
+	CONTRACT_NM          varchar(200)  NULL ,
+	CONTRACT_STA_DT      date  NULL ,
+	CONTRACT_END_DT      date  NULL ,
+	CONTRACT_STA_DT_BP   date  NULL ,
+	CONTRACT_END_DT_BP   date  NULL ,
+	INSERT_USER_ID       varchar(10)  NULL ,
+	INSERT_DATE          datetime  NULL ,
+	UPDATE_USER_ID       varchar(10)  NULL ,
+	UPDATE_DATE          datetime  NULL 
+)
+go
+
+ALTER TABLE MCCONTRACT
+	ADD CONSTRAINT PK_MCCONTRACT PRIMARY KEY  CLUSTERED (CONTRACT_NO ASC)
+go
+
+
+CREATE TABLE MCCONTRACTBRANCH
+( 
+	CONTRACT_NO          int  NOT NULL ,
+	CONTRACT_BRANCH_NO   int  NOT NULL ,
+	BRANCH_ID            varchar(10)  NULL ,
+	STA_DT               datetime  NULL ,
+	END_DT               datetime  NULL 
+)
+go
+
+
+
+ALTER TABLE MCCONTRACTBRANCH
+	ADD CONSTRAINT PK_MCCONTRACTBRANCH PRIMARY KEY  CLUSTERED (CONTRACT_BRANCH_NO ASC)
+go
+
+CREATE TABLE MCCONTRACTDTL
+( 
+	CONTRACTDTL_NO       int  NOT NULL ,
+	CONTRACT_NO          int  NULL ,
+	MATERIAL             varchar(20)  NULL ,
+	STA_DT               datetime  NULL ,
+	END_DT               datetime  NULL ,
+	USE_YN               char(18)  NULL ,
+	RATIO1               int  NULL ,
+	BP1                  varchar(10)  NULL ,
+	REGION1              varchar(20)  NULL ,
+	RATIO2               int  NULL ,
+	BP2                  varchar(10)  NULL ,
+	REGION2              varchar(20)  NULL ,
+	RATIO3               int  NULL ,
+	BP3                  varchar(10)  NULL ,
+	REGION3              varchar(20)  NULL 
+)
+go
+
+
+
+ALTER TABLE MCCONTRACTDTL
+	ADD CONSTRAINT PK_MCCONTRACTDTL PRIMARY KEY  CLUSTERED (CONTRACTDTL_NO ASC)
+go

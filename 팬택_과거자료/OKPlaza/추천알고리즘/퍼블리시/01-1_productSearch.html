@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="./css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="./jq/buy/plugins.js"></script>
+	<script src="./jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="./css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="./jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="./jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+	<div class="okWrap">
+
+		<div class="okInWrap">
+			<!-- header -->
+			<header class="ok_header fixMenu"> <!-- main과 검색에만 class = fixMenu 추가됨 -->
+				<div class="okUtill">
+					<h1><a href="#self"><img src="./img/buy/logo.png" alt="OK plaza"></a></h1>
+					<section class="">
+						<ul class="h_quick">
+							<li><a href="#self" onclick="javaScript:fnAdmUserInfo();"><i class="fas fa-phone-alt"></i> 담당자 안내</a></li>
+							<li><a href="/system/systemLogout.sys"><i class="fas fa-power-off"></i> 로그아웃</a></li>
+							<li><a href="/buyOrgan/organBuyList.sys?_menuCd=BUY_MY_BORG"><i class="fas fa-cubes"></i> 사업장관리</a></li>
+							<li><a href="/buyOrgan/organBuyUserList.sys?_menuCd=BUY_MY_USER"><i class="fas fa-users"></i> 사용자관리</a></li>
+							<li><a href="javascript:fnUserDetail();"><i class="fas fa-user"></i> 정아름</a></li>
+						</ul>
+						
+						<article>
+							<div class="h_searchForm">
+								<span>상품검색</span>
+								<input type="text" />
+								<button type="button" onclick="javascript:fnTotSearch();">검색</button>
+							</div>
+							<div class="subArea">
+								<select name="" id="">
+									<option value="">씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+								</select>
+								<dl class="h_besiness">
+									<dt>사업장상태</dt>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerIsOrderLimit" /> <label for="headerIsOrderLimit">주문제작</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerPrePay" /> <label for="headerPrePay">수동주문</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerLoanYn" /> <label for="headerLoanYn">여신초과</label></dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+				</div>
+
+				<div class="okMenu">
+					<!-- category -->
+					<section class="allCate">
+						<h2><a href="#self"><i class="fas fa-align-left"></i> 카테고리 전체</a></h2>
+						<ul>
+							<li><a href="#self">공통자재</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">전기/통신</a>
+								<ul>
+									<li><a href="#self">광점퍼코드</a>
+										<ul>
+											<li><a href="#self">등기구</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다가</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">토목</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">건축</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">비품/관리</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">제조 원재로</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="serviceName">
+							<strong>010-2081-0424</strong>
+							<span><a href="mailto:bjh33@sk.com">bjh33@sk.com</a></span>
+							<span>담당자 :  변지희</span>
+						</div>
+					</section>
+					<!-- //category -->
+
+					<nav class="gnb">
+						<ul>
+							<li><a href="#self">주문관리</a></li>
+							<li><a href="#self">인수/반품</a></li>
+							<li><a href="#self">정산관리</a></li>
+							<li><a href="#self">상품관리</a></li>
+							<li><a href="#self">재고관리</a></li>
+							<li><a href="#self">고객센터</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- // header -->
+
+			<!-- ok_container -->
+			<div class="ok_container">
+				<!-- ok_contents -->
+				<div class="ok_contents">
+
+					<!-- innerBody -->
+					<div class="innerBody prodList">
+						<!-- inBoxWrap -->
+						<div class="inBoxWrap">
+							<h3 class="red_tit">상품검색</h3>
+							<div class="b_searchForm">
+								<ul class="chkList">
+									<li class="ui_chk"><input type="checkbox" id="searchType1" /><label for="searchType1">결과내 검색(상품코드,자재BP사)</label></li>
+									<li class="ui_chk"><input type="checkbox" id="searchType2" checked/><label for="searchType2">검색어제외</label><input type="text" placeholder="검색어를 입력하세요" style="width:435px"/></li>
+								</ul>
+								<ul class="inp_form">
+									<li><label for="srcGoodName">상품명</label><input type="text" id="srcGoodName"/></li>
+									<li class="sel_inp">
+										<label for="srcGoodSpec">규격</label>
+										<input type="text" id="srcGoodSpec"/>
+										<select name="" id="" class="ui_select" style="width:76px">
+											<option value="">전체전체전체전체전체</option>
+											<option value="">전체</option>
+											<option value="">전체</option>
+											<option value="">전체</option>
+											<option value="">전체</option>
+											<option value="">전체</option>
+										</select>
+									</li>
+									<li><label for="srcGoodIdenNumb">상품코드</label><input type="text" id="srcGoodIdenNumb"/></li>
+									<li><label for="srcVendorNm">공급사</label><input type="text" id="srcVendorNm"/></li>
+									<li><label for="srcGoodClasCode">상품유형</label>
+										<select name="" id="srcGoodClasCode" class="ui_select" style="width:235px">
+											<option value="">전체</option>
+											<option value="">지정</option>
+											<option value="">일반</option>
+											<option value="">공구</option>
+											<option value="">안전</option>
+											<option value="">보안</option>
+											<option value="">B24</option>
+										</select>
+									</li>
+									<li><label for="srcTCode">FIMS코드</label><input type="text" id="srcTCode"/></li>
+								</ul>
+								<button type="button" onclick="javascript:fnSearch();"><i class="fas fa-search"></i>조회</button>
+							</div>
+
+							<div class="b_searchResult">
+								<p>연관검색어 : <strong>‘IF케이블’, ‘점퍼’, ‘광점퍼코드’, ‘Cabinet Rack’</strong></p>
+								<p><strong>'광점퍼코트' </strong>의 검색결과</p>
+							</div>
+						</div>
+						<!-- //inBoxWrap -->
+
+
+						<!-- inBoxWrap -->
+						<div class="inBoxWrap">
+							<h3>연관상품</h3>
+							<div class="rotating-prod connect-prod">
+								<!-- productGrid -->
+								<div class="prod-grid-comp">
+									<!-- product-list -->
+									<div class="product-list ">
+										<div class="productGridItem ">
+											<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+												<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+												<div class="prod-info">
+													<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+													<article>
+														<dl>
+															<dt>상품코드 : </dt>
+															<dd>10000065079</dd>
+														</dl>
+														<dl>
+															<dt>규격 : </dt>
+															<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+														</dl>
+													</article>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //product-list -->
+
+									<!-- product-list -->
+									<div class="product-list ">
+										<div class="productGridItem ">
+											<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+												<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+												<div class="prod-info">
+													<strong>22222222PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+													<article>
+														<dl>
+															<dt>상품코드 : </dt>
+															<dd>10000065079</dd>
+														</dl>
+														<dl>
+															<dt>규격 : </dt>
+															<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+														</dl>
+													</article>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //product-list -->
+
+									<!-- product-list -->
+									<div class="product-list ">
+										<div class="productGridItem ">
+											<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+												<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+												<div class="prod-info">
+													<strong>333333PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+													<article>
+														<dl>
+															<dt>상품코드 : </dt>
+															<dd>10000065079</dd>
+														</dl>
+														<dl>
+															<dt>규격 : </dt>
+															<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+														</dl>
+													</article>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //product-list -->
+
+									<!-- product-list -->
+									<div class="product-list ">
+										<div class="productGridItem ">
+											<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+												<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+												<div class="prod-info">
+													<strong>4444444PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+													<article>
+														<dl>
+															<dt>상품코드 : </dt>
+															<dd>10000065079</dd>
+														</dl>
+														<dl>
+															<dt>규격 : </dt>
+															<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+														</dl>
+													</article>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //product-list -->
+
+									<!-- product-list -->
+									<div class="product-list ">
+										<div class="productGridItem ">
+											<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+												<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+												<div class="prod-info">
+													<strong>555555PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+													<article>
+														<dl>
+															<dt>상품코드 : </dt>
+															<dd>10000065079</dd>
+														</dl>
+														<dl>
+															<dt>규격 : </dt>
+															<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+														</dl>
+													</article>
+												</div>
+											</a>
+										</div>
+									</div>
+									<!-- //product-list -->
+
+
+								</div>
+								<!-- //productGrid -->
+							</div>
+						</div>
+						<!-- //inBoxWrap -->
+
+						<!-- inBoxWrap -->
+						<div class="inBoxWrap">
+							<!-- listTopBox -->
+							<div class="listTopBox">
+								<h4 class="chkTit ui_chk"><input onclick="" type="checkbox" checked id="setGoodtype"><label for="setGoodtype">지정자재 우선</label></h4>
+								<ul>
+									<li><a href="javascript:setOrderBy('ASCII_ORDER ASC');">• 가나다순</a></li>
+									<li><a href="javascript:setOrderBy('ORDER_CNT DESC');">• 누적판매순</a></li>
+									<li><a href="javascript:setOrderBy('INSERT_DATE DESC');">• 최신등록순</a></li>
+									<li><a href="javascript:setOrderBy('SELL_PRICE ASC');">• 판매가격순</a></li>
+									<li>
+										<input type="hidden" id="orderString" name="orderString" value="">
+										<input type="hidden" id="goodtype_yn" name="goodtype_yn" value="">
+										<select id="pCnt" style="width:110px;" class="ui_select" onchange="javascript:fnSearch();">
+											<option selected="selected" value="30">30개씩 보기</option>
+											<option value="60">60개씩 보기</option>
+											<option value="90">90개씩 보기</option>
+										</select>
+									</li>
+								</ul>
+								<p class="blueTx">* 자동물량 배분상품은 주문 이후에 공급사가 배정되며 주문진척도와 SMS를 통해서 확인하실수 있습니다.</p>
+							</div>
+							<!-- //listTopBox -->
+
+							<!-- listTableWrap -->
+							<div class="listTableWrap">
+								<div class="listTableTab">
+									<ul>
+										<li><a href="#self">전체</a></li>
+										<li class="active"><a href="#self">공통자재</a></li>
+										<li><a href="#self">전기/통신</a></li>
+										<li><a href="#self">토목</a></li>
+										<li><a href="#self">건축</a></li>
+										<li><a href="#self">비품/관리</a></li>
+										<li><a href="#self">제조 원재료</a></li>
+									</ul>
+								</div>
+
+								<div class="listTable">
+									<table>
+										<caption>검색 목록</caption>
+										<colgroup>
+											<col style="width:162px;">
+											<col style="width:*">
+											<col style="width:170px;">
+											<col style="width:200px;">
+										</colgroup>
+										<tbody>
+											<tr>
+												<td class="prodListImg">
+													<a href="#self" title="상세보기" class="js_dialog" data-href="./layerPopup/buy/productDetail.html"><img src="./img/buy/pick01.png" alt=""></a>
+												</td>
+												<td>
+													<div class="pordInfoWrap">
+														<p class="itemName ui_chk">
+															<input type="checkbox" name="" id="list01"><label for="list01"></label>
+															<a href="#self" title="상세보기" class="js_dialog" data-href="./layerPopup/buy/productDetail.html"><strong style="color:#F53243">동축</strong>컨버터</a>
+														</p>
+														<ul class="itemInfo">
+															<li><span>규격</span> : Cat.5e, 6P/8P</li>
+															<li><span>상품코드</span> : 10000058404</li>
+															<li><span>제조원</span> : 대만(HANLONG)</li>
+															<li><span>표준납기일</span> : 3일</li>
+															<li><span>공급가</span> : 28,443 원</li>
+															<li><span>최소구매수량</span> : 1개</li>
+														</ul>
+														<div class="itemFlag">
+															<span>옵션</span>
+															<span style="background:#F53243">지정</span>
+															<!-- 
+															<span>보안</span>
+															<span>공구</span>
+															<span>물류</span>
+															<span>지정</span> 
+															-->
+														</div>
+													</div>
+												</td>
+												<td>
+													<span class="ui_radio"><input type="radio" name="r_list01" id="r_list0101"><label for="r_list0101">(주)코마넷</label></span>
+													<span class="ui_radio"><input type="radio" name="r_list01" id="r_list0102"><label for="r_list0102">(주)이에스테크인터내셔널</label></span>
+												</td>
+												<td class="alignRight">
+													<div class="prodOpt">
+														<dl>
+															<dt>재고</dt>
+															<dd><strong>99</strong> 개</dd>
+														</dl>
+														<dl class="prodOptCnt">
+															<dt><label for="inputQuan">수량</label></dt>
+															<dd><input type="text" name="" id="inputQuan" value="0"> 개</dd>
+														</dl>
+														<div class="optBtns">
+															<button type="button" class="optChoise">옵션선택</button>
+															<button type="button" onclick="javascript:fnSetUserGood('1');">관심상품등록</button>
+														</div>
+													</div>
+												</td>
+											</tr>
+											
+
+											<tr>
+												<td colspan="4" class="noResult">조회된 상품이 없습니다.</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+
+								<!-- listPaging -->
+								<div class="listPaging">
+									<ul>
+										<li class="first"><a href="#self">첫 페이지</a></li>
+										<li class="prev"><a href="#self">이전 페이지</a></li>
+										<li><a href="#self">1</a></li>
+										<li class="active"><a href="#self">2</a></li>
+										<li><a href="#self">3</a></li>
+										<li><a href="#self">4</a></li>
+										<li><a href="#self">5</a></li>
+										<li><a href="#self">6</a></li>
+										<li><a href="#self">7</a></li>
+										<li><a href="#self">8</a></li>
+										<li><a href="#self">9</a></li>
+										<li><a href="#self">10</a></li>
+										<li class="next"><a href="#self">다음 페이지</a></li>
+										<li class="last"><a href="#self">마지막 페이지</a></li>
+									</ul>
+								</div>
+								<!-- //listPaging -->
+							</div>
+							<!-- //listTableWrap -->
+
+						</div>
+						<!-- //inBoxWrap -->
+					</div>
+					<!-- //innerBody -->
+
+				</div>
+				<!-- //ok_contents -->
+
+				<div class="prodSum">
+					<strong>N개 품목 선택</strong>
+					<a href="#self">선택상품 일괄주문</a>
+				</div>
+			</div>
+			<!-- //ok_container -->
+		</div>
+
+		<div class="ok_quick">
+			<h3>QUICK<br />MENU</h3>
+			<ul class="quickList">
+				<li class="ico_q1"><a href="#self">장바구니 <span>2</span></a></li>
+				<li class="ico_q2"><a href="#self">관심상품 <span>4</span></a></li>
+				<li class="ico_q3"><a href="#self">구매이력<br/>조회</a></li>
+				<li class="ico_q4"><a href="#self">주문취소<br/>요청</a></li>
+				<li class="ico_q5"><a href="#self">반품처리<br/>요청</a></li>
+				<li class="ico_q6"><a href="#self">신규상품<br/>요청이력</a></li>
+			</ul>
+
+			<div class="quickRoll">
+				<h3>최근본 상품 <a href="#self">15</a></h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl">
+					<ul class="control-area">
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>222 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>3333 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<div class="quickRoll">
+				<h3>추천상품</h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl ">
+					<ul class="control-area">
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<button type="button" class="goTop">TOP</button>
+		</div>
+	</div><!-- //okWrap -->
+
+</body>
+</html>

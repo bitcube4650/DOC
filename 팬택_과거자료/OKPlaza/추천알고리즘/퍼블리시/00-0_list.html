@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./css/buy/okplaza_ui.css">
+<!-- Font Awesome Solid + Brands -->
+<link href="./css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+<link href="./css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+<title>OK Plaza Publishing DevTree List</title>
+<script type="text/javascript" src="./jq/buy/plugins.js"></script>
+<script type="text/javascript" src="./jq/buy/okplaza_ui.js"></script>
+<script src="./jq/buy/plugins.js"></script>
+<script src="./jq/buy/okplaza_ui.js"></script>
+<script type="text/javascript">
+	$(function($){
+		$('tr:nth-child(even)').css('background','#fafafa')
+		var nt = $('table tbody tr').length;
+		for(var n=1; n<=nt; n++){
+			$('tr:nth-child('+n+')').prepend('<td align="center">'+n+'</td>');
+		}
+		$('table').each(function(){
+			$('thead td:first').replaceWith('<th>번호</th>');	
+		})
+		
+	});
+	
+	$(function($){
+		$('#com').addClass('on');
+		$("td:contains('보류')").css('color','red');
+	});
+</script>
+
+</head>
+<body>
+<style type="text/css">
+body{position:relative;color:#222;font-size:13px;font-family:NanumBarunGothic,Dotum,Arial,sans-serif;background:#fff}.all_wrap a{color:#222;text-decoration:none}.all_wrap a:hover{color:#004aa4;text-decoration:underline}.all_wrap h1{padding:20px 10px;color:#fff;font-size:16px;background:#585858}.all_wrap h1 a{color:#fff}.all_wrap h1 a:hover{color:#fff;text-decoration:none}.all_wrap h2{padding:6px 14px;background:#dedede;font-size:14px;color:#404040}.all_wrap table{border-collapse:collapse;border-top:2px solid #069;width:100%}.all_wrap th{border:1px solid #dfdfdf;background:#f6f6f6;color:#0a376f;padding:8px 0 7px}.all_wrap td{border:1px solid #dfdfdf;color:#222;padding:5px;height:18px}.all_warp{background:#fff}.all_wrap .index_tbl th{padding:10px;font-size:16px}.all_wrap .index_tbl td{padding:10px}.all_wrap .title_wrap{position:relative;height:50px;text-align:left;padding:0 5px}.all_wrap .title_wrap.sub .btn{margin:3px 0 0;padding:0;background:#fff!important;border:1px solid #dfdfdf;border-bottom:none}.all_wrap .title_wrap.sub .btn a{display:block;width:100%;color:#222;font-size:16px;font-weight:700}.all_wrap .title_wrap.sub .btn.on,.all_wrap .title_wrap.sub .btn:hover{border-color:#cf242a}.all_wrap .title_wrap.sub .btn a:hover,.all_wrap .title_wrap.sub .btn.on a{color:#fff}.all_wrap .title{float:left;min-width:150px;margin-top:7px;padding:8px;color:#fff;font-size:18px;font-weight:700;text-align:center}.all_wrap .title.pc{background:#d22328}.all_wrap .title.mobile{background:#0072bc}.all_wrap .title.cs{background:#1da697}.all_wrap .title.global{background:#cbc517}.all_wrap .btn_r{position:absolute;top:-50px;right:10px}.all_wrap .title_wrap .link{margin:11px 10px 0;min-width:auto;display:inline-block;padding:8px 10px;font-size:12px;color:#555;text-decoration:underline}.all_wrap .title_wrap .link:hover{text-decoration:none;color:red}.all_wrap .navwrap{clear:both}.all_wrap .nav{height:1%}.all_wrap .nav:after{content:'';display:block;clear:both}.all_wrap .nav li{list-style:none;float:left;padding:10px 16px;text-align:center}.all_wrap .nav li a{font-size:16px;font-weight:700;color:#999}.all_wrap .nav li.on{border:1px solid #276bcl;border-bottom:none}.all_wrap .nav li.on a{font:bold 14px;color:#000;text-decoration:underline}.all_wrap .wrap{width:100%;margin-top:10px}.all_wrap .btnwrap{margin:10px auto;width:100%;text-align:center}.all_wrap .btn{display:inline-block;min-width:120px;background:#000;padding:10px 0 10px 10px;text-align:center}.all_wrap .btn a{padding:11px 0;font-size:18px;color:#fff}.all_wrap .btn.on a,.btn a:hover{background-color:#d22328;text-decoration:none;color:#fff}.all_wrap .btn.pc{background:#d22328}.all_wrap .btn.mobile{background:#d22328}.all_wrap .btn.global{background:#d22328}.all_wrap .tbl{border-collapse:collapse;border-top:1px solid #969696;width:100%;margin:0 auto}.all_wrap .tbl caption{margin:30px 0 10px;padding-left:10px;font-weight:700;font-size:16px;font-weight:700;text-align:left}.all_wrap .tbl th{border:1px solid #ccc;background:#fefefe;color:#036;padding:8px 0 7px;font:bold 12px dotum}.all_wrap .tbl td{border:1px solid #ccc;color:#333;padding:4px;height:16px}.all_wrap .list,.all_wrap .list li{list-style:none}.all_wrap .txt{font-size:11px;text-align:center;color:#c00;margin-bottom:10px}.all_wrap .txt span{font-weight:700}.all_wrap .txt2{width:70%;margin:0 auto;border:1px solid #b2b2b2;background:#f4f4f4;padding:6px;font-size:11px;text-align:center;color:#2c2c2c;margin-bottom:10px;line-height:16px}.all_wrap .end{color:#d51818;font-weight:700;text-align:center}.all_wrap .add{font-weight:700}.all_wrap .del td{background:#a7a7a7!important;color:#fff!important}.all_wrap h1.acc{margin-bottom:30px;font-size:35px;letter-spacing:-1px}.all_wrap .acc_table{border-top:none}.all_wrap .acc_table th{color:#fff;background:#666}.all_wrap .nav.acc{border-bottom:1px solid #000}.all_wrap .nav.acc li.on{background:#000}.all_wrap .nav.acc li.on a{color:#fff}.all_wrap .nav.acc li a{color:#444}.all_wrap .checked{text-align:center;font-weight:700}.all_wrap .red{color:red}.all_wrap .tpl td{padding:10px;color:#222;font-size:13px;font-weight:700;background:#cdf1f7}.all_wrap .tpl td a{padding-left:10px;color:#222;font-size:13px;font-weight:700;background:#cdf1f7}.all_wrap h2.guide{width:300px;margin:20px 0 10px;padding:8px 0 8px 10px;background:#555;font-size:14px;line-height:1;color:#fff}.all_wrap .btn-top{position:fixed;right:0;bottom:20%;background:#666}.all_wrap .btn-top a{display:block;width:60px;padding:5px 0;text-align:center;color:#fff;text-decoration:none}
+</style>
+<div id="devWrap" class="all_wrap">
+	<!--  head  -->
+	<div class="top_area">
+		<h1>OK PLAZA 퍼블리싱 리스트</h1>
+		<!-- title -->
+		<div class="title_wrap sub">
+			<div class="title pc">PC Web - OK PLAZA</div>
+			<a href="#login" class="title link"> >> LOGIN & Layer Popup</a>
+			<a href="#company" class="title link"> >> 회사소개</a>
+			<a href="#popup" class="title link"> >> 팝업 & 레이어팝업</a>
+			<a href="#order" class="title link"> >> 주문관리</a>
+			<a href="#return" class="title link"> >> 인수/반품</a>
+			<a href="#calc" class="title link"> >> 정산관리</a>
+			<a href="#manage" class="title link"> >> 상품관리</a>
+			<a href="#stock" class="title link"> >> 재고관리</a>
+			<a href="#coustomer" class="title link"> >> 고객센터</a>
+			<a href="#hs" class="title link"> >> 홈앤서비스</a>
+			<div class="btn_r">
+				<div class="btn pc"><a href="00-0_list.html">OK PLAZA</a></div>
+			</div>
+		</div>
+		<!-- //title -->
+	</div>
+	<!--  //head  -->
+	<!-- bottom -->
+	<div class="bt_area">
+		<h2 id="login" class="guide">LOGIN & ETC</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Layout</td>
+					<td>header & footer</td>
+					<td><a href="./00-0_layout.html" target="_blank">./00-0_layout.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>MAIN</td>
+					<td></td>
+					<td><a href="./02-1_main.html" target="_blank">./02-1_main.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>OK Plaza login</td>
+					<td></td>
+					<td rowspan="2"><a href="./00-1_login.html" target="_blank">./00-1_login.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>신규자재 제안하기 (비회원 로그인)</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>라디오 버튼 click 이벤트</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>로그아웃</td>
+					<td><a href="./11-1_logout.html" target="_blank">./11-1_logout.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>01-1_상품검색</td>
+					<td></td>
+					<td><a href="./01-1_productSearch.html" target="_blank">./01-1_productSearch.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>유틸</td>
+					<td>09-1_유틸_담당자안내_팝업</td>
+					<td><a href="./popup/buy/09-1_popup.html" target="_blank">./popup/buy/09-1_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>09-2_사업장관리</td>
+					<td><a href="./09-2_util.html" target="_blank">./09-2_util.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>09-3_사용자관리</td>
+					<td><a href="./09-3_util.html" target="_blank">./09-3_util.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="company" class="guide">회사소개</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>회사소개</td>
+					<td>00-2_회사개요</td>
+					<td><a href="./00-2_company.html" target="_blank">./00-2_company.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>00-3_CEO인사말</td>
+					<td><a href="./00-3_company.html" target="_blank">./00-3_company.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>00-4_사업장 안내</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>00-5_사업소개</td>
+					<td><a href="./00-5_company.html" target="_blank">./00-5_company.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>00-6_이용안내</td>
+					<td><a href="./00-6_company.html" target="_blank">./00-6_company.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="popup" class="guide">팝업 & 레이어팝업</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>팝업 & 레이어팝업</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>01_미이용회원안내_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/01_popup.html" class="js_dialog">./layerPopup/buy/01_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>02_비밀번호 변경_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/02_popup.html" class="js_dialog">./layerPopup/buy/02_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03_로그인 승인_레이어팝업(모바일 인증)</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/03_popup.html" class="js_dialog">./layerPopup/buy/03_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04_공지사항_팝업</td>
+					<td><a href="./popup/buy/04_notice.html" target="_blank">./popup/buy/04_notice.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>05_아이디 찾기_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/05_popup.html" class="js_dialog">./layerPopup/buy/05_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06_비밀번호 찾기_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/06_popup.html" class="js_dialog">./layerPopup/buy/06_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>07_개인정보 수집 및 이용동의_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/07_popup.html" class="js_dialog">./layerPopup/buy/07_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08_계약서 서명_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/08_popup.html" class="js_dialog">./layerPopup/buy/08_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>10_사업장 상세_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/10_popup.html" class="js_dialog">./layerPopup/buy/10_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>11_사용자 조회_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/11_popup.html" class="js_dialog">./layerPopup/buy/11_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>19_배송지관리_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/deliveryLayer.html" class="js_dialog">./layerPopup/buy/deliveryLayer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>20_배송지수정_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/deliveryLayerModify.html" class="js_dialog">./layerPopup/buy/deliveryLayerModify.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-3_주문관리_상품리스트_제품상세(팝업)_조장상품_레이어</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/productDetail.html" class="js_dialog">./layerPopup/buy/productDetail.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-3_주문관리_상품리스트_제품상세(팝업)_조장상품_팝업</td>
+					<td><a href="./popup/buy/productDetailPopup.html" target="_blank">./popup/buy/productDetailPopup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-4_주문관리_구매요청_장바구니 추가 / 이동</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/cartLayer.html" class="js_dialog">./layerPopup/buy/cartLayer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04-2_인수반품_상품인수_배송정보_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/04-2_return.html" class="js_dialog">./layerPopup/buy/04-2_return.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04-3_인수반품_상품인수_주문상세_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/04-3_popup.html" class="js_dialog">./layerPopup/buy/04-3_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04-5_인수반품_반품신청현황_주문상세_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/04-5_popup.html" class="js_dialog">./layerPopup/buy/04-5_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>05-3_정산관리_거래명세서_선택_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/05-3_popup.html" class="js_dialog">./layerPopup/buy/05-3_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06-6_상품관리_품질관리_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/06-6_popup.html" class="js_dialog">./layerPopup/buy/06-6_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-2_고객센터_공지사항_팝업</td>
+					<td><a href="./popup/buy/08-2_popup.html" target="_blank">./popup/buy/08-2_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-4_고객센터_질의응답등록_팝업</td>
+					<td><a href="./popup/buy/08-4_popup.html" target="_blank">./popup/buy/08-4_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-6_고객센터_자유게시판_등록_팝업</td>
+					<td><a href="./popup/buy/08-6_popup.html" target="_blank">./popup/buy/08-6_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-7_고객센터_자유게시판_상세_팝업</td>
+					<td><a href="./popup/buy/08-7_popup.html" target="_blank">./popup/buy/08-7_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-7_고객센터_자유게시판_상세_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/08-7_popup.html" class="js_dialog">./layerPopup/buy/08-7_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-9_고객센터_시스템장애개선_등록_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/08-9_popup.html" class="js_dialog">./layerPopup/buy/08-9_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>09-4_유틸_사용자상세_팝업</td>
+					<td><a href="./popup/buy/09-4_popup.html" target="_blank">./popup/buy/09-4_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>10-1_기타_계약서_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/10-1_popup.html" class="js_dialog">./layerPopup/buy/10-1_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>12_상세 팝업 개인정보_팝업</td>
+					<td><a href="./popup/buy/12_popup.html" target="_blank">./popup/buy/12_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>13_스마일 지수_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/13_popup.html" class="js_dialog">./layerPopup/buy/13_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>14_공지사항_팝업</td>
+					<td><a href="./popup/buy/14_popup.html" target="_blank">./popup/buy/14_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>15_인수목록_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/15_popup.html" class="js_dialog">./layerPopup/buy/15_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>16_옵션선택_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/16_popup.html" class="js_dialog">./layerPopup/buy/16_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>18_추가상품선택_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/18_popup.html" class="js_dialog">./layerPopup/buy/18_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>17_신규규격요청_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/17_popup.html" class="js_dialog">./layerPopup/buy/17_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>21_첨부파일_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/21_popup.html" class="js_dialog">./layerPopup/buy/21_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>22_주문취소_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/22_popup.html" class="js_dialog">./layerPopup/buy/22_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>24_반려사유작성_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/24_popup.html" class="js_dialog">./layerPopup/buy/24_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>25_반품요청_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/25_popup.html" class="js_dialog">./layerPopup/buy/25_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>26-1_신규상품요청_요청상태_레이어 팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/26-1_popup.html" class="js_dialog">./layerPopup/buy/26-1_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>26-2_신규상품요청_반려상태_레이어 팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/26-2_popup.html" class="js_dialog">./layerPopup/buy/26-2_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>27_관리물품등록/삭제_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/27_popup.html" class="js_dialog">./layerPopup/buy/27_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>28_기타재고_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/28_popup.html" class="js_dialog">./layerPopup/buy/28_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>29_출고_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/29_popup.html" class="js_dialog">./layerPopup/buy/29_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>30_작업자조회_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/30_popup.html" class="js_dialog">./layerPopup/buy/30_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>31_반납입고_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/31_popup.html" class="js_dialog">./layerPopup/buy/31_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>32_작업자관리_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/32_popup.html" class="js_dialog">./layerPopup/buy/32_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>33_작업자 일괄업로드_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/33_popup.html" class="js_dialog">./layerPopup/buy/33_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>34_작업자등록_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/34_popup.html" class="js_dialog">./layerPopup/buy/34_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>35_재고이력_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/35_popup.html" class="js_dialog">./layerPopup/buy/35_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>36_적정재고변경_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/36_popup.html" class="js_dialog">./layerPopup/buy/36_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>38_예산 일괄업로드_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/38_popup.html" class="js_dialog">./layerPopup/buy/38_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>39_예산등록_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/39_popup.html" class="js_dialog">./layerPopup/buy/39_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>40_센터조회_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/40_popup.html" class="js_dialog">./layerPopup/buy/40_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>41_예산수정_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/41_popup.html" class="js_dialog">./layerPopup/buy/41_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>42_예산이력_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/42_popup.html" class="js_dialog">./layerPopup/buy/42_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>44_예산증액_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/44_popup.html" class="js_dialog">./layerPopup/buy/44_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>46_바코드 입출고처리_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/46_popup.html" class="js_dialog">./layerPopup/buy/46_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>47_바코드 입력 활성화_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/47_popup.html" class="js_dialog">./layerPopup/buy/47_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>48_상품코드 바코드 출고_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/48_popup.html" class="js_dialog">./layerPopup/buy/48_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>51_재고조회_레이어팝업</td>
+					<td><a href="javascript:;" data-href="./layerPopup/buy/51_popup.html" class="js_dialog">./layerPopup/buy/51_popup.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				
+			</tbody>
+		</table>
+
+		<h2 id="order" class="guide">주문관리</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>주문관리</td>
+					<td>03-5_주문정보</td>
+					<td><a href="./03-5_order.html" target="_blank">./03-5_order.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-6_선입금 주문내역</td>
+					<td><a href="./03-6_order.html" target="_blank">./03-6_order.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-7_주문 진척도</td>
+					<td><a href="./03-7_order.html" target="_blank">./03-7_order.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-8_구매이력 조회</td>
+					<td><a href="./03-8_order.html" target="_blank">./03-8_order.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>03-9_주문승인조회</td>
+					<td><a href="./03-9_order.html" target="_blank">./03-9_order.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="return" class="guide">인수/반품</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>인수/반품</td>
+					<td>04-1_상품 인수 조회</td>
+					<td><a href="./04-1_return.html" target="_blank">./04-1_return.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04-4_반품신청/현황</td>
+					<td><a href="./04-4_return.html" target="_blank">./04-4_return.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>04-6_인수이력조회</td>
+					<td><a href="./04-6_return.html" target="_blank">./04-6_return.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="calc" class="guide">정산관리</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>정산관리</td>
+					<td>05-1_세금계산서</td>
+					<td><a href="./05-1_calculate.html" target="_blank">./05-1_calculate.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>05-2_거래명세서</td>
+					<td><a href="./05-2_calculate.html" target="_blank">./05-2_calculate.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>05-4_채무관리</td>
+					<td><a href="./05-4_calculate.html" target="_blank">./05-4_calculate.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="manage" class="guide">상품관리</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>상품관리</td>
+					<td>06-1_신규상품요청</td>
+					<td rowspan="2"><a href="./06-1_management.html" target="_blank">./06-1_management.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="2">TAB</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06-2_신규상품요청 이력</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06-3_신규 자재 제안 목록</td>
+					<td><a href="./06-3_management.html" target="_blank">./06-3_management.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06-4_관심 상품</td>
+					<td><a href="./06-4_management.html" target="_blank">./06-4_management.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>06-5_품질관리</td>
+					<td><a href="./06-5_management.html" target="_blank">./06-5_management.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="stock" class="guide">재고관리</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>재고관리</td>
+					<td>07-1_재고관리</td>
+					<td rowspan="3"><a href="./07-1_stock.html" target="_blank">./07-1_stock.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td rowspan="3">TAB</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>07-2_재고조회</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>07-3_재고이동</td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="coustomer" class="guide">고객센터</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>고객센터</td>
+					<td>08-1_공지사항</td>
+					<td><a href="./08-1_customer.html" target="_blank">./08-1_customer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-3_질의응답</td>
+					<td><a href="./08-3_customer.html" target="_blank">./08-3_customer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-5_자유게시판</td>
+					<td><a href="./08-5_customer.html" target="_blank">./08-5_customer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>08-8_시스템장애 / 개선요청</td>
+					<td><a href="./08-8_customer.html" target="_blank">./08-8_customer.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+		<h2 id="hs" class="guide">홈앤서비스</h2>
+		<table summary="">
+			<colgroup>
+				<col style="width:50px" />
+				<col style="width:150px" />
+				<col style="width:300px" />
+				<col style="width:350px" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+				<col style="width:10%" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>1depth</th>
+					<th>2depth</th>
+					<th>파일명(화면ID)</th>
+					<th>완료일</th>
+					<th>수정일</th>
+					<th>작업자</th>
+					<th>비고</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>홈앤서비스</td>
+					<td>00-1_홈앤서비스_로그인</td>
+					<td><a href="./00-1_login_hs.html" target="_blank">./00-1_login_hs.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>02-1_홈앤서비스_메인</td>
+					<td><a href="./02-1_main_hs.html" target="_blank">./02-1_main_hs.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>37_예산관리/예산증액관리</td>
+					<td><a href="./37_hs.html" target="_blank">./37_hs.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>TAB</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>45_재고관리/재고조회/재고이동</td>
+					<td><a href="./45_hs_stock.html" target="_blank">./45_hs_stock.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td>TAB</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>49_센터별 재고이력</td>
+					<td><a href="./49_hs.html" target="_blank">./49_hs.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>50_재고종합현황</td>
+					<td><a href="./50_hs.html" target="_blank">./50_hs.html</a></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+
+
+	<!-- //bottom -->
+</div>
+<span class="btn-top"><a href="#devWrap">↑ 위로</a></span>
+</body>
+</html>

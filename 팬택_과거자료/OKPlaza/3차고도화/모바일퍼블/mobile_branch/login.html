@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+<title>모바일</title>
+
+<link rel="stylesheet" href="css/common.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script></script>
+<style>
+	footer{margin-bottom:0;}
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+
+	<section>
+		<div class="login-box">
+			<div class="lb-top">
+				<img src="images/login-bg.jpg" width="100%">
+			</div>
+			
+			<div class="lb-content box-1">
+				<form>
+					<input type="text" class="lo-input" placeholder="아이디">
+					<input type="text" class="lo-input2" placeholder="비밀번호">
+					
+					<button type="button" class="btn-2">로그인</button>
+					
+					<div class="lb-save">
+						<input type="checkbox" id="checkbox1" checked="checked" />
+    					<label for="checkbox1">아이디 저장</label>
+						
+						<ul class="lb-ul">
+							<li><a href="#layer1" class="btn-example1">아이디 찾기</a></li>
+							<li><a href="#layer2" class="btn-example2">비밀번호 찾기</a></li>
+						</ul>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
+	
+	<footer>
+		<div id="footer">
+			<div class="policy_wrap">
+				<div class="policy_box">
+					<ul class="policy">
+						<li>
+							<a href="#">개인정보처리방침</a>
+						</li>
+					</ul>
+					<!-- <h6><img src="images/icon-7.jpg" alt="sk telesys"></h6> -->
+				</div>
+				<adress>
+					<span class="adr-1">서울특별시 중구 남대문로10길 9</span>
+					<span class="adr-2">Copyright SK telesys Co., LTD. All Rights Reserved.</span>
+				</adress>
+			</div>
+		</div>
+	</footer>
+	
+	
+	<div class="dim-layer dim-layer1 dl-la1">
+	    <div class="dimBg"></div>
+	    <div id="layer1" class="pop-layer">
+	        <div class="pop-container">
+	            <div class="pop-conts">
+	            	<p class="pop-title">아이디 찾기</p>
+	                <table class="tstyle-4">
+	                	<tr>
+	                		<th>이름</th>
+	                		<td><input type="text" class="istyle-1" /></td>
+	                	</tr>
+	                	<tr>
+	                		<th>휴대전화</th>
+	                		<td>
+								<select id="srcMobileNum1" name="srcMobileNum1" class="istyle-11" style="height:22px;">
+										<option value="" selected="selected">선택</option>
+										<option value="010">010</option>
+										<option value="011">011</option>
+										<option value="016">016</option>
+										<option value="017">017</option>
+										<option value="018">018</option>
+										<option value="019">019</option>
+								</select> -
+								<input name="srcMobileNum2" id="srcMobileNum2" type="text"  size="4" maxlength="4 "class="istyle-11"/> -
+								<input name="srcMobileNum3" id="srcMobileNum3" type="text" size="4" maxlength="4" class="istyle-11"/>
+							</td>
+	                	</tr>
+	                </table>
+	            </div>
+	        </div>
+	        <div class="btn-r">
+	        	<a href="#" class="btn-layerClose">확인</a>
+                <a href="#" class="btn-layerClose">닫기</a>
+            </div>
+	    </div>
+	</div>
+	
+	<div class="dim-layer dim-layer2 dl-la2">
+	    <div class="dimBg"></div>
+	    <div id="layer2" class="pop-layer">
+	        <div class="pop-container">
+	            <div class="pop-conts">
+	            	<p class="pop-title">비밀번호 찾기</p>
+	                <table class="tstyle-4">
+	                	<tr>
+	                		<th>이름</th>
+	                		<td><input type="text" class="istyle-1" /></td>
+	                	</tr>
+						<tr>
+	                		<th>아이디</th>
+	                		<td><input type="text" class="istyle-1" /></td>
+	                	</tr>
+						<tr>
+	                		<th>휴대폰</th>
+	                		<td>
+								<select id="srcMobileNum1" name="srcMobileNum1" class="istyle-11" style="height:22px;" >
+										<option value="" selected="selected">선택</option>
+										<option value="010">010</option>
+										<option value="011">011</option>
+										<option value="016">016</option>
+										<option value="017">017</option>
+										<option value="018">018</option>
+										<option value="019">019</option>
+								</select> -
+								<input name="srcMobileNum2" id="srcMobileNum2" type="text"  size="4" maxlength="4 "class="istyle-11"/> -
+								<input name="srcMobileNum3" id="srcMobileNum3" type="text" size="4" maxlength="4" class="istyle-11"/>
+							</td>
+	                	</tr>
+	                </table>
+	            </div>
+	        </div>
+	        <div class="btn-r">
+	        	<a href="#" class="btn-layerClose">확인</a>
+                <a href="#" class="btn-layerClose">닫기</a>
+            </div>
+	    </div>
+	</div>
+		
+</div>
+
+
+	
+</body>
+<script type="text/javascript">
+	/* 레이어팝업 1 */
+	$('.btn-example1').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup($href);
+    });
+    function layer_popup(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer1').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer1').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer1').fadeOut();
+            return false;
+        });
+
+    }
+    
+    /* 레이어팝업 2 */
+	$('.btn-example2').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup2($href);
+    });
+    function layer_popup2(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer2').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer2').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer2').fadeOut();
+            return false;
+        });
+
+    }
+</script>
+</html>

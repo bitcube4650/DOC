@@ -1,0 +1,229 @@
+<div class="dialog_content" title="주문상세조회" style="width:850px;">
+	<div class="dialogInner">
+		<div class="tableSection">
+			<h3 class="mb10">주문자 정보</h3>
+			<div class="topBtnGroup">
+				<button type="button" onclick="javascript:fnOrderSheet();"><i class="fas fa-print"></i> 페이지 출력</button>
+			</div>
+			<div class="tableWrap full bdBot">
+				<table>
+					<colgroup>
+						<col width="65px">
+						<col width="300px">
+						<col width="65px">
+						<col width="160px">
+						<col width="65px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">고객사</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">주문자</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">주문자 TEL</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">권역</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">이수자</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">이수자 TEL</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">공사명</label></th>
+							<td>
+								<div class="addrInp"><input id="" name="" type="text" style="width:195px"><a href="#self">변경</a></div>
+							</td>
+							<th><label for="">물품도착지</label></th>
+							<td colspan="3"><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">비고</label></th>
+							<td colspan="3"><textarea name="" id="" cols="30" rows="10" class="full" style="height:50px"></textarea></td>
+							<th><label for="">감독관</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<td colspan="6">
+								<div class="fileBoxRes">
+									<span><label for="">첨부파일1</label><input id="" name="" type="text" class="full" disabled></span>
+									<span><label for="">첨부파일1</label><input id="" name="" type="text" class="full" disabled></span>
+									<span><label for="">첨부파일1</label><input id="" name="" type="text" class="full last" disabled></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+
+			<h3 class="mb10 mt20">주문상품(일반)</h3>
+			<div class="tableWrap full bdBot">
+				<table>
+					<colgroup>
+						<col width="65px">
+						<col width="300px">
+						<col width="65px">
+						<col width="160px">
+						<col width="65px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">주문번호</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">상품코드</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">상품명</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">규격</label></th>
+							<td>
+								<div class="txtBox" style="width:248px">규격: N 2/5, 재질: 실리콘, 총중량(할증포함): 80g<br />색상: 흑색, TYPE: N, o: 35mm, L: 101mm</div>
+							</td>
+							<th><label for="">표준납기일</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">주문수량</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">주문상태</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">물품도착일</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">공급사번호</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3 class="mb10 mt30">발주정보</h3>
+			<div class="tableWrap type02 mt5 no-bd pb0 pdTable">
+				<table>
+					<colgroup>
+						<col style="width:150px"/>
+						<col style="width:70px"/>
+						<col style="width:auto"/>
+						<col style="width:70px"/>
+						<col style="width:70px"/>
+						<col style="width:100px"/>
+						<col style="width:100px"/>
+						<col style="width:80px"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>주문번호</th>
+							<th>발주차수</th>
+							<th>공급사명</th>
+							<th>발주수량</th>
+							<th>납품수량</th>
+							<th>판매단가</th>
+							<th>판매금액</th>
+							<th>상태</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tc">GEN1907010115-7</td>
+							<td class="tc">1</td>
+							<td class="tc">주식회사 에이스파워</td>
+							<td class="tc">5</td>
+							<td class="tc">5</td>
+							<td class="tr">23,111</td>
+							<td class="tr">231,111</td>
+							<td class="tc"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3 class="mb5 mt30">배송정보</h3>
+			<span class="block mb5"><strong class="blueTx">주문번호[GEN1907010115-7] 발주치수[1]</strong>의 납품정보</span>
+			<div class="tableWrap type02 mt5 no-bd pb0 pdTable">
+				<table>
+					<colgroup>
+						<col style="width:9%"/>
+						<col style="width:9%"/>
+						<col style="width:9%"/>
+						<col style="width:9%"/>
+						<col style="width:85px"/>
+						<col style="width:9%"/>
+						<col style="width:85px"/>
+						<col style="width:9%"/>
+						<col style="width:90px"/>
+						<col style="width:9%"/>
+						<col style="width:110px"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>납품차수</th>
+							<th>인수차수</th>
+							<th>납품수량</th>
+							<th>인수수량</th>
+							<th>납품일시</th>
+							<th>인수자</th>
+							<th>인수일시</th>
+							<th>주문상태</th>
+							<th>배송완료여부</th>
+							<th>운송수단</th>
+							<th>송장번호</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tc">1</td>
+							<td class="tc">1</td>
+							<td class="tc">122</td>
+							<td class="tc">1222</td>
+							<td class="tc">2019-07-04</td>
+							<td class="tc">홍길동</td>
+							<td class="tc">2019-07-07</td>
+							<td class="tc">인수완료</td>
+							<td class="tc">배송완료</td>
+							<td class="tc">로젠택배</td>
+							<td class="tc blueTx"><a href="#self" class="blueTx">940-85-8-0041</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3 class="mb10 mt30">주문변경정보</h3>
+			<div class="tableWrap type02 mt5 no-bd pb0 pdTable">
+				<table>
+					<colgroup>
+						<col style="width:18%"/>
+						<col style="width:25%"/>
+						<col style="width:10%"/>
+						<col style="width:38%"/>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>변경일시</th>
+							<th>변경내용</th>
+							<th>변경자</th>
+							<th>변경사유</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tc vm">2019-07-04 09:30:00</td>
+							<td class="tc vm">주문번호 [GEN1907010115-7] <strong class="block">[배송중] 상태로 변경</strong></td>
+							<td class="tc vm">윤상훈</td>
+							<td class="tc vm"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btnWrap">
+				<button type="button" class="c_gray">닫기</button>
+			</div>
+		</div>
+		
+	</div>
+</div> <!-- // .dialog_content -->

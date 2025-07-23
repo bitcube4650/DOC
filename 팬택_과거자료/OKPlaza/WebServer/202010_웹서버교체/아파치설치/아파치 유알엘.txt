@@ -1,0 +1,23 @@
+https://www.apachelounge.com/download/VC15/
+
+
+https://araikuma.tistory.com/775?category=879108
+
+
+// test서버
+b24 / 8009
+ok / 89
+wms / 8010
+
+// 실서버
+b24 / 6009
+ok / 8009
+wms / 5009
+
+환경변수 path 에 D:\Apache24\bin 추가
+
+httpd.exe -k install -n "Apache2.4_wms" -f "D:\Apache24\conf\httpd_wms.conf"
+httpd.exe -k install -n "Apache2.4_b24" -f "D:\Apache24\conf\httpd_b24.conf"
+httpd.exe -k install -n "Apache2.4_okplza" -f "D:\Apache24\conf\httpd_okplaza.conf"
+
+httpd.exe -k install -n "Apache2.4_bitMp" -f "D:\Apache24\conf\httpd_bitMp.conf"

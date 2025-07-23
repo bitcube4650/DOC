@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="./css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="./jq/buy/plugins.js"></script>
+	<script src="./jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="./css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="./jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="./jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+	<div class="okWrap">
+
+		<div class="okInWrap">
+			<!-- header -->
+			<header class="ok_header">
+				<div class="okUtill">
+					<h1><a href="#self"><img src="./img/buy/logo.png" alt="OK plaza"></a></h1>
+					<section class="">
+						<ul class="h_quick">
+							<li><a href="#self" onclick="javaScript:fnAdmUserInfo();"><i class="fas fa-phone-alt"></i> 담당자 안내</a></li>
+							<li><a href="/system/systemLogout.sys"><i class="fas fa-power-off"></i> 로그아웃</a></li>
+							<li><a href="/buyOrgan/organBuyList.sys?_menuCd=BUY_MY_BORG"><i class="fas fa-cubes"></i> 사업장관리</a></li>
+							<li><a href="/buyOrgan/organBuyUserList.sys?_menuCd=BUY_MY_USER"><i class="fas fa-users"></i> 사용자관리</a></li>
+							<li><a href="javascript:fnUserDetail();"><i class="fas fa-user"></i> 정아름</a></li>
+						</ul>
+						
+						<article>
+							<div class="h_searchForm">
+								<span>상품검색</span>
+								<input type="text" />
+								<button type="button" onclick="javascript:fnTotSearch();">검색</button>
+							</div>
+							<div class="subArea">
+								<select name="" id="">
+									<option value="">씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+								</select>
+								<dl class="h_besiness">
+									<dt>사업장상태</dt>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerIsOrderLimit" /> <label for="headerIsOrderLimit">주문제작</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerPrePay" /> <label for="headerPrePay">수동주문</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerLoanYn" /> <label for="headerLoanYn">여신초과</label></dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+				</div>
+
+				<div class="okMenu">
+					<!-- category -->
+					<section class="allCate">
+						<h2><a href="#self"><i class="fas fa-align-left"></i> 카테고리 전체</a></h2>
+						<ul>
+							<li><a href="#self">공통자재</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">전기/통신</a>
+								<ul>
+									<li><a href="#self">광점퍼코드</a>
+										<ul>
+											<li><a href="#self">등기구</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다가</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">토목</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">건축</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">비품/관리</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">제조 원재로</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="serviceName">
+							<strong>010-2081-0424</strong>
+							<span><a href="mailto:bjh33@sk.com">bjh33@sk.com</a></span>
+							<span>담당자 :  변지희</span>
+						</div>
+					</section>
+					<!-- //category -->
+
+					<nav class="gnb">
+						<ul>
+							<li><a href="#self">주문관리</a></li>
+							<li><a href="#self">인수/반품</a></li>
+							<li><a href="#self">정산관리</a></li>
+							<li><a href="#self">상품관리</a></li>
+							<li><a href="#self">재고관리</a></li>
+							<li><a href="#self">고객센터</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- // header -->
+
+			<!-- ok_container -->
+			<div class="ok_container">
+				<!-- ok_contents -->
+				<div class="ok_contents">
+
+					<!-- innerBody -->
+					<div class="innerBody">
+						<div class="subBoxWrap">
+							<h3 class="tit_red">구매이력 조회</h3>
+
+							<div class="topBtnGroup">
+								<button type="button" class="greenBtn"><i class="fas fa-file-excel"></i> 엑셀다운</button>
+								<button type="button" class="redBtn"><i class="fas fa-search"></i> 조회</button>
+							</div>
+
+							<form id="frmSearch" name="frmSearch" onsubmit="return false;">
+							<input type="hidden" id="hnsRole" name="hnsRole" value="">
+								<div class="tableSection">
+									<div class="tableWrap full">
+										<table>
+											<colgroup>
+												<col width="60px">
+												<col width="250px">
+												<col width="60px">
+												<col width="250px">
+												<col width="60px">
+												<col width="auto">
+											</colgroup>
+											<tbody>
+												<tr>
+													<th><label for="srcOrderNumber">주문번호</label></th>
+													<td><input type="text" id="srcOrderNumber" name="srcOrderNumber" style="width:190px;"></td>
+													<th>주문상태</th>
+													<td>
+														<select id="srcOrderStatusFlag" name="srcOrderStatusFlag" class="ui_select" onchange="javascript:changeOrderStatusFlag();" style="width:212px">
+															<option value="">전체</option>
+															<option value="05">승인요청</option>
+															<option value="10">주문요청</option>
+															<option value="40">주문의뢰</option>
+															<option value="50">주문접수</option>
+															<option value="60">배송중</option>
+															<option value="70">인수완료</option>
+															<option value="80">반품완료</option>
+															<option value="99">주문취소</option>
+														</select>
+													</td>
+													<td colspan="2">
+														<select id="srcOrderDateFlag" name="srcOrderDateFlag" class="ui_select" style="width:138px">
+															<option value="">주문일</option>
+															<option value="1">발주일</option>
+															<option value="2">배송일</option>
+															<option value="4">인수일</option>
+															<option value="9">세금계산서일</option>
+														</select>
+														<div class="date">
+															<span><input type="text" id="srcOrdStartDate" name="srcOrdStartDate" class="js_datepicker" readonly="readonly"></span>
+															<span><input type="text" id="srcOrdEndDate" name="srcOrdEndDate" class="js_datepicker" readonly="readonly"></span>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th><label for="srcGoodName">상품명</label></th>
+													<td><input type="text" id="srcGoodName" name="srcGoodName" style="width:190px;"></td>
+													<th><label for="srcGoodIdenNumb">상품코드</label></th>
+													<td><input type="text" id="srcGoodIdenNumb" name="srcGoodIdenNumb" style="width:190px;"></td>
+													<th><label for="srcTCode">FIMS코드</label></th>
+													<td><input type="text" id="srcTCode" name="srcTCode" style="width:336px;"></td>
+												</tr>
+												<tr>
+													<input type="hidden" id="srcBranchId" name="srcBranchId" value="304456">
+													<th>주문자</th>
+													<input type="hidden" id="borgId" name="borgId" value="304456">
+													<td id="userIdList">
+														<select id="srcOrderUserId" name="srcOrderUserId" class="ui_select" style="width:212px">
+															<option value="">전체</option>
+															<option value="301799" selected="selected">정아름</option>
+															<option value="302063">SKTS 공용</option>
+															<option value="302304">테스트_나용호</option>
+															<option value="301543">PS&amp;M</option>
+														</select>
+													</td>
+													<th>계산서발행</th>
+													<td>
+														<select id="srcIsBill" name="srcIsBill" class="ui_select" style="width:212px">
+															<option value="">전체</option>
+															<option value="1">발행</option>
+															<option value="0">미발행</option>
+														</select>
+													</td>
+													<th>자재유형</th>
+													<td>
+														<select id="srcGoodType" name="srcGoodType" class="ui_select" style="width:358px">
+															<option value="">전체</option>
+															<option value="20">지정</option>
+															<option value="10">일반</option>
+															<option value="60">공구</option>
+															<option value="70">안전</option>
+															<option value="80">보안</option>
+															<option value="90">B24</option>
+														</select>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</form>
+
+
+							<script type="text/javascript">
+								var mydata = [
+									{id:"1",invdate:"2010-05-24",name:"test",note:"note",tax:"10.00",total:"2111.00"} ,
+									{id:"1",invdate:"2010-05-24",name:"test",note:"note",tax:"10.00",total:"2111.00"}
+								];
+
+								$(function(){
+								  jQuery("#list").jqGrid({
+								   data: mydata,
+								   datatype: "local",
+
+								   height: 460,
+								   rowNum: 10,
+								   rowList: [10,20,30],
+								   colNames:['주문일자',					'주문<br/>유형',		'주문<br/>상태',
+
+										'주문번호',					'카테고리',					'상품명',					'자재유형',					'규격',
+										'상품코드',					'단위',						'판매단가',					'수량',						'낱개수',
+										'판매금액',					'공급사',					'공급사 연락처',			'인수일',					'세금<br/>계산서일',
+										'매입세금<br/>계산서일',	'납품<br/>요청일',			'공사유형',					'발주차수',					'발주수량',
+										'출하차수',					'출하수량',					'인수차수',					'인수수량',					'매출확정자',
+										'매입확정자',				'공사명',					'구매사',					'구매사사업자등록번호',		'권역',
+										'공급사사업자등록번호',		'주문자',					'인수자',					'인수자<br/>전화번호',		'disp_good_id',
+										'vendorid',					'sum_total_sale_unit_pric',	'sum_quantity',				'공사유형 담당자',			'발주일',
+										'출하일',					'배송정보입력일',			'자동인수여부',				'비고',						'상품 실적년도',
+										'카테고리 진열명',			'법인ID',					'사업장ID',					'공급사ID',					'is_add_good',
+										'SUM_SALE_PROD_AMOU'
+							],
+								   colModel	: [
+										{name:'REGI_DATE_TIME',				index:'REGI_DATE_TIME',				width:80,		sortable:false,	align:"center", formatter:"date"},	//주문일자
+										{name:'ORDE_TYPE_CLAS',				index:'ORDE_TYPE_CLAS',				width:40,		sortable:false,	align:"center"},					//주문유형
+										{name:'STAT_FLAG_NAME',				index:'STAT_FLAG_NAME',				width:60,		sortable:false,	align:"center"},					//주문상태
+
+										
+										{name:'ORDE_IDEN_NUMB',				index:'ORDE_IDEN_NUMB',				width:125,		sortable:false,	align:"left"},						//주문번호
+										{name:'CATE_NM1',					index:'CATE_NM',					width:200,		sortable:false,	align:"left"},						//카테고리
+										{name:'GOOD_NAME',					index:'GOOD_NAME',					width:200,		sortable:false,	align:"left"},						//상품명
+										{name:'GOOD_CLAS_CODE',				index:'GOOD_CLAS_CODE',				width:55,		sortable:false,	align:"center"},					//자재유형
+										{name:'GOOD_SPEC',					index:'GOOD_SPEC',					width:120,		sortable:false,	align:"left"},						//상품규격
+										
+										{name:'GOOD_IDEN_NUMB',				index:'GOOD_IDEN_NUMB',				width:80,		sortable:false,	align:"left"},						//상품코드
+										{name:'ORDE_CLAS_CODE',				index:'ORDE_CLAS_CODE',				width:45,		sortable:false,	align:"center"},					//단위
+										{name:'ORDE_REQU_PRICE',			index:'ORDE_REQU_PRICE',			width:100,		sortable:false,	align:"right",
+											sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"" }},	//판매단가
+										{name:'QUANTITY',					index:'QUANTITY',					width:40,		sortable:false,	align:"right",
+												sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"" }},//수량
+										{name:'PACKAGE_QUAN',				index:'PACKAGE_QUAN',				width:40,		sortable:false,	align:"right"},						//낱개수
+										
+										{name:'TOTAL_ORDE_REQU_PRIC',		index:'TOTAL_ORDE_REQU_PRIC',		width:70,		sortable:false,	align:"right",
+											sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"" }},	//판매금액
+										{name:'VENDORNM',					index:'VENDORNM',					width:120,		sortable:false,	align:"left"},						//공급사
+										{name:'PHONENUM',					index:'PHONENUM',					width:120,		sortable:false,	align:"left"},						//공급사연락처
+										{name:'RECE_REGI_DATE',				index:'RECE_REGI_DATE',				width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//인수일
+										{name:'CLOS_SALE_DATE',				index:'CLOS_SALE_DATE',				width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//매출세금계산서일
+										
+										{name:'CLOS_BUYI_DATE',				index:'CLOS_BUYI_DATE',				width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date", hidden:true, hidedlg:true},//매입세금계산서일
+										{name:'REQU_DELI_DATE',				index:'REQU_DELI_DATE',				width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//납품요청일
+										{name:'WORKNM',						index:'WORKNM',						width:100,		sortable:false,	align:"left"},//공사유형
+										{name:'PURC_IDEN_NUMB',				index:'PURC_IDEN_NUMB',				width:60,		sortable:false,	align:"center"},//납품차수
+										{name:'PURC_IDEN_QUAN',				index:'PURC_IDEN_QUAN',				width:60,		sortable:false,	align:"right",  sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"" }},
+										
+										{name:'DELI_IDEN_NUMB',				index:'DELI_IDEN_NUMB',				width:60,		sortable:false,	align:"center"},
+										{name:'DELI_IDEN_QUAN',				index:'DELI_IDEN_QUAN',				width:60,		sortable:false,	align:"right",  sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"", defaultValue: '' }},
+										{name:'RECE_IDEN_NUMB',				index:'RECE_IDEN_NUMB',				width:60,		sortable:false,	align:"center"},
+										{name:'RECE_IDEN_QUAN',				index:'RECE_IDEN_QUAN',				width:60,		sortable:false,	align:"right",  sorttype:'integer', formatter:'integer', formatoptions:{ decimalSeparator:"", thousandsSeparator:",", decimalPlaces: 0, prefix:"" ,defaultValue: ''}},
+										{name:'SALE_SEQU_NUMB',				index:'SALE_SEQU_NUMB',				width:70,		sortable:false,	align:"center", hidden:true},//매출 id
+										
+										{name:'BUYI_SEQU_NUMB',				index:'BUYI_SEQU_NUMB',				width:70,		sortable:false,	align:"center", hidden:true},//매입 id
+										{name:'CONS_IDEN_NAME',				index:'CONS_IDEN_NAME',				width:200,		sortable:false,	align:"left"},//공사명
+										{name:'BRANCHNM',					index:'BRANCHNM',					width:120,		sortable:false,	align:"left" },//고객사
+										{name:'BCHBUSINESSNUM',				index:'BCHBUSINESSNUM',				width:120,		sortable:false,	align:"center", hidden:true},//고객사사업자등록번호
+										{name:'DELI_AREA_NAME',				index:'DELI_AREA_NAME',				width:60,		sortable:false,	align:"center", hidden:true},//권역
+										
+										{name:'VENBUSINESSNUM',				index:'VENBUSINESSNUM',				width:120,		sortable:false,	align:"center", hidden:true},//공급사사업자등록번호
+										{name:'USERNM',						index:'USERNM',						width:70,		sortable:false,	align:"left"},//주문자
+										{name:'TRAN_USER_NAME',				index:'TRAN_USER_NAME',				width:70,		sortable:false,	align:"left"},//인수자
+										{name:'TRAN_TELE_NUMB',				index:'TRAN_TELE_NUMB',				width:100,		sortable:false,	align:"right", hidden:true},//인수자 전화번호
+										{name:'DISP_GOOD_ID',				index:'DISP_GOOD_ID',				hidden:true,	hidedlg:true},
+										
+										{name:'VENDORID',					index:'VENDORID',					hidden:true,	hidedlg:true},
+										{name:'SUM_TOTAL_SALE_UNIT_PRIC',	index:'SUM_TOTAL_SALE_UNIT_PRIC',	hidden:true,	hidedlg:true},
+										{name:'SUM_QUANTITY',				index:'SUM_QUANTITY',				search:false,	sortable:false,	hidden:true, hidedlg:true},
+										{name:'WORKUSERNM',					index:'WORKUSERNM',					width:100,		sortable:false,	align:"left"},//주문자
+										{name:'CLIN_DATE',					index:'CLIN_DATE',					width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//발주일
+										
+										{name:'DELI_DEGR_DATE',				index:'DELI_DEGR_DATE',				width:80,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//출하일
+										{name:'INVOICEDATE',				index:'INVOICEDATE',				width:100,		sortable:false,	align:"center", sorttype:"date", formatter:"date"},//송장저장일
+										{name:'AUTO_RECEIVE',				index:'AUTO_RECEIVE',				width:90,		sortable:false,	align:"center"},	//자동인수여부
+										{name:'ADDE_TEXT_DESC',				index:'ADDE_TEXT_DESC',				width:90,		sortable:false,	align:"left"},	//비고
+										{name:'GOOD_REG_YEAR',				index:'GOOD_REG_YEAR',				width:100,		sortable:false,	align:"center", hidden:true, hidedlg:true},//상품실적년도
+										
+										{name:'FULL_CATE_NAME',				index:'FULL_CATE_NAME',				width:250,		sortable:false,	align:"left",   hidden:true, hidedlg:true},//풀카테고리명
+										{name:'CLIENTID',					index:'CLIENTID',					width:250,		sortable:false,	align:"left",   hidden:true, hidedlg:true },//법인ID
+										{name:'BRANCHID',					index:'BRANCHID',					width:250,		sortable:false,	align:"left",   hidden:true, hidedlg:true },//사업장ID
+										{name:'VENDORID',					index:'VENDORID',					width:250,		sortable:false,	align:"left",   hidden:true, hidedlg:true },//공급사ID
+										{name:'IS_ADD_GOOD',				index:'IS_ADD_GOOD',				hidden:true,	hidedlg:true },
+										
+										{name:'SUM_SALE_PROD_AMOU',			index:'SUM_SALE_PROD_AMOU',			hidden:true,	hidedlg:true}	//총 금액
+									],
+
+									pager: "#plist",
+									viewrecords: true,
+								   autowidth:true, 
+									shrinkToFit:false,
+									forceFit:true,
+								});
+							});
+
+
+							</script>
+
+
+							<div class="topBtnGroup static">
+								<button type="button" class="grayBtn"><i class="fas fa-wrench"></i> 개인별 항목 설정</button>
+								<select name="" id="" class="ui_select">
+									<option value="">300</option>
+									<option value="">300</option>
+									<option value="">300</option>
+									<option value="">300</option>
+									<option value="">300</option>
+								</select>
+							</div>
+
+							<div class="tableWrap type02 jqGridWrap">
+								<table id="list"></table>
+								<div id="plist"></div>
+							</div>
+
+						</div>
+
+					</div>
+					<!-- //innerBody -->
+
+				</div>
+				<!-- //ok_contents -->
+
+			</div>
+			<!-- //ok_container -->
+
+			<!-- footer -->
+			<footer class="footer">
+				<!-- <ul class="mFootMenu">
+					<li><a href="#self" class="fMenu01">물품공급 기본계약서</a></li>
+					<li><a href="#self" class="fMenu02">특별계약서</a></li>
+					<li><a href="#self" class="fMenu03">윤리서약서</a></li>
+					<li><a href="#self" class="fMenu04">신규고객 결제안내</a></li>
+					<li><a href="#self" class="fMenu05">고객의 소리</a></li>
+					<li><a href="#self" class="fMenu06">담당자 안내</a></li>
+					<li><a href="#self" class="fMenu07">화면공유상담</a></li>
+					<li><a href="#self" class="fMenu08">신규상품제안</a></li>
+				</ul> -->
+				<div class="footInfo">
+					<h2 class="logo"><a href="#self"><img src="./img/buy/foot_logo.png" alt="SK telesys"></a></h2>
+					<div class="com_info">
+						<address>서울특별시 중구 남대문로 10길 9</address>
+						<p>Copyright SK telesys Co, LTD. All Rights Reserved.</p>
+					</div>
+					<ul class="link">
+						<li><a href="#self">개인정보 처리방침</a></li>
+						<li><a href="#self">이메일무단수집거부</a></li>
+						<li><a href="mailto:bjh33@sk.com">담당자 : 변지희 (010-2081-0424 / bjh33@sk.com)</a></li>
+					</ul>
+					<p class="foot_banner"><a href="#self"><img src="./img/buy/foot_banner.png" alt="임직원 &amp; 협력사 전용 몰"></a></p>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+		<!-- //okInWrap -->
+
+		<div class="ok_quick">
+			<h3>QUICK<br />MENU</h3>
+			<ul class="quickList">
+				<li class="ico_q1"><a href="#self">장바구니 <span>2</span></a></li>
+				<li class="ico_q2"><a href="#self">관심상품 <span>4</span></a></li>
+				<li class="ico_q3"><a href="#self">구매이력<br/>조회</a></li>
+				<li class="ico_q4"><a href="#self">주문취소<br/>요청</a></li>
+				<li class="ico_q5"><a href="#self">반품처리<br/>요청</a></li>
+				<li class="ico_q6"><a href="#self">신규상품<br/>요청이력</a></li>
+			</ul>
+
+			<div class="quickRoll">
+				<h3>최근본 상품 <a href="#self">15</a></h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl">
+					<ul class="control-area">
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>222 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>3333 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<div class="quickRoll">
+				<h3>추천상품</h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl ">
+					<ul class="control-area">
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<button type="button" class="goTop">TOP</button>
+		</div>
+		
+	</div><!-- //okWrap -->
+
+</body>
+</html>

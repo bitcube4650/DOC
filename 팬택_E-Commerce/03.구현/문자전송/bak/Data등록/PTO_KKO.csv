@@ -1,0 +1,17 @@
+TEMPLATE_CD,SEND_TYPE,SEND_SVC,TITLE,CONTENTS,DESCRIPTION
+Pantaon101,SMS,PTO,로그인페이지 > 아이디 찾기,[팬타온] 고객님의 아이디는 #{userId} 입니다.,아이디 찾는 사용자
+Pantaon102,SMS,PTO,로그인페이지 > 비밀번호 찾기,[팬타온] 초기화 된 비밀번호는 #{userPwd} 입니다.,비밀번호 찾는 사용자
+Pantaon001,KKO,PTO,회원가입 완료시,[팬타온] #{userNm}님의 회원가입을 축하드립니다.,고객(구매자)
+Pantaon002,KKO,PTO,회원탈퇴 완료 시,[팬타온] #{userNm}님의 회원탈퇴 처리가 완료되었습니다.,고객(구매자)
+Pantaon003,KKO,PTO,회원정보 변경완료 시,[팬타온] #{userNm}님의 회원정보가 변경되었습니다.,고객(구매자)
+Pantaon004,KKO,PTO,주문 결제완료 시,[팬타온] 주문번호 [#{orderNum}] 건에 대한 주문이 결제완료되었습니다. 고객명 : [#{userNm}] 상품명 : [#{goodName}],고객(구매자)
+Pantaon005,KKO,PTO,주문취소 완료 시,[팬타온] 주문번호 [#{orderNum}] 건에 대한 주문이 결제취소되었습니다. 고객명 : [#{userNm}] 상품명 : [#{goodName}],고객(구매자)
+Pantaon006,KKO,PTO,택배사에서 배송 시작 시,"[팬타온] [#{vendorNm}]에서 [#{orde_iden_numb}-#{orde_sequ_numb}], [#{good_name} 상품]에 대하여 배송처리 하였습니다. * #{vendorNm} + 배송 문의: #{phonenum}, 송장번호: #{deli_invo_iden}",고객(구매자)
+Pantaon007,KKO,PTO,구매자가 교환요청 신청시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 교환요청이 왔습니다.,공급사(담당자)
+Pantaon008,KKO,PTO,공급사가 교환요청 거부 시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 교환요청이 거부 되었습니다.,고객(구매자)
+Pantaon009,KKO,PTO,공급사가 교환요청 승인 시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 교환요청이 승인 되었습니다.,고객(구매자)
+Pantaon010,KKO,PTO,구매자가 반품요청 신청시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 반품요청이 왔습니다.,공급사(담당자)
+Pantaon011,KKO,PTO,공급사가 반품요청 거부 시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 반품요청이 거부 되었습니다.,고객(구매자)
+Pantaon012,KKO,PTO,공급사가 반품요청 승인 시,[팬타온] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 반품요청이 승인 되었습니다.,고객(구매자)
+Pantaon013,KKO,PTO,상품문의 답글 생성 시,[팬타온] #{userNm} 님의 상품문의에 대한 답글이 등록되었습니다. 확인해주세요.,고객(구매자)
+Pantaon014,KKO,PTO,1:1문의 답변 생성 시,[팬타온] #{userNm} 님의 1:1문의에 대한 답변이 등록되었습니다. 확인해주세요.,고객(구매자)

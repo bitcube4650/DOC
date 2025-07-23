@@ -1,0 +1,97 @@
+<div class="dialog_content" title="배송지 관리" style="width:700px;">
+	<div class="tableSection">
+		<div class="tableWrap">
+			<table width="100%">
+				<colgroup>
+					<col style="width:90px"/>
+					<col style="width:auto"/>
+				</colgroup>
+				<tbody>
+					<tr>
+						<th><label for="shippingPlaceManageDiv">배송지명</label></th>
+						<td><input id="shippingPlaceManageDiv" name="shippingPlaceManageDiv" type="text" size="30" maxlength="50"></td>
+					</tr>
+					<tr>
+						<th><label for="btnShippingPostManageDiv">주소</label></th>
+						<td>
+							<span style="display:block">
+								<input id="shippingPostManageDiv" name="shippingPostManageDiv" type="text" size="7" disabled="disabled" style="width:132px;margin-right:7px">
+								<button type="button" id="btnShippingPostManageDiv" class="grayBtn"><i class="fas fa-search"></i> 검색</button>
+							</span>
+							<input id="shippingAddressManageDiv" name="shippingAddressManageDiv" type="text" size="50" class="input_text_none" disabled="disabled" readonly="readonly" style="width: 525px;margin-top:10px">
+							<input id="shippingAddressDescManageDiv" name="shippingAddressDescManageDiv" type="text" size="50" maxlength="50" style=" width: 525px;margin-top:10px">
+						</td>
+					</tr>
+					<tr>
+						<th><label for="tranUserNameDiv">인수자</label></th>
+						<td><input id="tranUserNameDiv" name="tranUserNameDiv" type="text" size="30" maxlength="20" style="width:525px"></td>
+					</tr>
+					<tr>
+						<th><label for="tranTeleNumbDiv">인수자 전화번호</label></th>
+						<td><input id="tranTeleNumbDiv" name="tranTeleNumbDiv" type="text" size="30" maxlength="13" style="width:525px"></td>
+					</tr>
+					<tr>
+						<th><label for="isDefaultDiv">기본 배송지 여부</label></th>
+						<td>
+							<select class="ui_select" name="isDefaultDiv" id="isDefaultDiv" style="width:150px">
+								<option value="0">아니오</option>
+								<option value="1">예</option>
+							</select>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<div class="btnWrap">
+			<button type="button" class="c_red">요청</button>
+		</div>
+
+		<!-- topBtnGroup -->
+		<div class="topBtnGroup static">
+			<button type="button" class="grayBtn">기본 배송지로 변경</button>
+			<button type="button" class="borderBtn" style="background:#fff"> 수정</button>
+			<button type="button" class="borderBtn" style="background:#fff"> 삭제</button>
+		</div>
+		<!-- //topBtnGroup -->
+
+		
+		<div class="tableWrap type02" style="margin-top:10px;border:none;padding:0">
+			<div class="scrollTable">
+				<table id="stockManageList" style="width:900px;">
+					<thead>
+						<tr>
+							<th style="width:120px">배송지명</th>
+							<th style="width:500px">배송지주소</th>
+							<th style="width:100px">인수자</th>
+							<th style="width:100px">인수자 전화번호</th>
+							<th style="width:80px">기본배송지</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="tc">공릉동미주아파트</td>
+							<td>01809 서울 노원구 공릉로58길 111 (하계동, 아주아파트) 테스트상세	</td>
+							<td class="tc">인수자</td>
+							<td class="tc">010-1234-1234</td>
+							<td class="tc">예</td>
+						</tr>
+						<tr>
+							<td class="tc">미주아파트</td>
+							<td>01809 서울 노원구 공릉로58길 111 (하계동, 아주아파트) </td>
+							<td class="tc">인수자</td>
+							<td class="tc">010-1234-1234</td>
+							<td class="tc">아니오</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="btnWrap">
+				<button type="button" class="c_red">선택</button>
+				<button type="button" class="c_gray">닫기</button>
+			</div>
+		</div>
+	</div>
+
+</div> <!-- // .dialog_content -->

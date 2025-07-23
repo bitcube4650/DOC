@@ -1,0 +1,47 @@
+<div class="dialog_content" title="바코드 입출고 처리" style="width:700px;">
+	<div class="dialogInner">
+		<div class="tableSection">
+			<div class="btnWrap bdBot pb15 mb10" style="margin:0;text-align:right">
+				<button type="button" class="grayBtn">바코드 입력 활성화</button>
+				<button type="button" class="redBtn"><i class="fas fa-search"></i> 조회</button>
+			</div>
+			<div class="tableWrap full no-bd">
+				<table>
+					<colgroup>
+						<col width="70px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">바코드</label></th>
+							<td>
+								<input id="" name="" type="text" style="width:200px">
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">처리유형</label></th>
+							<td>
+								<div>
+									<span class="ui_chk grayChk"><input type="checkbox" id="ipChi1"><label for="ipChi1">자재입고</label></span>
+									<span class="ui_chk grayChk ml10"><input type="checkbox" id="ipChi2"><label for="ipChi2">자재반납입고</label></span>
+									<span class="ui_chk grayChk ml10"><input type="checkbox" id="ipChi3"><label for="ipChi3">자재출고</label></span>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tableWrap type02 mt0 pt0 pb0 no-bd">
+				그리드테이블
+				<table id="list"></table>
+				<div id="plist"></div>
+			</div>
+
+		</div>
+		<div class="btnWrap">
+			<button type="button" class="c_red">입/출고</button>
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+	</div>
+</div> <!-- // .dialog_content -->

@@ -1,0 +1,57 @@
+TEMPLATE_CD,SEND_TYPE,SEND_SVC,TITLE,CONTENTS,DESCRIPTION
+OKPlaza037,SMS,OKP,아이디찾기,[#{svcName}] 해당 사업자번호로 가입된 아이디는 #{loginId}입니다.,제안자
+OKPlaza038,SMS,OKP,비밀번호 초기화,[#{svcName}] 초기화된 비밀번호는 #{newPwd}입니다.,제안자
+OKPlaza055,SMS,OKP,잠금 상태 해제,"[#{svcName}] 사용 계정의 잠금 해제 처리가 완료되었습니다. 새로운 비밀번호는 [#{randPassword}""] 입니다",잠김해제 사용자
+OKPlaza070,SMS,OKP,로그인 인증번호,[#{svcName}] 로그인 인증번호는 [#{authNumber}] 입니다,로그인 사용자
+OKPlaza071,SMS,OKP,비번 오류 10회이상 계정 잠금 시,[#{svcName}] #{loginId} 계정이 잠금처리 되었습니다.,로그인 사용자
+OKPlaza072-1,SMS,OKP,아이디 분실 시,[#{svcName}] 요청하신 로그인 아이디는 [#{loginid}] 입니다,로그인 사용자
+OKPlaza072-2,SMS,OKP,비밀번호 분실 시,[#{svcName}] 요청하신 로그인 비밀번호는 [#{randPassword}] 입니다,로그인 사용자
+OKPlaza001,KKO,OKP,물량배분 주문요청 시,[#{svcName}] [#{branchNm}]의 [#{goodName}] 물량배분주문 요청이 왔습니다.,주문사업장 공사유형 담당자
+OKPlaza005,KKO,OKP,주문취소 요청,[#{svcName}] 주문번호 [#{ordeIdenNumb}-#{ordeSequNumb}] 의 주문취소 요청이 있습니다. 미 확인 처리시에는 10일이후 자동취소처리됩니다.,주문 공급사 사용자
+OKPlaza009,KKO,OKP,인수처리 시,[#{svcName}] [#{branchNm}]에서 인수확인 하였습니다.,주문 공급사 사용자
+OKPlaza014,KKO,OKP,주문변경 시,[#{svcName}] 주문번호 #{ordeIdenNumb}-#{ordeSequNumb}의 #{orderInfo}가 변경 되었으니 OK plaza에서 반드시 확인 바랍니다.,주문 공급사 사용자
+OKPlaza018,KKO,OKP,공급사 주문접수 거부,[#{svcName}] 공급사 [#{vendorNm}] 에서 [#{ordeIdenNumb}-#{ordeSequNumb}]를 주문 접수 거부 하였습니다.,주문사업장 공사유형 담당자
+OKPlaza019,KKO,OKP,반품요청 시,[#{svcName}] 주문번호 #{ordeIdenNumb}-#{ordeSequNumb}의 반품요청이 왔습니다.,주문 공급사 사용자
+OKPlaza022,KKO,OKP,반품철회 시,[#{svcName}] 주문번호 [#{ordeIdenNumb}-#{ordeSequNumb}]의 반품요청이 철회되었습니다.,주문 공급사 사용자
+OKPlaza029,KKO,OKP,여신초과 주문 시,[#{svcName}] 주문번호 [#{ordeIdenNumb}] 여신초과 주문처리 요청이 왔습니다.,운영사 코드관리(BONDS_MANAGER)에 회계담당자로 지정된 사용자
+OKPlaza030,KKO,OKP,공급사 상품등록요청 시,[#{svcName}] [#{borgNm}] 공급사 상품등록 요청이 도착하였습니다.,운영사 상품담당자
+OKPlaza047,KKO,OKP,고객사 질의응답 등록 시,[#{svcName}] 질의응답 게시판에 글이 등록 되었습니다.,코드 질의유형(REQU_STAT_FLAG) 담당자에게 발송
+OKPlaza048,KKO,OKP,질의응답 답변 등록,[#{svcName}] 등록하신 질의응답 게시판에 답변 글이 등록 되었습니다.,질의자에게 발송
+OKPlaza049,KKO,OKP,법인 등록 요청 시,[#{svcName}] [#{clientNm}]에서 구매사 등록을 요청하였습니다,코드 (ORGAN_REQ_SMS) 담당자에게 발송
+OKPlaza050,KKO,OKP,홈앤서비스 재고조사 등록 or 수정 시,"#{svcName}] 재고조사 승인 요청 건이 있습니다. ""HOMS>재고/예산>재고조사""화면에서 확인해 주시길 바랍니다.",(As-Is)사업장의 지점장 권한을 가진 사용자에게 발송 => (To-Be) 사업장의 감독관에게 발송
+OKPlaza053,KKO,OKP,공급사 등록요청 시,[#{svcName}] [#{vendorNm}]에서 공급사등록을 요청하였습니다,B2B운영자권한(ADM_B2B_MAN)
+OKPlaza057,KKO,OKP,고객사상품등록요청 시,[#{svcName}] [#{borgNm}] 고객사 상품등록요청을 하였습니다.,사업장 공사유형 담당자
+OKPlaza060,KKO,OKP,홈앤서비스 1단계 상품승인 시,#{svcName}] 상품등록/단가변경 승인요청이 있습니다.,"HNS_경영지원팀(BRANCHID : 306164)에 속해있고, HNS본사관리자 권한을 가진 사용자"
+OKPlaza061,KKO,OKP,홈앤서비스 상품승인 반려 시,[#{svcName}] 상품등록 or 상품가격변동 요청 건이 반려 되었습니다. #{goodName} (#{goodIdenNumb}),상품담당자(MCGOOD)
+OKPlaza069,KKO,OKP,예산 증액 요청 시,[#{svcName}] #{branchNm} 센터에서 예산 증액이 신청되었습니다.,"해당 사업장(지점) 또는 상위 사업장(센터)의 
+본사관리자"
+OKPlaza073,KKO,OKP,선입금시 주문자에게 SMS 발송,[#{svcName}] 주문하신 건 ...에 대한 ...원을 선입금하여 주시길 바랍니다.,주문자
+OKPlaza074,KKO,OKP,승인 요청 상태인 경우 감독관에게 SMS 발송,[#{svcName}] 주문번호 [#{ordeIdenNumb}] 건에 대한 주문 승인 요청이 왔습니다. 고객사명 : [#{branchNm}] 상품명 : [#{goodName}],감독관
+OKPlaza076,KKO,OKP,출하 시 (일반),"[#{svcName}] [#{vendorNm}]에서 [#{orde_iden_numb}-#{orde_sequ_numb}], [#{good_name} 상품]에 대하여 배송처리 하였습니다. * #{vendorNm} 배송 문의: #{phonenum}, 송장번호: #{deli_invo_iden}",인수자
+OKPlaza081,KKO,OKP,발주거부 시,[#{svcName}] 공급사 [#{vendorNm}] 에서 [#{orde_iden_numb}-#{orde_sequ_numb}]를 주문 접수 거부 하였습니다.,인수자
+OKPlaza082,KKO,OKP,주문접수 시,"[#{svcName}] [#{vendorNm}]에서 [#{orde_iden_numb}-#{orde_sequ_numb}], [#{goodName}]에 대하여 #{deliDate}에 납품 예정입니다. * #{vendorNm} 배송 문의 : #{vendorPhone}",주문자
+OKPlaza083,KKO,OKP,반품승인 시,[#{svcName}] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 반품요청이 승인 되었습니다.,주문자
+OKPlaza084,KKO,OKP,반품거부 시,[#{svcName}] 주문번호 [#{orde_iden_numb}-#{orde_sequ_numb}] 의 반품요청이 거부 되었습니다.,주문자
+OKPlaza099,KKO,OKP,공급사 SMS 발송,[#{svcName}] 주문의뢰 정보가 있습니다. 주문접수 처리 요청 드립니다.,공급사 사용자
+OKPlaza100,KKO,OKP,주문의뢰시 물류센터 사용자에게 SMS 전송,[#{svcName}] 배송준비 처리 할 주문이 있습니다. 확인 부탁드립니다.,"물류센타 담당자, 권한코드(CEN_MNG)"
+OKPlaza101-1,KKO,OKP,공급사 단가변경,[#{svcName}] 공급사 [#{vendorNm}]에서 상품 [#{goodName}]의 단가변경요청 하였습니다,운영사 상품담당자
+OKPlaza101-2,KKO,OKP,공급사 단종요청,[#{svcName}] 공급사 [#{vendorNm}]에서 상품 [#{goodName}]의 단종요청 하였습니다,운영사 상품담당자
+OKPlaza101-3,KKO,OKP,공급사 재등록요청,[#{svcName}] 공급사 [#{vendorNm}]에서 상품 [#{goodName}]의 재등록요청 하였습니다,운영사 상품담당자
+OKPlaza102,KKO,OKP,재고조사 등록 시,[#{svcName}] #{month}월 재고조사 등록 대기/승인 건이 있습니다. HOMS > 재고/예산관리 > 재고조사 화면에서 확인해주시길 바랍니다.,해당 사업장 감독관(기존엔 재고조사 담당자였음)
+OKPlaza054,KKO,OKP,사업장 생성,[#{svcName}] 구매사 [#{clientNm}]에서 사업장 [#{borgNm}] 가(이) 생성 되었습니다,사업장 공사유형 담당자
+OKPlaza056,KKO,OKP,신규상품등록 반려,[#{svcName}] 신규 등록 요청하신 상품이 반려 처리 되었습니다. 자세한 내용은 상품제안>상품소싱요청>신규상품요청 이력에서 확인해 주시길 바랍니다. (발신자 : #{userNm}),신규상품 등록자
+OKPlaza058,KKO,OKP,고객사상품등록요청 기상품 처리,[#{svcName}] 신규 등록 요청하신 상품이 등록 처리 되었습니다. 자세한 내용은 상품관리>신규상품요청 에서 확인해 주시길 바랍니다. (발신자 : #{userNm}),신규상품 등록자
+OKPlaza059,KKO,OKP,상품 승인 반려 시,[#{svcName}] 상품가격변동 요청 건이 반려 되었습니다. #{goodName} (#{good_iden_numb}),상품담당자(MCGOOD)
+OKPlaza036,KKO,OKP,출고접수 > 재고 부족 시 (배송가능수량+입고대기-주문수량) 이 마이너스일 경우(매일 오전 10시 15분),[#{svcName}] WMS(#{borgNm})에 출고 재고 부족한 품목이 #{orderCnt}건 있습니다. 확인 조치해주시길 바랍니다.,운영사 상품당당자
+OKPlaza063,KKO,OKP,HOMS 미승인 주문 스케줄,[#{svcName}] 승인처리 대상이 있습니다.,HNS 주문 미승인자
+OKPlaza064,KKO,OKP,홈앤서비스 미 인수 주문건 스케줄,[#{svcName}] #{branchNm}에 미 인수 주문 #{noReceiveCnt}건이 있습니다.,주문자
+OKPlaza065,KKO,OKP,홈앤서비스 주문 승인 요청 스케줄,#{svcName}] 주문 승인 요청이 왔습니다.,주문한지 0분~30분 사이의 주문에 대해 미승인된 주문 지점장(감독관으로 변경)에게 발송
+OKPlaza066,KKO,OKP,매입승인 결과 스케줄,"[#{svcName}] WMS 매입 주문 총 #{sumCnt} 건 중에 승인 #{approveCnt} 건, 반려 #{returnCnt} 건이 발생하였습니다. Okplaza > 주문관리 > 매입실적조회 화면에서 상세 내역을 확인해주시길 바랍니다.",주문자
+OKPlaza085,KKO,OKP,출하후 4일이 지난 줄하주문,[#{svcName}] 인수대상 주문이 존재합니다. 해당 주문은 3일후 자동인수처리됩니다,주문자
+OKPlaza087,KKO,OKP,납품예정일 지난 공급사에 배송안내,[#{svcName}] [#{goodName}]은(는) 납기예정일이 경과되었습니다. 배송처리 요청드립니다.,공급사 사용자
+OKPlaza092,KKO,OKP,공급사 상품 등록 요청 미응답,[#{svcName}] 처리하지 못한 공급사 상품등록 목록이 있습니다.,요청상품 운영사담당자
+OKPlaza093,KKO,OKP,구매사 상품 등록 요청 미응답,[#{svcName}] 처리하지 못한 고객사 상품등록 목록이 있습니다.,구매사 공사유형 운영사담당자
+OKPlaza094,KKO,OKP,질의응답 요청 미응답,[#{svcName}] 처리하지 못한 질의 응답 목록이 있습니다.,구매사 공사유형 운영사담당자
+OKPlaza097,KKO,WMS,"물류인 경우 주문자, 인수자 발송","[#{svcName}] 통합물류센터에서 [#{orde_iden_numb}-#{orde_sequ_numb}], [#{good_name}]을(를) 출하하였습니다. * 배송 문의 : "" + #{admWorkInfo}",주문자
+OKPlaza098,KKO,WMS,매입주문 승인요청 SMS,[#{svcName}] 매입주문 승인 요청건이 있습니다.,"코드유형(WMS_ORDER_APP_SMS)
+사용자"

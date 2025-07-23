@@ -1,0 +1,42 @@
+<div class="dialog_content" title="아이디 찾기" style="width:400px;">
+	<div class="dialogInner">
+		<p class="infoBotLine">입력정보가 정확해야 휴대전화로 아이디가 전송됩니다.</p>
+		<div class="tableSection">
+			<div class="tableWrap full">
+				<table>
+					<colgroup>
+						<col width="70px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="srcUserNm">성명</label></th>
+							<td><input id="srcUserNm" name="srcUserNm" type="text" value="" maxlength="10" style="width:241px" class="blue"></td>
+						</tr>
+						<tr>
+							<th><label for="srcMobileNum1">휴대폰</label></th>
+							<td>
+								<select id="srcMobileNum1" name="srcMobileNum1" class="ui_select" style="width:80px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> - 
+								<input name="srcMobileNum2" id="srcMobileNum2" type="text" size="6" maxlength="4" style="width:60px">
+								-
+								<input name="srcMobileNum3" id="srcMobileNum3" type="text" size="6" maxlength="4" style="width:60px">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="btnWrap">
+			<button type="button" class="c_red">확인</button>
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+	</div>
+</div> <!-- // .dialog_content -->

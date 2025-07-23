@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="./css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="./jq/buy/plugins.js"></script>
+	<script src="./jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="./css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="./jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="./jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+	<div class="okWrap">
+
+		<div class="okInWrap">
+			<!-- header -->
+			<header class="ok_header">
+				<div class="okUtill">
+					<h1><a href="#self"><img src="./img/buy/logo.png" alt="OK plaza"></a></h1>
+					<section class="">
+						<ul class="h_quick">
+							<li><a href="#self" onclick="javaScript:fnAdmUserInfo();"><i class="fas fa-phone-alt"></i> 담당자 안내</a></li>
+							<li><a href="/system/systemLogout.sys"><i class="fas fa-power-off"></i> 로그아웃</a></li>
+							<li><a href="/buyOrgan/organBuyList.sys?_menuCd=BUY_MY_BORG"><i class="fas fa-cubes"></i> 사업장관리</a></li>
+							<li><a href="/buyOrgan/organBuyUserList.sys?_menuCd=BUY_MY_USER"><i class="fas fa-users"></i> 사용자관리</a></li>
+							<li><a href="javascript:fnUserDetail();"><i class="fas fa-user"></i> 정아름</a></li>
+						</ul>
+						
+						<article>
+							<div class="h_searchForm">
+								<span>상품검색</span>
+								<input type="text" />
+								<button type="button" onclick="javascript:fnTotSearch();">검색</button>
+							</div>
+							<div class="subArea">
+								<select name="" id="">
+									<option value="">씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+								</select>
+								<dl class="h_besiness">
+									<dt>사업장상태</dt>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerIsOrderLimit" /> <label for="headerIsOrderLimit">주문제작</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerPrePay" /> <label for="headerPrePay">수동주문</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerLoanYn" /> <label for="headerLoanYn">여신초과</label></dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+				</div>
+
+				<div class="okMenu">
+					<!-- category -->
+					<section class="allCate">
+						<h2><a href="#self"><i class="fas fa-align-left"></i> 카테고리 전체</a></h2>
+						<ul>
+							<li><a href="#self">공통자재</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">전기/통신</a>
+								<ul>
+									<li><a href="#self">광점퍼코드</a>
+										<ul>
+											<li><a href="#self">등기구</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다가</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">토목</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">건축</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">비품/관리</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">제조 원재로</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="serviceName">
+							<strong>010-2081-0424</strong>
+							<span><a href="mailto:bjh33@sk.com">bjh33@sk.com</a></span>
+							<span>담당자 :  변지희</span>
+						</div>
+					</section>
+					<!-- //category -->
+
+					<nav class="gnb">
+						<ul>
+							<li><a href="#self">주문관리</a></li>
+							<li><a href="#self">인수/반품</a></li>
+							<li><a href="#self">정산관리</a></li>
+							<li><a href="#self">상품관리</a></li>
+							<li><a href="#self">재고관리</a></li>
+							<li><a href="#self">고객센터</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- // header -->
+
+			<!-- ok_container -->
+			<div class="ok_container">
+				<!-- ok_contents -->
+				<div class="ok_contents">
+
+					<!-- innerBody -->
+					<div class="innerBody">
+
+						<!-- tabs-comp -->
+						<div class="tabs-comp">
+							<ul>
+								<li class="current"><a href="javascript:;">신규상품요청</a></li>
+								<li><a href="javascript:;">신규상품요청 이력</a></li>
+							</ul>
+
+
+							<div class="tabs-panel">
+								<!-- tabs-cont -->
+								<div class="panel-section tableSection">
+									<div class="tableWrap full">
+										<form id="frm" onsubmit="return false">
+											<input name="oper" type="hidden" value="add">
+											<input name="state" type="hidden" value="10">
+											<input name="newgoodid" type="hidden">
+											<input name="insert_borgid" type="hidden" value="304456">
+											<input name="insert_user_id" type="hidden" value="301799">
+											<table>
+												<colgroup>
+													<col width="60px">
+													<col width="auto">
+													<col width="80px">
+													<col width="440px">
+												</colgroup>
+												<tbody>
+													<tr>
+														<th>고객사</th>
+														<td><input name="insert_borgid_nm" type="text" style="width:410px;" value="테스트고객사(1)" readonly="readonly" disabled=""></td>
+														<th>요청일</th>
+														<td><input name="insert_date" type="text" style="width:418px;" value="2019-08-05" readonly="readonly" disabled=""></td>
+													</tr>
+													<tr>
+														<th><label for="stand_good_name">상품명</label></th>
+														<td>
+															<input id="stand_good_name" name="stand_good_name" title="상품명" required="" type="text" style="width:410px;" value="">
+														</td>
+														<th>진행상태</th>
+														<td>
+															<select id="state" title="진행상태" readonly="readonly" disabled="" class="ui_select" style="width:440px">
+																<option value="10">요청</option>
+																<option value="90">기상품처리</option>
+																<option value="91">상품반려</option>
+															</select>
+														</td>
+													</tr>
+													<tr>
+														<th>상품규격</th>
+														<td><input name="stand_good_spec_desc" title="상품규격" required="" maxlength="100" type="text" style="width:410px;" value=""></td>
+														<th><label for="req_good_iden_numb">요청상품코드</label></th>
+														<td><input id="req_good_iden_numb" name="req_good_iden_numb" title="요청상품코드" disabled="" type="text" style="width:418px;" value=""></td>
+													</tr>
+													<tr>
+														<th>요청사항</th>
+														<td colspan="3">
+															<textarea name="note" title="요청사항" required="" rows="10"></textarea>
+														</td>
+													</tr>
+													<tr>
+														<td colspan="4">
+															<div class="fileWrap-3">
+																<div class="fileBox">
+																	<label for="fileUpload1">첨부파일 1</label>
+																	<div class="input-group">
+																		<div class="custom-file"><span>파일을 선택하세요.</span></div>
+																		<a href="#self" class="btnFile js_dialog" data-href="./layerPopup/buy/21_popup.html">등록</a>
+																		<!-- <button type="button" class="btnFile">삭제</button> -->
+																	</div>
+																	
+																</div>
+
+																<div class="fileBox">
+																	<label for="fileUpload2">첨부파일 2</label>
+																	<div class="input-group">
+																		<div class="custom-file"><span>파일을 선택하세요.</span></div>
+																		<a href="#self" class="btnFile js_dialog" data-href="./layerPopup/buy/21_popup.html">등록</a>
+																		<!-- <button type="button" class="btnFile">삭제</button> -->
+																	</div>
+																</div>
+
+																<div class="fileBox">
+																	<label for="fileUpload3">첨부파일 3</label>
+																	<div class="input-group">
+																		<div class="custom-file"><span>파일을 선택하세요.</span></div>
+																		<a href="#self" class="btnFile js_dialog" data-href="./layerPopup/buy/21_popup.html">등록</a>
+																		<!-- <button type="button" class="btnFile">삭제</button> -->
+																	</div>
+																</div>
+															</div>
+														</td>
+													</tr>
+												</tbody>
+											</table>
+										</form>
+									</div>
+									<div class="btnWrap">
+										<button type="button" class="redBtn">저장</button>
+										<button type="button" class="grayBtn">초기화</button>
+									</div>
+								</div>
+								<!-- tabs-cont -->
+
+								<!-- tabs-cont -->
+								<div class="panel-section">
+									<div class="tableSection">
+										<div class="topBtnGroup">
+											<button type="button" class="redBtn"><i class="fas fa-search"></i> 조회</button>
+										</div>
+										<div class="tableWrap full">
+											<form id="frmS">
+												<input name="sord" type="hidden" value="desc">
+												<input name="sidx" type="hidden" value="newgoodid">
+												<table>
+													<colgroup>
+														<col width="60px">
+														<col width="auto">
+														<col width="80px">
+														<col width="440px">
+													</colgroup>
+													<tbody>
+														<tr>
+															<th><label for="srcBorgNm">고객사</label></th>
+															<td><input id="srcBorgNm" type="text" style="width:410px;" value="테스트고객사(1)" readonly="readonly" disabled=""></td>
+															<th>요청일</th>
+															<td>
+																<div class="date">
+																	<span style="width:215px"><input type="text" id="srcInsert_FromDt" name="srcInsert_FromDt" class="js_datepicker" value="2019-08-05"  readonly="readonly" style="width:150px"></span>
+																	<span style="width:215px"><input type="text" id="srcInsert_EndDt" name="srcInsert_EndDt" class="js_datepicker" value="2019-08-05"  readonly="readonly" style="width:150px"></span>
+																</div>
+															</td>
+														</tr>
+														<tr>
+															<th>상품명</th>
+															<td><input name="srcStand_good_name" type="text" style="width:410px;">
+															</td>
+															<th>진행상태</th>
+															<td>
+																<select id="srcState" name="srcState" class="ui_select" style="width:440px">
+																	<option value="">전체</option>
+																	<option value="10">요청</option>
+																	<option value="90">기상품처리</option>
+																	<option value="91">상품반려</option>
+																</select>
+															</td>
+														</tr>
+														<tr>
+															<th>상품규격</th>
+															<td><input name="srcStand_good_spec_desc" type="text" style="width:410px;" value=""></td>
+															<th>제안자</th>
+															<td>
+																<input type="text" style="width:418px;" value="정아름" readonly="readonly">
+																<input name="srcInsertUserId" type="hidden" value="301799">
+																<span style="padding-top:10px;display:none;">
+																	<span class="ui_radio"><input name="srcRequestType" type="radio" value="0"checked="" id="srcRequestType"><label for="srcRequestType">상품등록</label></span>
+																	<span class="ui_radio" style="padding-left:10px"><input name="srcRequestType" type="radio" value="1" id="srcRequestType2"><label for="srcRequestType2">상품제안</label></span>
+																</span>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</form>
+										</div>
+									</div>
+
+									<div class="tableWrap type02">
+										<table>
+											<colgroup>
+												<col width="80px">
+												<col width="auto">
+												<col width="100px">
+												<col width="100px">
+												<col width="200px">
+												<col width="100px">
+											</colgroup>
+											<thead>
+												<tr>
+													<th>요청번호</th>
+													<th>신규상품명</th>
+													<th>진행상태</th>
+													<th>상품유형</th>
+													<th>제안조직</th>
+													<th>요청일</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td class="tc">11</td>
+													<td>가나다라마아아아</td>
+													<td class="tc">진행</td>
+													<td class="tc">유형</td>
+													<td>조직며아러라어미러님</td>
+													<td class="tc">2019-00-00</td>
+												</tr>
+												<tr>
+													<td colspan="6" style="text-align:center">조회된 데이터가 없습니다.</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+
+									<!-- listPaging -->
+									<div class="listPaging">
+										<ul>
+											<li class="first"><a href="#self">첫 페이지</a></li>
+											<li class="prev"><a href="#self">이전 페이지</a></li>
+											<li><a href="#self">1</a></li>
+											<li class="active"><a href="#self">2</a></li>
+											<li><a href="#self">3</a></li>
+											<li><a href="#self">4</a></li>
+											<li><a href="#self">5</a></li>
+											<li><a href="#self">6</a></li>
+											<li><a href="#self">7</a></li>
+											<li><a href="#self">8</a></li>
+											<li><a href="#self">9</a></li>
+											<li><a href="#self">10</a></li>
+											<li class="next"><a href="#self">다음 페이지</a></li>
+											<li class="last"><a href="#self">마지막 페이지</a></li>
+										</ul>
+									</div>
+									<!-- //listPaging -->
+								</div>
+								<!-- tabs-cont -->
+							</div>
+						</div>
+					</div>
+					<!-- //innerBody -->
+
+				</div>
+				<!-- //ok_contents -->
+
+			</div>
+			<!-- //ok_container -->
+
+			<!-- footer -->
+			<footer class="footer">
+				<!-- <ul class="mFootMenu">
+					<li><a href="#self" class="fMenu01">물품공급 기본계약서</a></li>
+					<li><a href="#self" class="fMenu02">특별계약서</a></li>
+					<li><a href="#self" class="fMenu03">윤리서약서</a></li>
+					<li><a href="#self" class="fMenu04">신규고객 결제안내</a></li>
+					<li><a href="#self" class="fMenu05">고객의 소리</a></li>
+					<li><a href="#self" class="fMenu06">담당자 안내</a></li>
+					<li><a href="#self" class="fMenu07">화면공유상담</a></li>
+					<li><a href="#self" class="fMenu08">신규상품제안</a></li>
+				</ul> -->
+				<div class="footInfo">
+					<h2 class="logo"><a href="#self"><img src="./img/buy/foot_logo.png" alt="SK telesys"></a></h2>
+					<div class="com_info">
+						<address>서울특별시 중구 남대문로 10길 9</address>
+						<p>Copyright SK telesys Co, LTD. All Rights Reserved.</p>
+					</div>
+					<ul class="link">
+						<li><a href="#self">개인정보 처리방침</a></li>
+						<li><a href="#self">이메일무단수집거부</a></li>
+						<li><a href="mailto:bjh33@sk.com">담당자 : 변지희 (010-2081-0424 / bjh33@sk.com)</a></li>
+					</ul>
+					<p class="foot_banner"><a href="#self"><img src="./img/buy/foot_banner.png" alt="임직원 &amp; 협력사 전용 몰"></a></p>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+		<!-- //okInWrap -->
+
+		<div class="ok_quick">
+			<h3>QUICK<br />MENU</h3>
+			<ul class="quickList">
+				<li class="ico_q1"><a href="#self">장바구니 <span>2</span></a></li>
+				<li class="ico_q2"><a href="#self">관심상품 <span>4</span></a></li>
+				<li class="ico_q3"><a href="#self">구매이력<br/>조회</a></li>
+				<li class="ico_q4"><a href="#self">주문취소<br/>요청</a></li>
+				<li class="ico_q5"><a href="#self">반품처리<br/>요청</a></li>
+				<li class="ico_q6"><a href="#self">신규상품<br/>요청이력</a></li>
+			</ul>
+
+			<div class="quickRoll">
+				<h3>최근본 상품 <a href="#self">15</a></h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl">
+					<ul class="control-area">
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>222 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>3333 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<div class="quickRoll">
+				<h3>추천상품</h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl ">
+					<ul class="control-area">
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<button type="button" class="goTop">TOP</button>
+		</div>
+		
+	</div><!-- //okWrap -->
+
+</body>
+</html>

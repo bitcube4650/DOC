@@ -1,0 +1,61 @@
+<div class="dialog_content" title="관리물품등록/삭제" style="width:850px;">
+	<div class="dialogInner">
+		<div class="tableSection">
+
+			<div class="topBtnGroup static colorGroup mt0 mb15">
+				<div class="leftGroup">
+					<span class="f_red">* 순서변경 드래그로 변경 하십시오.</span>
+				</div>
+				<button type="button" id="" class="grayBtn" style="background:#FF6600">최상단저장</button>
+				<button type="button" id="" class="grayBtn" style="background:#F53243">최하단저장</button>
+				<button type="button" id="" class="grayBtn" style="background:#00B1DB">기타재고등록</button>
+			</div>
+
+			<div class="tableWrap type02 mt5 pt0 no-bd pb0 inpTable">
+				그리드테이블
+				<table id="list"></table>
+				<div id="plist"></div>
+			</div>
+		</div>
+		<div class="btnWrap">
+			<button type="button" class="c_red">순서저장</button>
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+
+		<div class="tableSection">
+			<div class="tableWrap full pt15 pb15 mt30" style="border-radius:0;border-top:1px solid #ccc">
+				<table>
+					<colgroup>
+						<col width="70px">
+						<col width="230px">
+						<col width="70px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">상품코드</label></th>
+							<td><input type="text" id="" name="" class="full"></td>
+							<th><label for="">상품명</label></th>
+							<td>
+								<input type="text" id="" name="" style="width:202px"><button type="button" class="redBtn" style="float:right"><i class="fa fa-search"></i> 조회</button>
+							</td>
+						<tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="tableWrap type02 mt0 pt0 no-bd pb0 inpTable">
+				그리드테이블
+				<table id="list2"></table>
+				<div id="plist2"></div>
+			</div>
+		</div>
+
+		<div class="btnWrap">
+			<button type="button" class="c_red">재고품목추가</button>
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+
+
+	</div>
+</div> <!-- // .dialog_content -->

@@ -1,0 +1,30 @@
+안녕하세요. IDR 윤상훈입니다.
+
+현재까지 HTML 작업한 내역 공유드립니다.
+
+
+
+http://idr2019.cafe24.com/OKplaza/02-1_main.html 메인 
+http://idr2019.cafe24.com/OKplaza/01-1_productSearch.html 상품검색 (상품 상세 및 장바구니 레이어 완료)
+
+http://idr2019.cafe24.com/OKplaza/03-5_order.html 주문정보
+http://idr2019.cafe24.com/OKplaza/03-6_order.html 선입금 주문내역 
+http://idr2019.cafe24.com/OKplaza/03-7_order.html 주문 진척도 
+http://idr2019.cafe24.com/OKplaza/03-8_order.html 구매이력 조회 
+http://idr2019.cafe24.com/OKplaza/04-1_return.html 상품 인수 조회 
+http://idr2019.cafe24.com/OKplaza/04-4_return.html 반품신청/현황 
+http://idr2019.cafe24.com/OKplaza/04-6_return.html 인수이력조회
+
+
+jqGrid는 영역만 표시. 추후 디자인 일괄 적용 예정 (html 구조는 변함없음.html 구조는 03-5 참고)
+카테고리 전체 메뉴 / 디자인 및 js 일괄 적용 예정 (html 구조는 변함없음)
+퀵 메뉴도 HTML 틀만 잡아놓은것이고 스크롤 할때도 좌측에 고정 될 수 있게 변경 예정임
+
+정산, 상품, 재고, 고객센터 진행 중 (레이어팝업 제외)
+
+----
+
+FTP 계정
+idr2019.cafe24.com
+아이디: idr2019
+비번: ee57ee57!@

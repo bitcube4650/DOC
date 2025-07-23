@@ -1,0 +1,691 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>SK Telesys</title>
+<!-- Stylesheet Start -->
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/swiper.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- // Stylesheet End -->
+
+<!-- jQuery Start -->
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$( function() {
+	    $( ".datepicker" ).datepicker({
+	    	dateFormat: "yy-mm-dd"
+	    });
+	  } );
+</script>
+
+<!-- // jQuery End -->
+</head>
+<body>
+	<!-- header -->
+	<div class="dimmed">
+	</div>
+	<div id="header">
+		<div class="top-menu">
+			<div class="inner">
+				<div class="bookmark">
+					즐겨찾기<span>★</span>
+				</div>
+
+				<div class="snb-box">
+					<ul class="snb">
+						<li><a href="../order/basket.html">장바구니</a></li>
+						<!-- <li><a href="../myshop/index.html">마이페이지</a></li> -->
+						<li><a href="../mypage/index.html">마이페이지</a></li>
+						<li><a href="../board/index.html">고객센터</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="bot-menu">
+			<div class="inner">
+				<h1 class="logo"><a href="../index.html"><img src="../img/logo.png" alt="로고"></a></h1>
+				<div class="search-box">
+					<div class="search-grp">
+						<input type="text" id="" name="" value=""><a href="#"><img src="../img/icon/icon_search.png"></a>
+					</div>
+				</div>
+				<div class="gnb-box">
+					<ul class="gnb">
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg1.png"><br><span>공통자재</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg2.png"><br><span>전기통신</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg3.png"><br><span>토목</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg4.png"><br><span>비품/관리</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg5.png"><br><span>제조/원재료</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg6.png"><br><span>건축</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+<div class="sub-bg">
+	<div class="sub-tit">
+		서브 타이틀
+	</div>
+</div>
+
+<div id="detail">
+	<div class="inner">
+		<!-- 상품 정보 영역 -->
+		<div class="">
+			<div class="item-info-area">
+				<div class="thumbnail-box">
+					<div class="thumbnail">
+						<img src="../img/thumb-sample.jpg">
+					</div>
+					<div class="thumb-gallery">
+						<ul>
+							<li class="current"><a href="#"><img src="../img/gallery-sample.jpg"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+							<li><a href="#"></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="item-info-box">
+					<div class="product-option-list">
+						<div class="product-option-list-head">
+							옵션선택
+							<a href="javascript:optionBoxOff();">X</a>
+						</div>
+						<div class="product-option-list-body">
+							<table>
+								<colgroup>
+									<col width="10%;">
+									<col width="35%;">
+									<col width="40%;">
+									<col width="15%;">
+								</colgroup>
+								<thead>
+								<tr>
+									<th><input type="checkbox"></th>
+									<th>규격</th>
+									<th>판매단가</th>
+									<th>수량</th>
+								</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>500mm</td>
+										<td>47500원</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>500mm</td>
+										<td>47500원</td>
+										<td><input type="text"></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox"></td>
+										<td>500mm</td>
+										<td>47500원</td>
+										<td><input type="text"></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="item-head">
+						<h2 class="title">앙카볼트</h2>
+						<p class="summary">규격: 500ml / 9개 / 케이스</p>
+					</div>
+					<div class="item-body">
+						<ul>
+							<li>
+								<p class="list-head">소비자가격</p>
+								<p class="list-body">100,000원</p>
+							</li>
+							<li class="sell-price">
+								<p class="list-head">판매단가</p>
+								<p class="list-body">50,000원</p>
+							</li>
+							<li>
+								<p class="list-head">배송비</p>
+								<p class="list-body">2,500원</p>
+							</li>
+							<li>
+								<p class="list-head">상품코드</p>
+								<p class="list-body">100000215</p>
+							</li>
+							<li>
+								<p class="list-head">구매수량</p>
+								<p class="list-body"><input type="text" id="" name="" value="1"></p>
+							</li>
+						</ul>
+					</div>
+					<div class="qty-dc-info">
+						<table>
+							<tr>
+								<th width="100">수량</th>
+								<th>50개 이상</th>
+								<th>100개 이상</th>
+								<th>150개 이상</th>
+								<th>200개 이상</th>
+								<th>250개 이상</th>
+							</tr>
+							<tr>
+								<td>할인율</td>
+								<td class="font-td">5% DC</td>
+								<td class="font-td">10% DC</td>
+								<td class="font-td">15% DC</td>
+								<td class="font-td">20% DC</td>
+								<td class="font-td">25% DC</td>
+							</tr>
+							<tr>
+								<td>금액</td>
+								<td class="font-td">47,500</td>
+								<td class="font-td">45,000</td>
+								<td class="font-td">42,500</td>
+								<td class="font-td">40,000</td>
+								<td class="font-td">37,500</td>
+							</tr>
+						</table>
+					</div>
+					<div class="option-box">
+						<div class="item-body">
+							<ul>
+								<li>
+									<p class="list-head">옵션</p>		
+									<div class="list-body">
+										<select>
+											<option>선택하세요</option>
+											<option>옵션 1</option>
+											<option>옵션 2</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<p class="list-head">옵션</p>		
+									<div class="list-body">
+										<div class="btn-more-option"><a href="javascript:optionBoxOn();">상품 옵션보기</a></div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="option-list-box">
+						<ul>
+							<li>
+								<div class="overflow-hidden option-list-item">
+									<div class="float-left">
+										<p class="option-name">500 mm</p>
+										<div class="option-qty">
+											<span>-</span>
+											<input type="text" value="1">
+											<span>+</span>
+										</div>
+									</div>
+									<div class="float-right price-box">
+										<span class="total-dc">5,000</span>
+										<span class="total-price">50,000 원</span>
+										<span class="btn-close">X</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="overflow-hidden option-list-item">
+									<div class="float-left">
+										<p class="option-name">500 mm</p>
+										<div class="option-qty">
+											<span>-</span>
+											<input type="text" value="1">
+											<span>+</span>
+										</div>
+									</div>
+									<div class="float-right price-box">
+										<span class="total-dc">5,000</span>
+										<span class="total-price">50,000 원</span>
+										<span class="btn-close">X</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="total-box">
+						<div class="float-left">
+							<span class="total-title">총 합계금액</span>
+						</div>
+						<div class="float-right">
+							<span class="total-dc">5,000</span>
+							<span class="total-price">50,000</span>
+						</div>
+					</div>
+					<div class="btn-area">
+						<ul>
+							<li class="btn-buy"><a href="#">바로구매</a></li>
+							<li class="btn-cart"><a href="#">장바구니</a></li>
+							<li class="btn-wish"><a href="#">관심상품</a></li>
+						</ul>
+					</div>
+					<!--div class="item-question-box">
+						<p>상품정보가 추가로 필요하세요? <a href="#">상품정보 문의</a></p>
+					</div-->
+				</div>
+			</div>
+			<div class="option-area">
+				<div class="option-box">
+					<h2>옵션 리스트</h2>
+					<table>
+						 <colgroup>
+							 <col width="30px" />
+							 <col width="*" />
+							 <col width="150px" />
+							 <col width="100px" />
+							 <col width="100px" />
+							 <col width="200px" />
+						 </colgroup>
+						 <thead>
+							<tr>
+								<th><input type="checkbox" id="" name="" value=""></th>
+								<th>상품정보</th>
+								<th>상품코드</th>
+								<th>수량</th>
+								<th>단위</th>
+								<th>가격(부가세 포함)</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="checkbox" id="" name="" value=""></td>
+								<td class="item-info">
+									<p class="item-title">앵커볼트</p>
+									<p class="item-summary">500ml / 9개 / 케이스</p>
+								</td>
+								<td>10000045259</td>
+								<td><input type="text" id="" name="" value="1"></td>
+								<td>BOX</td>
+								<td>
+									<p class="sale-price">14,500원</p>
+									<p class="sell-price">13,500원</p>
+								</td>
+							</tr>
+							<tr>
+								<td><input type="checkbox" id="" name="" value=""></td>
+								<td class="item-info">
+									<p class="item-title">앵커볼트</p>
+									<p class="item-summary">500ml / 9개 / 케이스</p>
+								</td>
+								<td>10000045259</td>
+								<td><input type="text" id="" name="" value="1"></td>
+								<td>BOX</td>
+								<td>
+									<p class="sale-price">14,500원</p>
+									<p class="sell-price">13,500원</p>
+								</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td></td>
+								<td colspan="3"><a href="#">다시계산</a></td>
+								<td class="price-total" colspan="2"><p>합계금액: <span>150,000원</span>(VAT 포함)</p></td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				<div class="option-total-box">
+				</div>
+				<div class="btn-area">
+					<ul>
+						<li class="btn-buy"><a href="#">바로구매</a></li>
+						<li class="btn-cart"><a href="#">장바구니</a></li>
+						<li class="btn-wish"><a href="#">관심상품</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- // 상품 정보 영역-->
+		<!-- 상품 고객지원 영역 -->
+		<div id="tabv-1" class="tab-content-box">
+			<div class="tab-list-box">
+				<ul>
+					<li class="active"><a href="#tabv-1">상품정보</a></li>
+					<li><a href="#tabv-2">상품정보고시</a></li>
+					<li><a href="#tabv-3">상품평</a></li>
+					<li><a href="#tabv-4">결제/배송안내</a></li>
+					<li><a href="#tabv-5">교환/반품안내</a></li>
+				</ul>
+			</div>
+			<div class="tab-content tab-content01">
+				<!-- <div class="dump">
+					상품 정보
+				</div> -->
+			</div>
+		</div>
+		
+		<div id="tabv-2" class="tab-content-box">
+			<div class="tab-list-box">
+				<ul>
+					<li><a href="#tabv-1">상품정보</a></li>
+					<li class="active"><a href="#tabv-2">상품정보고시</a></li>
+					<li><a href="#tabv-3">상품평</a></li>
+					<li><a href="#tabv-4">결제/배송안내</a></li>
+					<li><a href="#tabv-5">교환/반품안내</a></li>
+				</ul>
+			</div>
+			<div class="tab-content tab-content02">
+				<div class="table-type-1">
+					<h3 class="h3-con">상품정보제공 고시 상세정보</h3>
+					<table>
+						<tr>
+							<td height="40">제품명</td>
+							<td>킴테크 사이언스 와이퍼 중형 200매</td>
+							<td>브랜드</td>
+							<td>킴테크</td>
+						</tr>
+						<tr>
+							<td height="40">제조사</td>
+							<td>유한컴빌리</td>
+							<td>원산지</td>
+							<td>국내(한국)</td>
+						</tr>
+						<tr>
+							<td height="40">규격</td>
+							<td>215 X 210</td>
+							<td>주문 후 예상 배송 기간</td>
+							<td>상품 상세 페이지 참조</td>
+						</tr>
+						<tr>
+							<td height="40">인증 허가 사항</td>
+							<td colspan="3">상품 상세 페이지 참조</td>
+						</tr>
+						<tr>
+							<td height="40">A/S 안내</td>
+							<td colspan="3">고객센터에 문의(전화번호 : 02-892-6004)</td>
+						</tr>
+						<tr>
+							<td height="40" colspan="4">제품하자가 아닌 소비자의 단숨 변심, 착오구매에 따른 청약철회가 불가능한 경우 그 구체적 사유와 근거</td>
+						</tr>
+					</table>
+					<p class="p-con">하단 이용약관 참조</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="tabv-3" class="tab-content-box">
+			<div class="tab-list-box">
+				<ul>
+					<li><a href="#tabv-1">상품정보</a></li>
+					<li><a href="#tabv-2">상품정보고시</a></li>
+					<li class="active"><a href="#tabv-3">상품평</a></li>
+					<li><a href="#tabv-4">결제/배송안내</a></li>
+					<li><a href="#tabv-5">교환/반품안내</a></li>
+				</ul>
+			</div>
+			<div class="tab-content tab-content03">
+				<div class="tab-box">
+					<p>* 비방, 광고, 불건전한 내용의 글은 관리자에 의해 사전 동의 없이 삭제될 수 있습니다.</p>
+					<p>* 해당 주문의 배송완료 이거나 1개월 이내에 주문한 상품에 대해서만 상품평을 작성하실 수 있습니다.</p>
+					
+					<div class="tab-lr">
+						<div class="tl">전체 만족도 <span class="star-rating"><span></span></span>(0건)</div>
+						<a href="#layer1" class="btn-example2 btn-2">상품평 쓰기</a>
+					</div>
+					<table class="tstyle2">
+						<tr>
+							<th>만족도</th>
+							<th>상품평</th>
+							<th>작성자</th>
+							<th>작성일</th>
+						</tr>
+						<tr>
+							<td></td>
+							<td>상품평</td>
+							<td>popo***</td>
+							<td>2018-01-01</td>
+						</tr>
+						<tr>
+							<td colspan="4">아직 작성된 상품평이 없습니다. 상품평을 작성해 주세요.</td>
+						</tr>
+					</table>
+					
+					<ul class="pagination-box">
+						<li class="prev"><a href="#">&lt;</a></li>
+						<li><a class="active" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li class="next"><a href="#">&gt;</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="tabv-4" class="tab-content-box">
+			<div class="tab-list-box">
+				<ul>
+					<li><a href="#tabv-1">상품정보</a></li>
+					<li><a href="#tabv-2">상품정보고시</a></li>
+					<li><a href="#tabv-3">상품평</a></li>
+					<li class="active"><a href=#tabv-4">결제/배송안내</a></li>
+					<li><a href="#tabv-5">교환/반품안내</a></li>
+				</ul>
+			</div>
+			<div class="tab-content tab-content04">
+				<div class="tab-box">
+					<h3 class="h3-con">배송안내</h3>
+					<p>· 결제완료 후 서울/경기 3~5일, 그외 지역 3~8일 이내 배송됩니다. (단, 주말/휴일은 배송되지 않습니다.)</p>
+					<p>· 대금지급을 무통장 입금방식에 의하는 경우, 배송소요기간은 입금 확인일로부터 기산합니다.</p>
+					<p>· 산간벽지나 도서지방은 배송이 지연될 수 있으며, 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.</p>
+					<p>· 천재지변 등 불가항력적인 사유 발생 시 그 해당 기간 동안은 배송 소요기간에서 제외됩니다.</p>
+					<p>· 배송은 상품에 따라 배송방법이 다르며, 구매 시 배송구분 정보를 확인하시길 바랍니다.</p>
+					<p>· 배송일은 지역별/업체별 상황에 따라서 변경될수 있습니다.</p>
+					<p>· 배송비 3,000원(도서산간지역/상품종류/포장단위)에 따라 다를 수 있습니다.</p>
+					
+					<h3 class="h3-con mg_t40">결제안내</h3>
+					<p>· 상품을 구매하신 이후 대금의 지급 수단은 신용카드, 무통장입금, 실시간 계좌이체 중 한가지를 선택하여 결제하실 수 있습니다.</p>
+				
+					<h3 class="h3-con mg_t40">카드결제</h3>
+					<table class="tstyle3">
+						<tr>
+							<th width="280">인터넷 안심결제 (ISP) 사용카드</th>
+							<td>국민/비씨/우리/저축은행체크/새마을체크/우체국 카드</td>
+						</tr>
+						<tr>
+							<th>안심클릭 사용카드</th>
+							<td>신한/삼성/외환/하나SK/롯데/현대/NH채움/광주/산은/수협/신협체크/전북제주 카드</td>
+						</tr>
+					</table>
+					
+					<h3 class="h3-con mg_t40">카드결제시 부가가치세 신고방법</h3>
+					<p>· 카드 전표는 세금계산서로 대체 가능합니다.</p>
+					<p>· 결제 완료 후 주문조회 메뉴에서 카드전표를 출력하여 부가가치세 신고를 하시면 됩니다.</p>
+					
+					<h3 class="h3-con mg_t40">무통장 입금, 실시간 계좌이체</h3>
+					<table class="tstyle3">
+						<tr>
+							<th width="280">무통장 입금</th>
+							<td>기업,외환,국민,수협,농협,우리,대구,부산,경남,우체국,하나은행</td>
+						</tr>
+						<tr>
+							<th>실시간 계좌이체</th>
+							<td>주문과정에서 고객님은 은행계좌(증권)로부터 바로 구매대금이 인출되는 방식으로 공인인증서가 필요합니다.</td>
+						</tr>
+					</table>
+					<p class="mg_t15">· 마이페이지에서 세금계산서를 출력하실 수 있습니다.</p>
+					<p>· 카드전표나 세금계산서 출력과 관련한 문의 사항은 고객센터(02-892-6004)로 문의 바랍니다.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="tabv-5" class="tab-content-box">
+			<div class="tab-list-box">
+				<ul>
+					<li><a href="#tabv-1">상품정보</a></li>
+					<li><a href="#tabv-2">상품정보고시</a></li>
+					<li><a href="#tabv-3">상품평</a></li>
+					<li><a href="#tabv-4">결제/배송안내</a></li>
+					<li class="active"><a href="#tabv-5">교환/반품안내</a></li>
+				</ul>
+			</div>
+			<div class="tab-content tab-content05">
+				<div class="tab-box">
+					<h3 class="h3-con">배송안내</h3>
+					<p>· 결제완료 후 서울/경기 3~5일, 그외 지역 3~8일 이내 배송됩니다. (단, 주말/휴일은 배송되지 않습니다.)</p>
+					<p>· 대금지급을 무통장 입금방식에 의하는 경우, 배송소요기간은 입금 확인일로부터 기산합니다.</p>
+					<p>· 산간벽지나 도서지방은 배송이 지연될 수 있으며, 별도의 추가금액을 지불하셔야 하는 경우가 있습니다.</p>
+					<p>· 천재지변 등 불가항력적인 사유 발생 시 그 해당 기간 동안은 배송 소요기간에서 제외됩니다.</p>
+					<p>· 배송은 상품에 따라 배송방법이 다르며, 구매 시 배송구분 정보를 확인하시길 바랍니다.</p>
+					<p>· 배송일은 지역별/업체별 상황에 따라서 변경될수 있습니다.</p>
+					<p>· 배송비 3,000원(도서산간지역/상품종류/포장단위)에 따라 다를 수 있습니다.</p>
+					
+					<h3 class="h3-con mg_t40">결제안내</h3>
+					<p>· 상품을 구매하신 이후 대금의 지급 수단은 신용카드, 무통장입금, 실시간 계좌이체 중 한가지를 선택하여 결제하실 수 있습니다.</p>
+				
+					<h3 class="h3-con mg_t40">카드결제</h3>
+					<table class="tstyle3">
+						<tr>
+							<th width="280">인터넷 안심결제 (ISP) 사용카드</th>
+							<td>국민/비씨/우리/저축은행체크/새마을체크/우체국 카드</td>
+						</tr>
+						<tr>
+							<th>안심클릭 사용카드</th>
+							<td>신한/삼성/외환/하나SK/롯데/현대/NH채움/광주/산은/수협/신협체크/전북제주 카드</td>
+						</tr>
+					</table>
+					
+					<h3 class="h3-con mg_t40">카드결제시 부가가치세 신고방법</h3>
+					<p>· 카드 전표는 세금계산서로 대체 가능합니다.</p>
+					<p>· 결제 완료 후 주문조회 메뉴에서 카드전표를 출력하여 부가가치세 신고를 하시면 됩니다.</p>
+					
+					<h3 class="h3-con mg_t40">무통장 입금, 실시간 계좌이체</h3>
+					<table class="tstyle3">
+						<tr>
+							<th width="280">무통장 입금</th>
+							<td>기업,외환,국민,수협,농협,우리,대구,부산,경남,우체국,하나은행</td>
+						</tr>
+						<tr>
+							<th>실시간 계좌이체</th>
+							<td>주문과정에서 고객님은 은행계좌(증권)로부터 바로 구매대금이 인출되는 방식으로 공인인증서가 필요합니다.</td>
+						</tr>
+					</table>
+					<p class="mg_t15">· 마이페이지에서 세금계산서를 출력하실 수 있습니다.</p>
+					<p>· 카드전표나 세금계산서 출력과 관련한 문의 사항은 고객센터(02-892-6004)로 문의 바랍니다.</p>
+				</div>
+			</div>
+		</div>
+		<!-- // 상품 고객지원 영역 -->
+	</div>
+</div>
+
+<script>
+	// 옵션창
+	var option_box = $('.product-option-list');
+	var option_width = -$('.product-option-list').width() / 2;
+	var option_height = -$('.product-option-list').height() / 2;
+
+	function optionBoxAlign() {
+		option_box.css({
+			"margin-left": option_width + 'px',
+			"margin-top": option_height + 'px'
+		});
+	};
+
+	function optionBoxOn() {
+		$('.dimmed').fadeIn();
+		optionBoxAlign();
+		option_box.fadeIn();
+	}
+
+	function optionBoxOff() {
+		$('.dimmed').fadeOut();
+		option_box.fadeOut('fast');
+	}
+
+	$('.dimmed').on('click', function() {
+		optionBoxOff();
+	});
+
+	$('.option-list-box ul li').on('click', '.btn-close', function() {
+		$(this).closest('li').fadeOut('fast');
+	});
+
+		$('.btn-example2').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup2($href);
+    });
+    function layer_popup2(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer2').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer2').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer2').fadeOut();
+            return false;
+        });
+
+    }
+</script>
+
+<!-- footer -->
+	<div id="footer">
+		<div class="inner ft-inner">
+			<div class="left-box">
+				<div class="ft-info-box">
+					<h3>INFORMATION</h3>
+					<p class="ft-info">
+					(주)SK텔레시스  /  <span>서울특별시 중구 남대문로10길 9</span> / 대표 : 홍길동<br>
+					사업자등록번호 : 220-87-13283  /  법인등록번호 : 110111-3276402  /  통신판매신고 제 2009-서울강남-02751호 <br>
+					개인정보보호관리자 : 홍길동  /  이메일 : info@test.com
+					</p>
+				</div>
+			</div>
+			<div class="right-box">
+				<h3>ABOUT COMPANY</h3>
+				<p class="company-info">
+				저희 SK텔레시스는 최고의 역량과 경쟁력을 기반으로, 고객에게 시뢰받는 품질과 서비스를<br>
+				제공하기 위해 노력하겠습니다.
+				</p>
+				<div class="cs-info">
+				<span>CS CENTER</span><span>TEL : 1588-0000</span><span>OPEN : AM 10:00 ~ PM 06:00 / Sat, Sun, Holiday OFF</span>
+				</div>
+			</div>
+		</div>
+		<div class="copy-box">
+			Copyright <span>SK telesys</span> Co., LTD. All Rights Reserved.
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<script src="../js/main.js"></script>
+	<script src="../js/swiper.js"></script>
+</body>
+</html>

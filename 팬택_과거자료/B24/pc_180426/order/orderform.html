@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>SK Telesys</title>
+<!-- Stylesheet Start -->
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/swiper.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<style>
+	.find-box{width:700px;}
+</style>
+<!-- // Stylesheet End -->
+
+<!-- jQuery Start -->
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$( function() {
+	    $( ".datepicker" ).datepicker({
+	    	dateFormat: "yy-mm-dd"
+	    });
+	  } );
+</script>
+
+<!-- // jQuery End -->
+</head>
+<body>
+	<!-- header -->
+	<div class="dimmed">
+	</div>
+	<div id="header">
+		<div class="top-menu">
+			<div class="inner">
+				<div class="bookmark">
+					즐겨찾기<span>★</span>
+				</div>
+
+				<div class="snb-box">
+					<ul class="snb">
+						<li><a href="../order/basket.html">장바구니</a></li>
+						<!-- <li><a href="../myshop/index.html">마이페이지</a></li> -->
+						<li><a href="../mypage/index.html">마이페이지</a></li>
+						<li><a href="../board/index.html">고객센터</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="bot-menu">
+			<div class="inner">
+				<h1 class="logo"><a href="../index.html"><img src="../img/logo.png" alt="로고"></a></h1>
+				<div class="search-box">
+					<div class="search-grp">
+						<input type="text" id="" name="" value=""><a href="#"><img src="../img/icon/icon_search.png"></a>
+					</div>
+				</div>
+				<div class="gnb-box">
+					<ul class="gnb">
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg1.png"><br><span>공통자재</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg2.png"><br><span>전기통신</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg3.png"><br><span>토목</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg4.png"><br><span>비품/관리</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg5.png"><br><span>제조/원재료</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg6.png"><br><span>건축</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+
+<div class="sub-bg">
+	<div class="sub-tit">
+		서브 타이틀
+	</div>
+</div>
+
+<div id="orderform">
+	<div class="inner">
+		<div class="step-box">
+			<ul>
+				<li>장바구니</li>
+				<li class="active">주문결제</li>
+				<li>주문완료</li>
+			</ul>
+		</div>
+
+		<form>
+			<div class="option-area">
+				<div class="option-box">
+				<table>
+					 <colgroup>
+						 <col width="*" />
+						 <col width="150px" />
+						 <col width="100px" />
+						 <col width="100px" />
+						 <col width="200px" />
+					 </colgroup>
+					 <thead>
+						<tr>
+							<th>상품정보</th>
+							<th>단가</th>
+							<th>수량</th>
+							<th>단위</th>
+							<th>가격(부가세 포함)</th>
+							<th>배송비</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="item-info overflow-hidden">
+								<div class="float-left">
+									<div class="img-box">
+										<img src="../img/no-img.jpg" width="100%" alt="사진"/>
+									</div>
+								</div>
+								<div class="float-right desc-box">
+									<p class="item-title">앵커볼트</p>
+									<p class="item-summary">500ml / 9개 / 케이스huasdfahwduiofawehjuiofeawjioewafjioafwe</p>
+								</div>
+							</td>
+							<td>
+								<p class="sell-price">13,500원</p>
+							</td>
+							<td>
+								<div>1</div>
+							</td>
+							<td>BOX</td>
+							<td>
+								<p>13,500원</p>
+							</td>
+							<td>2,500원</td>
+						</tr>
+						<tr>
+							<td class="item-info overflow-hidden">
+								<div class="float-left">
+									<div class="img-box">
+										<img src="../img/no-img.jpg" width="100%" alt="사진"/>
+									</div>
+								</div>
+								<div class="float-right desc-box">
+									<p class="item-title">앵커볼트</p>
+									<p class="item-summary">500ml / 9개 / 케이스</p>
+								</div>
+							</td>
+							<td>
+								<p class="sell-price">13,500원</p>
+							</td>
+							<td>
+								<div>1</div>
+							</td>
+							<td>BOX</td>
+							<td>
+								<p>13,500원</p>
+							</td>
+							<td>2,500원</td>
+						</tr>
+							<tr>
+							<td class="item-info overflow-hidden">
+								<div class="float-left">
+									<div class="img-box">
+										<img src="../img/no-img.jpg" width="100%" alt="사진"/>
+									</div>
+								</div>
+								<div class="float-right desc-box">
+									<p class="item-title">앵커볼트</p>
+									<p class="item-summary">500ml / 9개 / 케이스</p>
+								</div>
+							</td>
+							<td>
+								<p class="sell-price">13,500원</p>
+							</td>
+							<td>
+								<div>1</div>
+							</td>
+							<td>BOX</td>
+							<td>
+								<p>13,500원</p>
+							</td>
+							<td>2,500원</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td class="price-total" colspan="8">
+								<p class="text-right">총 주문금액 : 27,000 + 배송비 2,500원 = 결제예정금액(부가세포함) <span>32,000원</span></p>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			</div>
+
+			<!--  div class="order-info">
+				<div class="table-type-3">
+					<h2>주문자 정보</h2>
+					<table>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<tr>
+							<td>주문하시는 분</td>
+							<td>
+								<input type="text">
+								<a href="#">로그인</a>
+								<a href="#">회원가입</a>
+								<span>회원이실 경우 로그인하세요.</span>
+							</td>
+						</tr>
+						<tr>
+							<td>전화번호</td>
+							<td>
+								<select>
+									<option>02</option>
+									<option>031</option>
+									<option>032</option>
+								</select> - 
+								<input type="text" style="width:60px;"> - <input type="text" style="width:60px;">
+							</td>
+						</tr>
+						<tr>
+							<td>휴대폰 번호</td>
+							<td><input type="text" style="width:60px;"> - <input type="text" style="width:60px;"> - <input type="text" style="width:60px;"> <input id="sms_chk" type="checkbox"><label for="sms_chk">주문 관련 SMS를 수신합니다.</label></td>
+						</tr>
+						<tr>
+							<td>주소</td>
+							<td>
+								<div>
+									<input type="text" style="width:100px;"> - <input type="text" style="width:100px;"> <a href="#" class="post-number">우편번호 검색</a>
+								</div>
+								<div class="" style="padding:10px 0 0 0;">
+									<input type="text" style="width:300px;"> <input type="text" style="width:350px;">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>이메일</td>
+							<td>
+								<input type="text" style="width:100px;"> @ <input type="text" style="width:100px;">
+								<select>
+									<option>직접 입력</option>
+									<option>naver.com</option>
+									<option>hanmail.net</option>
+									<option>google.com</option>
+								</select>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div -->
+
+			<div class="delivery-info">
+				<div class="table-type-3">
+					<h2>배송지 정보</h2>
+					<table>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<tr>
+							<td>
+								배송지
+							</td>
+							<td>
+								<input id="account" type="radio" name="chk_pay"><label>기본 배송지</label>
+								<input id="account" type="radio" name="chk_pay"><label>새로운 배송지</label>
+								<span class="btn-group1"><a href="javascript:optionBoxOn()">배송지 관리</a></span>
+							</td>
+						</tr>
+						<tr>
+							<td>주소</td>
+							<td>
+								<div>
+									<input type="text" style="width:100px;"> - <input type="text" style="width:100px;"> <a href="#" class="post-number">우편번호 검색</a>
+								</div>
+								<div class="" style="padding:10px 0 0 0;">
+									<input type="text" style="width:300px;"> <input type="text" style="width:350px;">
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>배송메모</td>
+							<td><input type="text"></td>
+						</tr>
+						<tr>
+							<td>수령인</td>
+							<td><input type="text" value="테스트"></td>
+						</tr>
+						<tr>
+							<td>연락처</td>
+							<td><input type="text" value="010-7141-7517"></td>
+						</tr>
+					
+					</table>
+				</div>
+			</div>
+
+			<div class="delivery-info">
+				<div class="table-type-3">
+					<h2>결제 정보</h2>
+					<table>
+						<colgroup>
+							<col width="20%">
+							<col width="80%">
+						</colgroup>
+						<tr>
+							<td>최종결제금액</td>
+							<td><span class="color-red fin-payment">37,500</span>원</td>
+						</tr>
+						<tr>
+							<td>결제방식</td>
+							<td>
+								<div>
+									<input id="payment" type="radio" name="chk_pay"><label for="payment">신용카드</label>
+								</div>
+								<!-- div class="row">
+									<input id="account" type="radio" name="chk_pay"><label for="account">무통장 입금</label>
+									<select>
+										<option>:: 입금은행선택 ::</option>
+										<option>우리은행</option>
+										<option>기업은행</option>
+									</select>
+									<span>입금자명 : </span>
+									<input type="text" style="width:60px;">
+									<span class="color-blue">송금자명과 동일하게 입력</span>
+								</div>
+								<div class="row">
+									<input id="receipt" type="checkbox"><label for="receipt" class="color-blue">현금 영수증 신청용 핸드폰 번호</label>
+									<input type="text" style="width:60px;"> - <input type="text" style="width:60px;"> - <input type="text" style="width:60px;">
+								</div>
+								<div class="row">
+									<input id="realtime" type="radio" name="chk_pay"><label for="realtime">실시간 계좌이체</label>
+								</div>
+								<div class="row">
+									<input id="phone_pay" type="radio" name="chk_pay"><label for="phone_pay">휴대폰 결제</label>
+								</div -->
+							</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="btn-group">
+				<a href="../order/order_result.html">결제하기</a>
+				<a href="javascript:history.back();">되돌아가기</a>
+			</div>
+		</form>
+</div>
+
+
+<div class="find-box">
+	<div class="box-head">
+		배송지관리
+	</div>
+	<div class="box-body">
+		<div class="body-box">
+			<div class="board-table2">
+				<table class="mg_0">
+					<colgroup>
+						<col width="20%">
+						<col width="80%">
+					</colgroup>
+					<tr>
+						<th class="text-left">배송지명</th>
+						<td class="text-left"><input type="text" class="w-100" /></td>
+					</tr>
+					<tr class="t-vam">
+						<th class="text-left">주소</th>
+						<td class="text-left">
+							<input type="text" style="width:150px;"/><a href="#" class="btn-4">우편번호 검색</a><br/>
+							<input type="text" class="mg_t5 w-100"/><br/>
+							<input type="text" class="mg_t5 w-100" />
+						</td>
+					</tr>
+					<tr>
+						<th class="text-left">기본배송지여부</th>
+						<td class="text-left">
+							<select class="mg_l3">
+								<option>예</option>
+								<option>아니요</option>
+							</select>
+						</td>
+					</tr>
+				</table>
+				<div class="btn-box text-center mg_t10">
+					<button type="button" class="btn-3">등록</button>
+				</div>
+				
+				<div class="btn-box text-right mg_t20">
+					<button type="button" class="btn-3">기본배송지로 변경</button>
+					<button type="button" class="btn-3">수정</button>
+					<button type="button" class="btn-3">삭제</button>
+				</div>
+				
+				<table>
+					<colgroup>
+						<col width="20%">
+						<col width="*">
+						<col width="20%">
+					</colgroup>
+					<tr>
+						<th>배송지명</th>
+						<th>배송지주소</th>
+						<th>기본</th>
+					</tr>
+					<tr class="t-vam">
+						<td class="text-center">집</td>
+						<td class="text-center">42090 경기도 하남시 남도동...</td>
+						<td class="text-center">Y</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+		
+		<div class="btn-group pd_0 mg_t20">
+			<a href="../member/join_step2.html" class="btn-submit" style="float:none">선택</a>
+			<!-- 사업자 정보가 있는 경우 -->
+			<!-- a href="../member/join_step2-1.html" class="btn-submit">확인</a -->
+			<a href="javascript:optionBoxOff()" class="btn-close" style="float:none">닫기</a>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	// 옵션창
+	var option_box = $('.find-box');
+	var option_width = -$('.find-box').width() / 2;
+	var option_height = -$('.find-box').height() * -0.5;
+
+	function optionBoxAlign() {
+		option_box.css({
+			"margin-left": option_width + 'px',
+			"margin-top": option_height + 'px'
+		});
+	};
+
+	function optionBoxOn() {
+		$('.dimmed').fadeIn();
+		optionBoxAlign();
+		option_box.fadeIn();
+	}
+
+	function optionBoxOff() {
+		$('.dimmed').fadeOut();
+		option_box.fadeOut('fast');
+	}
+
+	$('.dimmed').on('click', function() {
+		optionBoxOff();
+	});
+
+	$('.option-list-box ul li').on('click', '.btn-close', function() {
+		$(this).closest('li').fadeOut('fast');
+	});
+</script>
+
+	<!-- footer -->
+	<div id="footer">
+		<div class="inner ft-inner">
+			<div class="left-box">
+				<div class="ft-info-box">
+					<h3>INFORMATION</h3>
+					<p class="ft-info">
+					(주)SK텔레시스  /  <span>서울특별시 중구 남대문로10길 9</span> / 대표 : 홍길동<br>
+					사업자등록번호 : 220-87-13283  /  법인등록번호 : 110111-3276402  /  통신판매신고 제 2009-서울강남-02751호 <br>
+					개인정보보호관리자 : 홍길동  /  이메일 : info@test.com
+					</p>
+				</div>
+			</div>
+			<div class="right-box">
+				<h3>ABOUT COMPANY</h3>
+				<p class="company-info">
+				저희 SK텔레시스는 최고의 역량과 경쟁력을 기반으로, 고객에게 시뢰받는 품질과 서비스를<br>
+				제공하기 위해 노력하겠습니다.
+				</p>
+				<div class="cs-info">
+				<span>CS CENTER</span><span>TEL : 1588-0000</span><span>OPEN : AM 10:00 ~ PM 06:00 / Sat, Sun, Holiday OFF</span>
+				</div>
+			</div>
+		</div>
+		<div class="copy-box">
+			Copyright <span>SK telesys</span> Co., LTD. All Rights Reserved.
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<script src="../js/main.js"></script>
+	<script src="../js/swiper.js"></script>
+</body>
+</html>

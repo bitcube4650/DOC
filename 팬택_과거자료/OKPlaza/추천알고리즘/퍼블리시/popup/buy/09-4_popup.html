@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="../..//css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="../../css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="../../css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="../../jq/buy/plugins.js"></script>
+	<script src="../../jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="../../css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="../../jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="../../jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+<div class="dialog_content popWrap" title="사용자 상세" style="width:850px;">
+	<div class="ui-dialog-titlebar">
+		<span class="ui-dialog-title">사용자 상세</span>
+		<!-- <button class="btnClose">닫기</button> -->
+	</div>
+
+	<div class="dialogInner">
+		<div class="tableSection">
+			<h3 class="mb10">사용자 정보</h3>
+			<div class="tableWrap full bdBot">
+				<table>
+					<colgroup>
+						<col width="110px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 법인(단체)</label></th>
+							<td><input type="text" value="테스트고객사" class="full last"/></td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 사업장</label></th>
+							<td><input type="text" value="테스트고객사" class="full last"/></td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 성명</label></th>
+							<td><input type="text" value="테스트고객사" style="width:205px"/></td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 아이디</label></th>
+							<td><input type="text" value="테스트고객사" style="width:205px"/></td>
+						</tr>
+						<tr>
+							<th><strong class="f_red">*</strong> 비밀번호</th>
+							<td>
+								<button type="button" class="grayBtn">비밀번호 변경</button>
+								<button type="button" class="grayBtn" style="margin-left:10px">초기화 (SMS 전송)</button>
+							</td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 전화번호</label></th>
+							<td>
+								<select id="" name="" class="ui_select" style="width:80px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> - 
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:60px">
+								-
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:60px">
+							</td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 휴대폰번호</label></th>
+							<td>
+								<select id="" name="" class="ui_select" style="width:80px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> - 
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:60px">
+								-
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:60px">
+							</td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 이메일</label></th>
+							<td>
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:120px">
+								@
+								<input name="" id="" type="text" size="6" maxlength="4" style="width:120px;margin-right:10px">
+								<select id="srcMobileNum1" name="srcMobileNum1" class="ui_select" style="width:120px;margin-right:10px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select> ex)admin@sktelesys.com
+							</td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 상태</label></th>
+							<td>
+								<select id="" name="" class="ui_select" style="width:120px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th><label for=""><strong class="f_red">*</strong> 주문승인권한</label></th>
+							<td>
+								<select id="" name="" class="ui_select" style="width:120px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+				<div class="mt20 mb20 bdBot"></div>
+
+				<table>
+					<colgroup>
+						<col width="110px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th>개인정보이용동의</th>
+							<td>
+								<div class="agrView"><span>동의 (2019-02-07)</span><button type="button">필수[개인정보 상세]</button></div>
+							</td>
+						</tr>
+						<tr>
+							<th class="vm">이메일수신여부</th>
+							<td>
+								<div class="txtBox">
+									<div class="mb15">
+										<span class="ui_radio"><input type="radio" id="r_list01" name="r_list" /><label for="r_list01">수신동의</label></span>
+										<span class="ui_radio ml10"><input type="radio" id="r_list02" name="r_list"/><label for="r_list02">수신거부</label></span>
+									</div>
+									<p>이메일 수신을 동의하시면 당사 메일을 통해 각종 이벤트/혜택 등의 정보를 우선적으로 받아보실 수 있습니다.<br />회원가입관련 및 주문/배송/반품등 가격 정보와 관련된 내용은 거래안전을 위하여 수신동의 여부와 상관 없이 발송됩니다.</p>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th rowspan="2" class="vm">문자수신여부</th>
+							<td>
+								<div class="txtBox">
+									<p class="mb15">각종 이벤트/혜택에 대한 소식 안내를 문자로 받으시겠습니까?</p>
+									<div>
+										<span class="ui_radio"><input type="radio" id="r_list03" name="r_list2" /><label for="r_list03">수신동의</label></span>
+										<span class="ui_radio ml10"><input type="radio" id="r_list04" name="r_list2"/><label for="r_list04">수신거부</label></span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<div class="txtBox">
+									<p class="mb15">거래정보(주문/배송/반품 등 모든 거래 행위)와 관련된 내용을 문자로 받으시겠습니까?</p>
+									<div>
+										<span class="ui_radio"><input type="radio" id="r_list05" name="r_list3" /><label for="r_list05">수신동의</label></span>
+										<span class="ui_radio ml10"><input type="radio" id="r_list06" name="r_list3"/><label for="r_list06">수신거부</label></span>
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="">기본조직</label></th>
+							<td>
+								<select id="" name="" class="ui_select" style="width:200px">
+									<option value="" selected="selected">선택</option>
+									<option value="010">010</option>
+									<option value="011">011</option>
+									<option value="016">016</option>
+									<option value="017">017</option>
+									<option value="018">018</option>
+									<option value="019">019</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+			
+		<div class="btnWrap">
+			<button type="button" class="c_red"><i class="fa fa-trash"></i> 탈퇴</button>
+			<button type="button" class="c_gray" style="background:#4A4747"><i class="far fa-save"></i> 저장</button>
+			<button type="button" class="c_gray"><i class="fa fa-times"></i> 닫기</button>
+		</div>
+
+		<div class="tableWrap type02" style="width:380px;max-height:200px;overflow-y:auto;margin-top:50px">
+			<h3 class="mb10">감독관리 사용자</h3>
+			<table>
+				<colgroup>
+					<col style="width:35%"/>
+					<col style="width:65%"/>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>로그인 ID</th>
+						<th>사용자명</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>asdf13</td>
+						<td>홍길동</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div> <!-- // .dialog_content -->
+
+
+</body>
+</html>

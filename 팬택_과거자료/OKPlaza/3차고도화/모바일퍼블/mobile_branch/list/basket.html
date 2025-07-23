@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+<title>모바일</title>
+
+<link rel="stylesheet" href="../css/common.css">
+<link rel="stylesheet" href="../css/wise_style.css">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script></script>
+<style>
+</style>
+</head>
+
+<body>
+
+<div id="wrap">
+	<header>
+		<div id="gnb">
+			<div class="gnb-title">
+				<h1><a href="">(주)신라안전</a></h1>
+			</div>
+			<div class="gnb-right">
+				<select naem="">
+					<option value="">다름사람으로 로그인</option>
+				</select>
+			</div>
+		</div>
+		
+		<div id="header-area">
+			<div class="hd-left"><a onclick="openNav()"><img src="../images/hdi-1.jpg" alt="메뉴" /></a></div>
+			<div class="hd-title"><a href="../index.html"><img src="../images/logo-title.jpg" alt="OK plaza" /></a></div>
+			<div class="hd-right">
+				<a href="" class="mg_r13"><img src="../images/hdi-2.jpg" alt="로그아웃" /></a>
+				<a href="basket.html"><img src="../images/hdi-3.jpg" alt="장바구니" /></a>
+			</div>
+		</div>
+		
+		<div id="search-area">
+			<div class="search-box">
+				<span>상품검색</span>
+				<input type="text" name="" placeholder="검색어를 입력하세요.">
+			</div>
+			<div class="search-box-btn"><img src="../images/hdi-4.jpg" alt="검색"></div>
+		</div>
+		
+		<div id="nav">
+			<ul class="nav-ul">
+				<li><a href="#" class="menu-1">주문</a></li>
+				<li><a href="#" class="menu-2">인수/반품</a></li>
+				<li><a href="#" class="menu-3">정산</a></li>
+				<li><a href="#" class="menu-4">상품제안</a></li>
+				<li><a href="#" class="menu-5">고객센터</a></li>
+			</ul>
+		</div>
+		
+		<div class="nav-sub-menu sub-1">
+			<div class="nav-box">
+				<a href="/design/sktelesys/mall/mobile/goods/list.html"><button type="button">상품리스트</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/prefinancing.html"><button type="button">선입금 주문내역</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/order.html"><button type="button">주문진척도</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/record.html"><button type="button">구매이력 조회</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/confirm.html"><button type="button">주문승인</button></a>
+			</div>
+		</div>
+		
+		<div class="nav-sub-menu sub-2">
+			<div class="nav-box">
+				<a href="/design/sktelesys/mall/mobile/list/takeover.html"><button type="button">상품인수</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/return.html"><button type="button">반품신청/현황</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/takelist.html"><button type="button">인수이력조회</button></a>
+			</div>
+		</div>
+		
+		<div class="nav-sub-menu sub-3">
+			<div class="nav-box">
+				<a href="/design/sktelesys/mall/mobile/list/taxbill.html"><button type="button">세금계산서</button></a>
+				<a href="/design/sktelesys/mall/mobile/list/financial.html"><button type="button">채무관리</button></a>
+			</div>
+		</div>
+		
+		<div class="nav-sub-menu sub-4">
+			<div class="nav-box">
+				<a href="#"><button type="button">재고관리</button></a>
+			</div>
+		</div>
+		
+		<div class="nav-sub-menu sub-5">
+			<div class="nav-box">
+				<a href="/design/sktelesys/mall/mobile/notice/notice_search.html"><button type="button">공지사항</button></a>
+				<a href="/design/sktelesys/mall/mobile/qna/qna_list.html"><button type="button">Q&A</button></a>
+			</div>
+		</div>
+	</header>
+	
+	<section class="section-w">
+	
+		<h3 class="con">#장바구니</h3>
+		
+		
+		<div class="box-3">
+			<table class="tstyle-1">
+				<tr>
+					<th width="10%"><input type="checkbox" /></td>
+					<th width="90%" colspan="2" class="text-center">
+						상품정보
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<!-- 반복구간 -->
+		<div class="box-4">
+			<table class="tstyle-5">
+				<tr>
+					<td width="10%" class="va_t"><input type="checkbox" /></td>
+					<td width="90%" colspan="2" class="text-right">
+						<div class="glist-box2">
+							<a href="/design/sktelesys/mall/mobile/goods/view.html">
+								<div class="glist2">
+									<img src="../images/goods-1.jpg" alt="배너">
+									<div class="glist-category">
+										<span class="gcsp-1 col-1">안전</span>
+										<p class="gcp2-1">안전도색판</p>
+										<p class="gcp2-2">37,900원</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="25%">단가(주문수량)</td>
+					<td width="65%" class="text-right">
+						<input type="text" class="istyle-2" size="4" /> 개 <span class="red va_i">(재고수량: 10개)</span>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="">금액</td>
+					<td width="" class="text-right"><span class="va_i fs_1-3rem bb">3,790,000</span> 원</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="">납기희망일</td>
+					<td width="" class="text-right">
+						<div class="date-sum">
+							<img src="../images/side/datep.jpg" width="27" alt="" style="float:right;""/> <input type="text" class="istyle-2 datepicker" style="float:right; width:60%" />
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="box-4">
+			<table class="tstyle-5">
+				<tr>
+					<td width="10%" class="va_t"><input type="checkbox" /></td>
+					<td width="90%" colspan="2" class="text-right">
+						<div class="glist-box2">
+							<a href="/design/sktelesys/mall/mobile/goods/view.html">
+								<div class="glist2">
+									<img src="../images/goods-1.jpg" alt="배너">
+									<div class="glist-category">
+										<span class="gcsp-1 col-1">안전</span>
+										<p class="gcp2-1">안전도색판</p>
+										<p class="gcp2-2">37,900원</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="25%">단가(주문수량)</td>
+					<td width="65%" class="text-right">
+						<input type="text" class="istyle-2" size="4" /> 개 <span class="red va_i">(재고수량: 10개)</span>
+					</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="">금액</td>
+					<td width="" class="text-right"><span class="va_i fs_1-3rem bb">3,790,000</span> 원</td>
+				</tr>
+				<tr>
+					<td width="10%">&nbsp;</td>
+					<td width="">납기희망일</td>
+					<td width="" class="text-right">
+						<div class="date-sum">
+							<img src="../images/side/datep.jpg" width="27" alt="" style="float:right;""/> <input type="text" class="istyle-2 datepicker" style="float:right; width:60%" />
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+		<div class="box-sum">
+			<p>공급가액 3,790,000원 + 부가세 379,000원<br/> = <span class="red va_s b fs_1-3rem">4,169,000</span><span class="va_s b fs_1-3rem">원</span></p>
+		</div>
+		
+		<div class="btn-box text-right">
+			<a href="#layer1" class="btn-example2"><button type="button" class="btns-4">선택 상품 주문 신청</button></a>
+			<a href="#layer1" class="btn-example2"><button type="button" class="btns-2">전체 상품 주문신청</button></a>
+		</div>
+		
+		<div class="paging">
+			<ul class="pagination">		    	
+				<li class="on"><a href=""><span>1</span></a></li>
+				<li><a href=""><span>2</span></a></li>
+				<li class="next">
+					<a href="" class="" aria-label="다음"><img src="../images/next-1.jpg" width="23" height="23"></a>
+				<li class="next">
+					<a href="" class="" aria-label="다다음"><img src="../images/next-2.jpg" width="23"  height="23"></a>
+				</li>
+			</ul>
+		</div>
+		
+	</section>
+	
+	<footer>
+		<div id="footer">
+			<div class="policy_wrap">
+				<div class="policy_box">
+					<ul class="policy">
+						<li>
+							<a href="#">개인정보처리방침</a>
+						</li>
+					</ul>
+					<!-- <h6><img src="../images/icon-7.jpg" alt="sk telesys"></h6> -->
+				</div>
+				<adress>
+					<span class="adr-1">서울특별시 중구 남대문로 10길 9(삼각동) 경기빌딩 3층 sk텔레시스(주)</span>
+					<span class="adr-2">copyright 2012 sktelesys. all rights reserved.</span>
+				</adress>
+			</div>
+			<div class="policy-footer">
+				<div>
+					<a href="basket.html">
+						<img src="../images/icon-8.jpg" alt="장바구니">
+						<span>장바구니</span>
+						<span class="pf-p">3</span>
+					</a>
+				</div>
+				<div>
+					<a href="../list/attention.html">
+						<img src="../images/icon-9.jpg" alt="관심상품">
+						<span>관심상품</span>
+					</a>
+				</div>
+				<div>
+					<a href="../list/record.html">
+						<img src="../images/icon-10.jpg" alt="구매이력">
+						<span>구매이력 조회</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<div id="mySidenav" class="sidenav" style="width:0%;">
+		<div class="side-top">
+			<a href="#"><img src="../images/logo-title.jpg" alt="OK plaza"></a>
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src="../images/side/side-01.jpg" alt="x" style="width:29px;"></a>
+		</div>
+		<div class="side-content">
+			<dl class="accodian">
+				<dt>공통자제 <span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">결속자제</a></li>
+						<li><a href="#">시멘트</a></li>
+						<li><a href="#">방수재</a></li>
+						<li><a href="#">접기/파뢰</a></li>
+						<li><a href="#">볼트/너트/나사</a></li>
+						<li><a href="#">공구</a></li>
+					</ul>
+				</dd>
+				<dt>전기/통신<span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">광점퍼코드</a></li>
+						<li><a href="#">통신함/기구물</a></li>
+						<li><a href="#">가선자재</a></li>
+						<li><a href="#">유/무선통신기기</a></li>
+						<li><a href="#">구조물</a></li>
+						<li><a href="#">개통자재</a></li>
+						<li><a href="#">케이블</a></li>
+						<li><a href="#">배전제어기기</a></li>
+						<li><a href="#">조명기구</a></li>
+						<li><a href="#">절연재료</a></li>
+						<li><a href="#">전선접속재</a></li>
+						<li><a href="#">수배전반</a></li>
+						<li><a href="#">전선관로재</a></li>
+						<li><a href="#">통신소자</a></li>
+					</ul>
+				</dd>
+				<dt>토목<span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">울타리용재</a></li>
+						<li><a href="#">맨홀</a></li>
+					</ul>
+				</dd>
+				<dt>건축<span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">도료</a></li>
+						<li><a href="#">타일</a></li>
+					</ul>
+				</dd>
+				<dt>비품/관리<span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">비품/소모품</a></li>
+						<li><a href="#">산업/안전용품</a></li>
+					</ul>
+				</dd>
+				<dt>제조 원재료<span></span></dt>
+				<dd>
+					<ul class="accod-ul">
+						<li><a href="#">전자재료</a></li>
+						<li><a href="#">철강재</a></li>
+						<li><a href="#">수/배전재</a></li>
+						<li><a href="#">전선/관로재</a></li>
+						<li><a href="#">통신원부자재</a></li>
+					</ul>
+				</dd>
+			</dl>
+			<div class="accd-box">
+				<ul class="accd-ful">
+					<li><a href="#">고객센터</a></li>
+					<li><a href="#">반품처리</a></li>
+					<li><a href="#">신규상품 요청</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="side-footer">
+		
+		</div>
+	</div>
+	
+	
+	<div class="dim-layer dim-layer2 dl-la1">
+	    <div class="dimBg"></div>
+	    <div id="layer1" class="pop-layer">
+	        <div class="pop-container">
+	            <div class="pop-conts">
+	            	<p class="pop-title">주문필수정보</p>
+	                <table class="tstyle-4">
+	                	<tr>
+	                		<th width="30%">주문명</th>
+	                		<td width="70%"><input type="text" class="istyle-1" /></td>
+	                	</tr>
+	                	<tr>
+	                		<th width="30%">배송지</th>
+	                		<td width="70%">
+								<select naem="" width="90%">
+									<option value="">서울 노원구 공릉로58길</option>
+								</select>
+							</td>
+	                	</tr>
+	                	<tr>
+	                		<th>예산여부</th>
+	                		<td>
+								<input type="radio"> 일반예산
+								<input type="radio"> 이벤트예산
+							</td>
+	                	</tr>
+	                </table>
+	            </div>
+	        </div>
+	        <div class="btn-r">
+				<a href="#layer1" class="btn-example2">주문</a>
+                <a href="#" class="btn-layerClose">닫기</a>
+            </div>
+	    </div>
+	</div>
+</div>
+
+</body>
+<script type="text/javascript">
+	function openNav() {
+	    document.getElementById("mySidenav").style.width = "100%";
+	}
+	
+	function closeNav() {
+	    document.getElementById("mySidenav").style.width = "0";
+	}
+	
+	var acodian = {
+	  click: function(target) {
+	    var $target = $(target);
+	    $target.on('click', function() {
+
+	      if ($(this).hasClass('on')) {
+	        slideUp($target);
+	      } else {
+	        slideUp($target);
+	        $(this).addClass('on').next().slideDown();
+	      }
+
+	      function slideUp($target) {
+	        $target.removeClass('on').next().slideUp();
+	      }
+
+	    });
+	  }
+	};
+	acodian.click('.accodian > dt');
+	
+	$( function() {
+	    $( ".datepicker" ).datepicker({
+	    	dateFormat: "yy-mm-dd"
+	    });
+	  } );
+
+	/* 레이어팝업 1 */
+	$('.btn-example1').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup($href);
+    });
+    function layer_popup(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer1').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer1').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer1').fadeOut();
+            return false;
+        });
+
+    }
+    
+    /* 레이어팝업 2 */
+	$('.btn-example2').click(function(){
+        var $href = $(this).attr('href');
+        layer_popup2($href);
+    });
+    function layer_popup2(el){
+
+        var $el = $(el);        //레이어의 id를 $el 변수에 저장
+        var isDim = $el.prev().hasClass('dimBg');   //dimmed 레이어를 감지하기 위한 boolean 변수
+
+        isDim ? $('.dim-layer2').fadeIn() : $el.fadeIn();
+
+        var $elWidth = ~~($el.outerWidth()),
+            $elHeight = ~~($el.outerHeight()),
+            docWidth = $(document).width(),
+            docHeight = $(document).height();
+
+        // 화면의 중앙에 레이어를 띄운다.
+        if ($elHeight < docHeight || $elWidth < docWidth) {
+            $el.css({
+                marginTop: -$elHeight /2,
+                marginLeft: -$elWidth/2
+            })
+        } else {
+            $el.css({top: 0, left: 0});
+        }
+
+        $el.find('a.btn-layerClose').click(function(){
+            isDim ? $('.dim-layer2').fadeOut() : $el.fadeOut(); // 닫기 버튼을 클릭하면 레이어가 닫힌다.
+            return false;
+        });
+
+        $('.layer .dimBg').click(function(){
+            $('.dim-layer2').fadeOut();
+            return false;
+        });
+
+    }
+    
+	$(".menu-1").click(function(){
+	    $(".sub-1").show();
+	    $(".sub-2").hide();
+	    $(".sub-3").hide();
+	    $(".sub-4").hide();
+	    $(".sub-5").hide();
+	});
+	$(".menu-2").click(function(){
+		$(".sub-1").hide();
+	    $(".sub-2").show();
+	    $(".sub-3").hide();
+	    $(".sub-4").hide();
+	    $(".sub-5").hide();
+	});
+	
+	$(".menu-3").click(function(){
+		$(".sub-1").hide();
+	    $(".sub-2").hide();
+	    $(".sub-3").show();
+	    $(".sub-4").hide();
+	    $(".sub-5").hide();
+	});
+	$(".menu-4").click(function(){
+		$(".sub-1").hide();
+	    $(".sub-2").hide();
+	    $(".sub-3").hide();
+	    $(".sub-4").show();
+	    $(".sub-5").hide();
+	});
+	
+	$(".menu-5").click(function(){
+		$(".sub-1").hide();
+	    $(".sub-2").hide();
+	    $(".sub-3").hide();
+	    $(".sub-4").hide();
+	    $(".sub-5").show();
+	});
+</script>
+</html>

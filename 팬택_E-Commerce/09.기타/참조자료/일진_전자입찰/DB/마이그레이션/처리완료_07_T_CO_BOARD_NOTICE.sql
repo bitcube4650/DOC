@@ -1,0 +1,2 @@
+-- To-Be 실DB에서 수행
+DELETE FROM T_CO_BOARD_NOTICE WHERE B_DATE > '2024-04-01'	-- 테스트한 DATA 삭제

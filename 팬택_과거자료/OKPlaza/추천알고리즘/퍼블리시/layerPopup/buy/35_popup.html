@@ -1,0 +1,113 @@
+<div class="dialog_content" title="재고이력" style="width:850px;">
+	<div class="dialogInner">
+		<div class="tableSection">
+			<h3 class="mb10">상품재고정보</h3>
+			<div class="tableWrap type02 mt5 no-bd pb0 pdTable">
+				<table>
+					<colgroup>
+						<col style="width:125px"/>
+						<col style="width:125px"/>
+						<col style="width:125px"/>
+						<col style="width:125px"/>
+						<col style="width:125px"/>
+						<col style="width:125px"/>
+					</colgroup>
+					<thead>
+					<tbody>
+						<tr>
+							<th>상품코드</th>
+							<th colspan="2">상품명</th>
+							<th colspan="3">상품규격</th>
+						</tr>
+						<tr>
+							<td class="tc">100000063327</td>
+							<td class="pl10" colspan="2">0</td>
+							<td class="pl10" colspan="3">0</td>
+						</tr>
+						<tr>
+							<th>적정재고<br />(A)</th>
+							<th>배송중<br />(주문/배송중)</th>
+							<th>재고량<br />(B)</th>
+							<th>반품대기</th>
+							<th>과부족<br />(B-A)</th>
+							<th>적정재고율</th>
+						</tr>
+						<tr>
+							<td class="tr">0</td>
+							<td class="tr">0</td>
+							<td class="tr">0</td>
+							<td class="tr">0</td>
+							<td class="tr">0</td>
+							<td class="tr">0</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<h3 class="mb10 mt20">재고이력</h3>
+			<div class="tableWrap full bdBot mb5 pt15 pb15" style="border-top:1px solid #ccc">
+				<table>
+					<colgroup>
+						<col width="65px">
+						<col width="280px">
+						<col width="65px">
+						<col width="180px">
+						<col width="65px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="srcOrdStartDate">일자</label></th>
+							<td>
+								<div class="date">
+									<span style="width:125px"><input type="text" id="srcOrdStartDate" name="srcOrdStartDate" class="js_datepicker" readonly="readonly" style="width:59px"  tabindex="-1"></span>
+									<span style="width:125px"><input type="text" id="srcOrdEndDate" name="srcOrdEndDate" class="js_datepicker" readonly="readonly" style="width:59px"></span>
+								</div>
+							</td>
+							<th><label for="">처리유형</label></th>
+							<td>
+								<div>
+									<span class="ui_chk grayChk"><input type="checkbox" id="ipChi1"><label for="ipChi1">전체</label></span>
+									<span class="ui_chk grayChk ml10"><input type="checkbox" id="ipChi2"><label for="ipChi2">입고</label></span>
+									<span class="ui_chk grayChk ml10"><input type="checkbox" id="ipChi3"><label for="ipChi3">출고</label></span>
+								</div>
+							</td>
+							<th><label for="">처리유형</label></th>
+							<td>
+								<select id="" name="" class="ui_select last">
+									<option value="">유형</option>
+									<option value="">유형</option>
+									<option value="">유형</option>
+									<option value="">유형</option>
+								</select>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+			<div class="topBtnGroup static">
+				<button type="button" class="greenBtn"><i class="far fa-file-excel"></i> 엑셀다운</button>
+				<button type="button" class="redBtn"><i class="fas fa-search"></i> 조회</button>
+			</div>
+
+			<div class="tableWrap type02 mt30 pt0 pb0 no-bd">
+				그리드테이블
+				<table id="list"></table>
+				<div id="plist"></div>
+			</div>
+
+
+			<div class="btnWrap">
+				<button type="button" class="c_gray">닫기</button>
+			</div>
+		</div>
+		
+	</div>
+</div> <!-- // .dialog_content -->
+
+<script type="text/javascript">
+$(function(){
+	$(".js_datepicker").fn_datepicker();
+});
+</script>

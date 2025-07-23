@@ -1,0 +1,70 @@
+
+JQGRID 버전 업그레이드
+var rowCnt = $("#list2").getGridParam('reccount');
+=>var rowCnt = $("#list2").jqGrid('getGridParam','records');
+
+
+$(this).setCell(rowid,'TITLE','',{color:'#0000ff',cursor:'pointer'});
+=>$("#list2").jqGrid('setCell', rowid,'TITLE','',{color:'#0000ff',cursor:'pointer'});
+
+var rowid = $("#list").getDataIDs()[i];
+=>  var $ids=$("#list").jqGrid('getDataIDs'); 
+for($i=0;$i<$ids.length;$i++){
+
+}
+
+
+
+
+$("#list").addRowData(rowid,{ 
+		ATTACH_SEQ		 : rtn_attach_seq, 
+		ATTACH_FILE_NAME : rtn_attach_file_name, 
+		ATTACH_FILE_PATH : rtn_attach_file_path, 
+		BIGO			 : "<img src='/img/system/icon/Download.gif' width='24' height='24' />"
+	});
+
+=>
+$("#list").jqGrid('addRowData',rowid,{
+		ATTACH_SEQ		 : rtn_attach_seq, 
+		ATTACH_FILE_NAME : rtn_attach_file_name, 
+		ATTACH_FILE_PATH : rtn_attach_file_path, 
+		BIGO			 : "<img src='/img/system/icon/Download.gif' width='24' height='24' />"
+	});
+
+
+혹은 다음으로도 처리 가능.
+var newData = [
+            {id: '78', thingy: "jkl"}
+        ];
+        var rowId = $.jgrid.randId(); // new row ID
+        $("#list").jqGrid('addRowData', rowId, newData);
+
+
+$("#list").addRowData(rowid);
+=>$("#list").jqGrid('addRowData',rowid);
+
+$("#list").delRowData(rowid);
+=>$("#list").jqGrid('delRowData',rowid);
+
+
+
+
+jq("#list").setSelection(top_rowid);
+=>jq("#list").jqGrid('setSelection', top_rowid);
+
+
+var rowData=jQuery("#list").getRowData(rowId);
+=>var rowData=jQuery("#list").jqGrid('getRowData', rowId);
+
+
+$("#list").setGridHeight(<%=listHeight %>);
+=> $("#list").jqGrid('setGridHeight', <%=listHeight %>);
+
+jq("#list2").clearGridData();
+=>jq("#list2").jqGrid('clearGridData');
+
+jq("#list2").saveRow(rowid);
+=>jq("#list2").jqGrid('saveRow', rowid);
+
+jq("#list2").editRow(rowid);
+=>jq("#list2").jqGrid('editRow', rowid);

@@ -1,0 +1,91 @@
+<div class="dialog_content" title="신규상품요청" style="width:700px;">
+	<div class="dialogInner">
+		<div class="tableSection">
+			<div class="tableWrap full no-bd pb0">
+				<table>
+					<colgroup>
+						<col width="70px">
+						<col width="275px">
+						<col width="80px">
+						<col width="auto">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th><label for="">고객사</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">요청일</label></th>
+							<td><input id="" name="" type="text" class="full last"></td>
+						</tr>
+						<tr>
+							<th><label for="">상품명</label></th>
+							<td><input id="" name="" type="text" class="full"></td>
+							<th><label for="">진행상태</label></th>
+							<td>
+								<select name="" id="" class="ui_select last">
+									<option value="">요청</option>
+								</select>
+							</td>
+						</tr>
+						<tr>
+							<th class="vm"><label for="">요청사항</label></th>
+							<td colspan="3"><textarea name="" id="" cols="30" rows="10"></textarea></td>
+						</tr>				
+						<tr>
+							<th><label for="fileUpload1">첨부파일1</label></th>
+							<td colspan="3">
+								<div class="fileBox">
+									<div class="input-group last">
+										<div class="custom-file"><span>파일을 선택하세요.</span></div>
+										<a href="#self" class="btnFile js_dialog" data-href="../../../OKplaza/layerPopup/buy/21_popup.html">등록</a>
+										<!-- <button type="button" class="btnFile">삭제</button> -->
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="fileUpload2">첨부파일2</label></th>
+							<td colspan="3">
+								<div class="fileBox">
+									<div class="input-group last">
+										<div class="custom-file"><span>파일을 선택하세요.</span></div>
+										<a href="#self" class="btnFile js_dialog" data-href="../../../OKplaza/layerPopup/buy/21_popup.html">등록</a>
+										<!-- <button type="button" class="btnFile">삭제</button> -->
+									</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><label for="fileUpload3">첨부파일3</label></th>
+							<td colspan="3">
+								<div class="fileBox">
+									<div class="input-group last">
+										<div class="custom-file"><span>파일을 선택하세요.</span></div>
+										<a href="#self" class="btnFile js_dialog" data-href="../../../OKplaza/layerPopup/buy/21_popup.html">등록</a>
+										<!-- <button type="button" class="btnFile">삭제</button> -->
+									</div>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+			
+		<div class="btnWrap">
+			<button type="button" class="c_red">수정</button>
+			<button type="button" class="c_gray" style="background:#4A4747">삭제</button>
+			<button type="button" class="c_gray">초기화</button>
+		</div>
+	</div>
+</div> <!-- // .dialog_content -->
+
+<script type="text/javascript">
+$(function(){
+	if($('.js_dialog').length > 0){
+		$(".js_dialog").click(function(e) {
+			$(this).fn_dialog();
+			e.preventDefault();
+		});
+	}
+});
+</script>

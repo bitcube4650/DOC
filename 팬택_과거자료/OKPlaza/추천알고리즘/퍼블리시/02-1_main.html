@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="./css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="./css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="./jq/buy/plugins.js"></script>
+	<script src="./jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="./css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="./jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="./jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+	<div class="okWrap">
+
+		<div class="okInWrap">
+			<!-- header -->
+			<header class="ok_header fixMenu"> <!-- main과 검색에만 class = fixMenu 추가됨 -->
+				<div class="okUtill">
+					<h1><a href="#self"><img src="./img/buy/logo.png" alt="OK plaza"></a></h1>
+					<section class="">
+						<ul class="h_quick">
+							<li><a href="#self" onclick="javaScript:fnAdmUserInfo();"><i class="fas fa-phone-alt"></i> 담당자 안내</a></li>
+							<li><a href="/system/systemLogout.sys"><i class="fas fa-power-off"></i> 로그아웃</a></li>
+							<li><a href="/buyOrgan/organBuyList.sys?_menuCd=BUY_MY_BORG"><i class="fas fa-cubes"></i> 사업장관리</a></li>
+							<li><a href="/buyOrgan/organBuyUserList.sys?_menuCd=BUY_MY_USER"><i class="fas fa-users"></i> 사용자관리</a></li>
+							<li><a href="javascript:fnUserDetail();"><i class="fas fa-user"></i> 정아름</a></li>
+						</ul>
+						
+						<article>
+							<div class="h_searchForm">
+								<span>상품검색</span>
+								<input type="text" />
+								<button type="button" onclick="javascript:fnTotSearch();">검색</button>
+							</div>
+							<div class="subArea">
+								<select name="" id="">
+									<option value="">씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+									<option value="">씨제이텔레콤</option>
+								</select>
+								<dl class="h_besiness">
+									<dt>사업장상태</dt>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerIsOrderLimit" /> <label for="headerIsOrderLimit">주문제작</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerPrePay" /> <label for="headerPrePay">수동주문</label></dd>
+									<dd class="ui_chk chk_s"><input type="checkbox" id="headerLoanYn" /> <label for="headerLoanYn">여신초과</label></dd>
+								</dl>
+							</div>
+						</article>
+					</section>
+				</div>
+
+				<div class="okMenu">
+					<!-- category -->
+					<section class="allCate">
+						<h2><a href="#self"><i class="fas fa-align-left"></i> 카테고리 전체</a></h2>
+						<ul>
+							<li><a href="#self">공통자재</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">전기/통신</a>
+								<ul>
+									<li><a href="#self">광점퍼코드</a>
+										<ul>
+											<li><a href="#self">등기구</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다</a></li>
+											<li><a href="#self">가나다가</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">토목</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">건축</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+								</ul>
+							</li>
+							<li><a href="#self">비품/관리</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#self">제조 원재로</a>
+								<ul>
+									<li><a href="#self">결속자재</a>
+										<ul>
+											<li><a href="#self">클램프/행거</a></li>
+											<li><a href="#self">케이블타이/밴드</a></li>
+											<li><a href="#self">브라켓</a></li>
+											<li><a href="#self">캡류</a></li>
+										</ul>
+									</li>
+									<li><a href="#self">방수재</a></li>
+									<li><a href="#self">볼트/너트</a></li>
+									<li><a href="#self">시멘트</a></li>
+									<li><a href="#self">접지/피뢰</a></li>
+									<li><a href="#self">공구</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+									<li><a href="#self">광점퍼코드</a></li>
+								</ul>
+							</li>
+						</ul>
+
+						<div class="serviceName">
+							<strong>010-2081-0424</strong>
+							<span><a href="mailto:bjh33@sk.com">bjh33@sk.com</a></span>
+							<span>담당자 :  변지희</span>
+						</div>
+					</section>
+					<!-- //category -->
+
+					<nav class="gnb">
+						<ul>
+							<li><a href="#self">주문관리</a></li>
+							<li><a href="#self">인수/반품</a></li>
+							<li><a href="#self">정산관리</a></li>
+							<li><a href="#self">상품관리</a></li>
+							<li><a href="#self">재고관리</a></li>
+							<li><a href="#self">고객센터</a></li>
+						</ul>
+					</nav>
+				</div>
+			</header>
+			<!-- // header -->
+
+			<!-- ok_container -->
+			<div class="ok_container">
+				<!-- ok_contents -->
+				<div class="ok_contents">
+
+					<ul class="mOrderProcess">
+						<li><div><a href="#self" class="mOrder_01"><strong>주문 0건</strong><span>주문취소하기</span></a></div></li>
+						<li><div><a href="#self" class="mOrder_02"><strong>배송준비 0건</strong><span>주문내역 확인</span></a></div></li>
+						<li><div><a href="#self" class="mOrder_03"><strong>배송 3건</strong><span>배송위치추적</span></a></div></li>
+						<li><div><a href="#self" class="mOrder_04"><strong>인수대기 0건</strong><span>인수대기 리스트</span></a></div></li>
+						<li><div><a href="#self" class="mOrder_05"><strong>정산대기 0건</strong><span>정산대기 리스트</span></a></div></li>
+					</ul>
+
+					<div class="autoRolling mainRolling">
+						<div class="rolling-ctrl ">
+							<ul class="control-area">
+								<li><a href="#self"><img src="./img/buy/mBanner01.png" alt="" /></a></li>
+								<li><a href="#self"><img src="./img/buy/mBanner01.png" alt="" /></a></li>
+								<li><a href="#self"><img src="./img/buy/mBanner01.png" alt="" /></a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- //mainSlideTop -->
+				</div>
+				<!-- //ok_contents -->
+
+				<!-- banner -->
+				<div class="autoRolling mainBanner">
+					<div class="rolling-ctrl ">
+						<ul class="control-area">
+							<li><a href="#self"><img src="./img/buy/banner.png" alt="" /></a></li>
+							<li><a href="#self"><img src="./img/buy/banner.png" alt="" /></a></li>
+							<li><a href="#self"><img src="./img/buy/banner.png" alt="" /></a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //banner -->
+
+				<!-- notice -->
+				<div class="noticeBar">
+					<div class="notice">
+						<strong>긴급공지</strong>
+						<ul class="noticeRoll">
+							<li><a href="#self">111서버점검 공지 - 2019. 05. 25(목) 오전 9시~12시까지 (약 3시간 가량)</a></li>
+							<li><a href="#self">222서버점검 공지 - 2019. 05. 25(목) 오전 9시~12시까지 (약 3시간 가량)</a></li>
+							<li><a href="#self">333서버점검 공지 - 2019. 05. 25(목) 오전 9시~12시까지 (약 3시간 가량)</a></li>
+							<li><a href="#self">444서버점검 공지 - 2019. 05. 25(목) 오전 9시~12시까지 (약 3시간 가량)</a></li>
+							<li><a href="#self">555서버점검 공지 - 2019. 05. 25(목) 오전 9시~12시까지 (약 3시간 가량)</a></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //notice -->
+
+				<!-- inBoxWrap -->
+				<div class="inBoxWrap mainRollBox">
+					<h3>추천상품</h3>
+					<div class="rotating-prod connect-prod">
+						<!-- productGrid -->
+						<div class="prod-grid-comp">
+							<!-- product-list -->
+							<div class="product-list ">
+								<div class="productGridItem ">
+									<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+										<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+										<div class="prod-info">
+											<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+											<article>
+												<dl>
+													<dt>상품코드 : </dt>
+													<dd>10000065079</dd>
+												</dl>
+												<dl>
+													<dt>규격 : </dt>
+													<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+												</dl>
+											</article>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- //product-list -->
+
+							<!-- product-list -->
+							<div class="product-list ">
+								<div class="productGridItem ">
+									<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+										<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+										<div class="prod-info">
+											<strong>22222222PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+											<article>
+												<dl>
+													<dt>상품코드 : </dt>
+													<dd>10000065079</dd>
+												</dl>
+												<dl>
+													<dt>규격 : </dt>
+													<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+												</dl>
+											</article>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- //product-list -->
+
+							<!-- product-list -->
+							<div class="product-list ">
+								<div class="productGridItem ">
+									<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+										<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+										<div class="prod-info">
+											<strong>333333PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+											<article>
+												<dl>
+													<dt>상품코드 : </dt>
+													<dd>10000065079</dd>
+												</dl>
+												<dl>
+													<dt>규격 : </dt>
+													<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+												</dl>
+											</article>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- //product-list -->
+
+							<!-- product-list -->
+							<div class="product-list ">
+								<div class="productGridItem ">
+									<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+										<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+										<div class="prod-info">
+											<strong>4444444PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+											<article>
+												<dl>
+													<dt>상품코드 : </dt>
+													<dd>10000065079</dd>
+												</dl>
+												<dl>
+													<dt>규격 : </dt>
+													<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+												</dl>
+											</article>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- //product-list -->
+
+							<!-- product-list -->
+							<div class="product-list ">
+								<div class="productGridItem ">
+									<a href="self" title="상세보기" class="productMainLink js_dialog" data-href="./layerPopup/buy/productDetail.html">
+										<span class="prod-thumb"><img src="./img/buy/pick01.png" alt=""></span>
+										<div class="prod-info">
+											<strong>555555PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+											<article>
+												<dl>
+													<dt>상품코드 : </dt>
+													<dd>10000065079</dd>
+												</dl>
+												<dl>
+													<dt>규격 : </dt>
+													<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+												</dl>
+											</article>
+										</div>
+									</a>
+								</div>
+							</div>
+							<!-- //product-list -->
+
+
+						</div>
+						<!-- //productGrid -->
+					</div>
+				</div>
+				<!-- //inBoxWrap -->
+
+				<!-- innerBody -->
+				<div class="mainBody">
+
+					<div class="mTbWrap">
+						<div class="tableWrap">
+							<h3 class="ico_chart">자재재고 현황<span>(금액단위: 백만원)</span></h3>
+							<div class="listDataTable bdTable">
+								<table>
+									<caption>자재재고 현황</caption>
+									<colgroup>
+										<col style="width:104px;" />
+										<col style="width:104px;" />
+										<col style="width:104px;" />
+										<col style="width:104px;" />
+										<col style="width:*px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col" rowspan="2" class="bln">구분</th>
+											<th scope="col" colspan="3">적정재고보유</th>
+											<th scope="col" rowspan="2" class="brn">총계</th>
+										</tr>
+										<tr>
+											<th scope="col" class="f_red">50% 이하</th>
+											<th scope="col">51~100%</th>
+											<th scope="col">101% 이상</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">품목</td>
+											<td>43</td>
+											<td>0</td>
+											<td>0</td>
+											<td>43</td>
+										</tr>
+										<tr>
+											<th scope="row">재고금액</td>
+											<td>60</td>
+											<td>0</td>
+											<td>0</td>
+											<td>60</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="#self" class="moreBtn">더보기 +</a>
+						</div>
+
+
+
+						<div class="tableWrap">
+							<h3 class="ico_receipt">세금계산서</h3>
+							<div class="listDataTable icoTable">
+								<table>
+									<caption>세금계산서</caption>
+									<colgroup>
+										<col style="width:90px;" />
+										<col style="width:120px;" />
+										<col style="width:90px;" />
+										<col style="width:100px;" />
+										<col style="width:*px;" />
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">발행일</th>
+											<th scope="col">금액</th>
+											<th scope="col">세금계산서</th>
+											<th scope="col">거래내역서</th>
+											<th scope="col">안전용품구매증명서</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>2019-05-31</td>
+											<td>2,891,559</td>
+											<td><a href="#self" class="icoBtn duty">세금계산서 보기</a></td>
+											<td><a href="#self" class="icoBtn invoice">거래내역서 보기</a></td>
+											<td><a href="#self" class="icoBtn safety">안전용품구매증명서 보기</a></td>
+										</tr>
+										<tr>
+											<td class="bln">2019-05-31</td>
+											<td>2,891,559</td>
+											<td><a href="#self" class="icoBtn duty">세금계산서 보기</a></td>
+											<td><a href="#self" class="icoBtn invoice">거래내역서 보기</a></td>
+											<td><a href="#self" class="icoBtn safety">안전용품구매증명서 보기</a></td>
+										</tr>
+										<tr>
+											<td class="bln">2019-05-31</td>
+											<td>2,891,559</td>
+											<td><a href="#self" class="icoBtn duty">세금계산서 보기</a></td>
+											<td><a href="#self" class="icoBtn invoice">거래내역서 보기</a></td>
+											<td><a href="#self" class="icoBtn safety">안전용품구매증명서 보기</a></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="#self" class="moreBtn">더보기 +</a>
+						</div>
+
+
+
+						<div class="tableWrap">
+							<h3 class="ico_notice">공지사항</h3>
+							<div class="listDataTable notiTable">
+								<table>
+									<caption>공지사항</caption>
+									<colgroup>
+										<col style="width:*px;" />
+										<col style="width:100px;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<td>
+												<a href="#self"><span class="tBadge" style="background:#00B1DB">NEW</span>시스템 서버 점검안내</a>
+											</td>
+											<td>2019-05-30</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#self"><span class="tBadge" style="background:#00B1DB">NEW</span>SKB向 동축커넥터(5C,7C) BMT참여 모집 공고</a>
+											</td>
+											<td>2019-05-30</td>
+										</tr>
+										<tr>
+											<td>
+												<a href="#self"><span class="tBadge" style="background:#FF6600">중요 ★</span>뭉쳐라 5G 이벤트 </a>
+											</td>
+											<td>2019-05-30</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="#self" class="moreBtn">더보기 +</a>
+						</div>
+
+
+
+						<div class="tableWrap">
+							<h3 class="ico_payinfo">자재대금 결제정보</h3>
+							<div class="listDataTable">
+								<table>
+									<caption>자재대금 결제정보</caption>
+									<colgroup>
+										<col style="width:340px;" />
+										<col style="width:*px;" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<td>
+												<p class="ico_exc">총 미결제 대금 : <span>2,891,559</span>원</p>
+											</td>
+											<td rowspan="3" class="bankInfo"><strong>국민은행</strong>295401-01-159395<br />(SK텔레시스)</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="ico_sack">만기 경과 대금 : <span>0</span>원</p>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<p class="ico_cal">최근 만기 도래대금 : <span>2,891,559</span>원 (2019-08-29)</p>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<a href="#self" class="moreBtn">더보기 +</a>
+						</div>
+					</div>
+
+				</div>
+				<!-- //innerBody -->
+			</div>
+			<!-- //ok_container -->
+
+			<!-- footer -->
+			<footer class="footer">
+				<ul class="mFootMenu">
+					<li><a href="#self" class="fMenu01">물품공급 기본계약서</a></li>
+					<li><a href="#self" class="fMenu02">특별계약서</a></li>
+					<li><a href="#self" class="fMenu03">윤리서약서</a></li>
+					<li><a href="#self" class="fMenu04">신규고객 결제안내</a></li>
+					<li><a href="#self" class="fMenu05">고객의 소리</a></li>
+					<li><a href="#self" class="fMenu06">담당자 안내</a></li>
+					<li><a href="#self" class="fMenu07">화면공유상담</a></li>
+					<li><a href="#self" class="fMenu08">신규상품제안</a></li>
+				</ul>
+				<div class="footInfo">
+					<h2 class="logo"><a href="#self"><img src="./img/buy/foot_logo.png" alt="SK telesys"></a></h2>
+					<div class="com_info">
+						<address>서울특별시 중구 남대문로 10길 9</address>
+						<p>Copyright SK telesys Co, LTD. All Rights Reserved.</p>
+					</div>
+					<ul class="link">
+						<li><a href="#self">개인정보 처리방침</a></li>
+						<li><a href="#self">이메일무단수집거부</a></li>
+						<li><a href="mailto:bjh33@sk.com">담당자 : 변지희 (010-2081-0424 / bjh33@sk.com)</a></li>
+					</ul>
+					<p class="foot_banner"><a href="#self"><img src="./img/buy/foot_banner.png" alt="임직원 &amp; 협력사 전용 몰"></a></p>
+				</div>
+			</footer>
+			<!-- //footer -->
+		</div>
+
+		<div class="ok_quick">
+			<h3>QUICK<br />MENU</h3>
+			<ul class="quickList">
+				<li class="ico_q1"><a href="#self">장바구니 <span>2</span></a></li>
+				<li class="ico_q2"><a href="#self">관심상품 <span>4</span></a></li>
+				<li class="ico_q3"><a href="#self">구매이력<br/>조회</a></li>
+				<li class="ico_q4"><a href="#self">주문취소<br/>요청</a></li>
+				<li class="ico_q5"><a href="#self">반품처리<br/>요청</a></li>
+				<li class="ico_q6"><a href="#self">신규상품<br/>요청이력</a></li>
+			</ul>
+
+			<div class="quickRoll">
+				<h3>최근본 상품 <a href="#self">15</a></h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl">
+					<ul class="control-area">
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>1111111PTZ 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>222 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+						<li>
+							<a href="#self"><img src="./img/buy/q_img.png" alt="" /></a>
+							<div class="prod-info">
+								<strong>3333 벽부형 브라켓PTZ 벽부형 브라켓PTZ 벽부형 브라켓</strong>
+								<article>
+									<dl>
+										<dt>상품코드 : </dt>
+										<dd>10000065079</dd>
+									</dl>
+									<dl>
+										<dt>규격 : </dt>
+										<dd>ㄱ자형, SBP-300WM1, 112*183*207.5mm</dd>
+									</dl>
+								</article>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<div class="quickRoll">
+				<h3>추천상품</h3>
+				<!-- rolling-ctrl -->
+				<div class="rolling-ctrl ">
+					<ul class="control-area">
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+						<li><a href="#self"><img src="./img/buy/q_img.png" alt="" /></a></li>
+					</ul>
+				</div>
+				<!-- rolling-ctrl -->
+			</div>
+
+			<button type="button" class="goTop">TOP</button>
+		</div>
+	</div><!-- //okWrap -->
+
+</body>
+</html>

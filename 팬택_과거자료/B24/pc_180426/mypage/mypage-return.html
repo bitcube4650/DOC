@@ -1,0 +1,502 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="Author" content="">
+<meta name="Keywords" content="">
+<meta name="Description" content="">
+<title>SK Telesys</title>
+<!-- Stylesheet Start -->
+<link href="../css/common.css" rel="stylesheet">
+<link href="../css/swiper.css" rel="stylesheet">
+<link href="../css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<!-- // Stylesheet End -->
+
+<!-- jQuery Start -->
+<script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script type="text/javascript">
+	$( function() {
+	    $( ".datepicker" ).datepicker({
+	    	dateFormat: "yy-mm-dd"
+	    });
+	  } );
+</script>
+
+<!-- // jQuery End -->
+</head>
+<body>
+	<!-- header -->
+	<div class="dimmed">
+	</div>
+	<div id="header">
+		<div class="top-menu">
+			<div class="inner">
+				<div class="bookmark">
+					즐겨찾기<span>★</span>
+				</div>
+
+				<div class="snb-box">
+					<ul class="snb">
+						<li><a href="../order/basket.html">장바구니</a></li>
+						<!-- <li><a href="../myshop/index.html">마이페이지</a></li> -->
+						<li><a href="../mypage/index.html">마이페이지</a></li>
+						<li><a href="../board/index.html">고객센터</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="bot-menu">
+			<div class="inner">
+				<h1 class="logo"><a href="../index.html"><img src="../img/logo.png" alt="로고"></a></h1>
+				<div class="search-box">
+					<div class="search-grp">
+						<input type="text" id="" name="" value=""><a href="#"><img src="../img/icon/icon_search.png"></a>
+					</div>
+				</div>
+				<div class="gnb-box">
+					<ul class="gnb">
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg1.png"><br><span>공통자재</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg2.png"><br><span>전기통신</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg3.png"><br><span>토목</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg4.png"><br><span>비품/관리</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg5.png"><br><span>제조/원재료</span></a></li>
+						<li><a href="../shop/list.html"><img src="../img/icon/icon_ctg6.png"><br><span>건축</span></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //header -->
+
+
+<div class="sub-bg">
+	<div class="sub-tit">
+		서브 타이틀
+	</div>
+</div>
+
+<div id="cs_center">
+	<div class="inner overflow-hidden pt-30">
+		<div class="float-left w200">
+			<div class="my-nav">
+				<div class="nav-head">
+					<h2><a href="../mypage/index.html">마이페이지</a></h2>
+				</div>
+				<div class="nav-body">
+					<ul class="nb-ult">
+						<li>
+							<a href="#">쇼핑정보</a>
+							<ul>
+								<li><a href="../mypage/mypage.html">- 주문배송조회</a></li>
+								<li class="active"><a href="../mypage/mypage-return.html">- 취소/반품/교환내역</a></li>
+								<li><a href="../mypage/mypage-attention.html">- 관심상품</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">활동정보</a>
+							<ul>
+								<li><a href="../mypage/mypage-consulting.html">- 1:1 문의내역</a></li>
+								<li><a href="../mypage/mypage-reviews.html">- 상품평</a></li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">개인정보</a>
+							<ul>
+								<li><a href="../mypage/mypage-Information.html">- 회원정보관리</a></li>
+								<li><a href="#">- 회원탈퇴</a></li>
+								<li><a href="../mypage/mypage-member.html">- 회원승인</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="float-right w1000">
+			
+			<div class="notice-board-box mg_t40">
+				<div class="overflow-hidden">
+					<div class="float-right">
+						<button type="button" class="btn-1 c_f13c43">조회</button>
+					</div>
+				</div>
+				<div class="table-type-1 mg_t10">
+					<form>
+						<table>
+							<colgroup>
+								<col width="15%;">
+								<col width="35%;">
+								<col width="15%;">
+								<col width="35%;">
+							</colgroup>
+							<tbody>
+							<tr>
+								<td>기간</td>
+								<td colspan="3">
+									<input type="text" class="datepicker text-center" style="width:100px;"> ~ <input type="text" class="datepicker text-center" style="width:100px;">
+									<button type="button" class="btn-2">1주일</button>
+									<button type="button" class="btn-2">1개월</button>
+									<button type="button" class="btn-2">3개월</button>
+									<button type="button" class="btn-2">6개월</button>
+								</td>
+							</tr>
+							<tr>
+								<td>상품명</td>
+								<td><input type="text" style="width:100px;"></td>
+								<td>주문상태</td>
+								<td>
+									<select>
+										<option>전체</option>
+									</select>
+								</td>
+							</tr>
+							
+						</tbody></table>
+					</form>
+				</div>
+			</div>
+			
+			<div class="notice-board-box">
+				<div class="overflow-hidden">
+					<h2 class="float-left con">최근주문정보</h2>
+					<div class="float-right">
+						<button type="button" class="btn-1 c_f13c43">더보기</button>
+					</div>
+				</div>
+				<div class="board-table2">
+					<table class="mg_0">
+						<colgroup>
+							<col width="12%">
+							<col width="26%">
+							<col width="9%">
+							<col width="9%">
+							<col width="10%">
+							<col width="10%">
+							<col width="14%">
+						</colgroup>
+						<tr>
+							<th>주문일</th>
+							<th>주문정보</th>
+							<th>주문자</th>
+							<th>결제방법</th>
+							<th>환불금액</th>
+							<th>주문상태</th>
+							<th>취소/반품/교환 날짜</th>
+						</tr>
+						<tr class="t-vam">
+							<td>2018.01.29<br/><a href="javascript:findview();"><button type="button" class="btn-1 mg_t5">상세보기</button></a></td>
+							<td class="text-left">앵커볼트외 2건<br/>주문번호:20180129000001</td>
+							<td>임상건</td>
+							<td>카드결제</td>
+							<td class="text-right">13,500</td>
+							<td>취소</td>
+							<td>2018-02-02</td>
+						</tr>
+						<tr class="t-vam">
+							<td>2018.01.29<br/><a href="javascript:findview();"><button type="button" class="btn-1 mg_t5">상세보기</button></a></td>
+							<td class="text-left">앵커볼트외 2건<br/>주문번호:20180129000001</td>
+							<td>임상건</td>
+							<td>카드결제</td>
+							<td class="text-right">13,500</td>
+							<td>취소</td>
+							<td>2018-02-02</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<ul class="pagination-box">
+					<li class="prev"><a href="#">&lt;</a></li>
+					<li><a class="active" href="#">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li class="next"><a href="#">&gt;</a></li>
+				</ul>
+		</div>
+	</div>
+</div>
+
+
+<div class="find-box2 find4" style="width:1040px;">
+	<div class="box-head">
+		상세보기
+	</div>
+	<div class="box-body">
+		<div class="body-box">
+			<h2 class="con text-left">주문상세내역</h2>
+			<p class="text-left">주문번호 : 20180129000001 주문일자: 2018-01-29 16:38</p>
+			<div class="option-area2">
+				<div class="option-box">
+					<table>
+						 <colgroup>
+							 <col width="*">
+							 <col width="150px">
+							 <col width="100px">
+							 <col width="100px">
+							 <col width="200px">
+						 </colgroup>
+						 <thead>
+							<tr>
+								<th>상품정보</th>
+								<th>단가</th>
+								<th>수량</th>
+								<th>단위</th>
+								<th>가격(부가세 포함)</th>
+								<th>배송비</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="item-info overflow-hidden">
+									<div class="float-left">
+										<div class="img-box2">
+										</div>
+									</div>
+									<div class="desc-box">
+										<p class="item-title">앵커볼트</p>
+										<p class="item-summary">500ml / 9개 / 케이스</p>
+									</div>
+								</td>
+								<td>
+									<p class="sell-price">13,500원</p>
+								</td>
+								<td>1</td>
+								<td>BOX</td>
+								<td>우체국택배<br/>(송장번호:<a href="javascript:findBoxOn()" class="blue">123154996</a>)</td>
+								<td rowspan="2">2,500원</td>
+							</tr>
+							<tr>
+								<td class="item-info overflow-hidden">
+									<div class="float-left">
+										<div class="img-box2">
+										</div>
+									</div>
+									<div class="desc-box">
+										<p class="item-title">앵커볼트</p>
+										<p class="item-summary">500ml / 9개 / 케이스</p>
+									</div>
+								</td>
+								<td>
+									<p class="sell-price">13,500원</p>
+								</td>
+								<td>1</td>
+								<td>BOX</td>
+								<td>우체국택배<br/>(송장번호:<a href="javascript:findBoxOn()" class="blue">123154996</a>)</td>
+							</tr>
+							<tr>
+								<td class="item-info overflow-hidden">
+									<div class="float-left">
+										<div class="img-box2">
+										</div>
+									</div>
+									<div class="desc-box">
+										<p class="item-title">앵커볼트</p>
+										<p class="item-summary">500ml / 9개 / 케이스</p>
+									</div>
+								</td>
+								<td>
+									<p class="sell-price">13,500원</p>
+								</td>
+								<td>1</td>
+								<td>BOX</td>
+								<td>우체국택배<br/>(송장번호:<a href="javascript:findBoxOn()" class="blue">123154996</a>)</td>
+								<td>2,500원</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr>
+								<td class="price-total" colspan="8">
+									<p class="text-right p1">주문금액 : <span>44,500원</span></p>
+									<p class="text-right p2">배송비 : <span>5,000원</span></p>
+									<p class="text-right p3">총 결제금액 : <span>49,500원</span></p>
+								</td>
+							</tr>
+						</tfoot>
+					</table>
+				</div>
+				
+			</div>
+			
+			<div class="notice-board-box">
+				<div class="overflow-hidden">
+					<h2 class="float-left con">배송지 정보</h2>
+				</div>
+				<div class="board-table2">
+					<table class="mg_0">
+						<colgroup>
+							<col width="12%">
+							<col width="88%">
+						</colgroup>
+						<tr>
+							<th class="text-left">받는 사람</th>
+							<td class="text-left">임상건</td>
+						</tr>
+						<tr class="t-vam">
+							<th class="text-left">연락처</th>
+							<td class="text-left">010-1111-1111</td>
+						</tr>
+						<tr class="t-vam">
+							<th class="text-left">주소</th>
+							<td class="text-left">서울특별시 은평구 불광동</td>
+						</tr>
+						<tr class="t-vam">
+							<th class="text-left">배송시 유의사항</th>
+							<td class="text-left"><textarea rows="7" style="width:100%;"></textarea></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			
+			<div class="notice-board-box mg_t40 mg_b40">
+				<div class="overflow-hidden">
+					<h2 class="float-left con">결제 정보</h2>
+				</div>
+				<div class="board-table2">
+					<table class="mg_0">
+						<colgroup>
+							<col width="12%">
+							<col width="88%">
+						</colgroup>
+						<tr>
+							<th class="text-left">총결제금액</th>
+							<td class="text-left">27,000</td>
+						</tr>
+						<tr class="t-vam">
+							<th class="text-left">결제방법</th>
+							<td class="text-left">카드결제</td>
+						</tr>
+						<tr class="t-vam">
+							<th class="text-left">결제자</th>
+							<td class="text-left">임상건</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+		</div>
+		
+		<div class="btn-group">
+			<a href="javascript:findBoxOff()" class="btn-close">닫기</a>
+		</div>
+	</div>
+</div>
+
+<script>
+var find_box = $('.find1');
+var find_box_width = -$('.find1').width() / 2;
+var find_box_height = $('.find1').height() / 3;
+
+var find_box2 = $('.find2');
+var find_box2_width = -$('.find2').width() / 2;
+var find_box2_height = $('.find2').height() / 3;
+
+var find_box3 = $('.find3');
+var find_box3_width = -$('.find3').width() / 2;
+var find_box3_height = $('.find3').height() / 3;
+
+var find_box4 = $('.find4');
+var find_box4_width = -$('.find4').width() / 2;
+var find_box4_height = $('.find4').height() / -5;
+
+function findBoxAlign() {
+	find_box.css({
+		"margin-left": find_box_width + 'px',
+		"margin-top": find_box_height + 'px'
+	});
+};
+
+function findBox2() {
+	find_box2.css({
+		"margin-left": find_box2_width + 'px',
+		"margin-top": find_box2_height + 'px'
+	});
+};
+
+function findBox3() {
+	find_box3.css({
+		"margin-left": find_box3_width + 'px',
+		"margin-top": find_box3_height + 'px'
+	});
+};
+
+function findBox4() {
+	find_box4.css({
+		"margin-left": find_box4_width + 'px',
+		"margin-top": find_box4_height + 'px'
+	});
+};
+
+function findBoxOn() {
+	$('.dimmed').fadeIn();
+	findBoxAlign();
+	find_box.fadeIn();
+};
+
+function findzn() {
+	$('.dimmed').fadeIn();
+	findBox2();
+	find_box2.fadeIn();
+};
+
+function findbn() {
+	$('.dimmed').fadeIn();
+	findBox3();
+	find_box3.fadeIn();
+};
+
+function findview() {
+	$('.dimmed').fadeIn();
+	findBox4();
+	find_box4.fadeIn();
+};
+
+function findBoxOff() {
+	$('.dimmed').hide();
+	find_box.fadeOut('fast');
+	find_box2.fadeOut('fast');
+	find_box3.fadeOut('fast');
+	find_box4.fadeOut('fast');
+}
+
+$('.dimmed').on('click', function() {
+	findBoxOff();
+});
+</script>
+
+<!-- footer -->
+	<div id="footer">
+		<div class="inner ft-inner">
+			<div class="left-box">
+				<div class="ft-info-box">
+					<h3>INFORMATION</h3>
+					<p class="ft-info">
+					(주)SK텔레시스  /  <span>서울특별시 중구 남대문로10길 9</span> / 대표 : 홍길동<br>
+					사업자등록번호 : 220-87-13283  /  법인등록번호 : 110111-3276402  /  통신판매신고 제 2009-서울강남-02751호 <br>
+					개인정보보호관리자 : 홍길동  /  이메일 : info@test.com
+					</p>
+				</div>
+			</div>
+			<div class="right-box">
+				<h3>ABOUT COMPANY</h3>
+				<p class="company-info">
+				저희 SK텔레시스는 최고의 역량과 경쟁력을 기반으로, 고객에게 시뢰받는 품질과 서비스를<br>
+				제공하기 위해 노력하겠습니다.
+				</p>
+				<div class="cs-info">
+				<span>CS CENTER</span><span>TEL : 1588-0000</span><span>OPEN : AM 10:00 ~ PM 06:00 / Sat, Sun, Holiday OFF</span>
+				</div>
+			</div>
+		</div>
+		<div class="copy-box">
+			Copyright <span>SK telesys</span> Co., LTD. All Rights Reserved.
+		</div>
+	</div>
+	<!-- //footer -->
+
+	<script src="../js/main.js"></script>
+	<script src="../js/swiper.js"></script>
+</body>
+</html>

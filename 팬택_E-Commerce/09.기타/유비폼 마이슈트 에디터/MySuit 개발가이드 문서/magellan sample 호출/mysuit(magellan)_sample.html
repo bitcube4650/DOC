@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" href="#">
+	<title></title>
+	<script type="text/javascript" src="./js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="./js/netModule.js"></script>
+	<script type="text/javascript" src="./js/mysuit-common.js?ver=20230106.04"></script>
+	<script type="text/javascript" src="./js/mysuit-data.js"></script>
+	<script type="text/javascript">
+		var gUrl = "http://localhost:9080";
+
+		// 싱글 레포트 호출
+		function fn_reportCall() {
+
+			var objFormData = new Object();
+			objFormData.projectName = "multi";
+			objFormData.formName = "test";
+			
+			var objDataset = new Object();
+			var data = [{'NAME' : '홍길동','POSITION' : '사장'},{'NAME' : '홍길동','POSITION' : '이사'}]
+			objDataset.dataset_0 = JSON.stringify(data); 
+						
+			var objParam = new Object();
+			objParam.name = "Test parameter data";
+			objParam.accessKey ="";			// (필수) 리포트 접속 키값
+			objParam.saasDivision  ="";		// T:Test(개발) O(Default): Operation(운영)
+			objParam.magellanCommonDoc='';  // 공통서식 여부
+
+			objFormData.datasetList = objDataset;
+			objFormData.paramList = objParam;
+
+			console.log(objFormData);
+
+			mysuitModule.gfn_reportCall(objFormData, gUrl + "/MYSUIT/UView5/index.jsp", "popup"); // iframe으로 호출 : if_report  popup으로 호출 : popup
+		}
+
+		//멀티 레포트 호출
+		function fn_reportCall_multi() {
+
+			var objMultiData = new Object();
+			var arrParamList = new Array();
+
+			var objFormData = new Object();
+			objFormData.projectName = "multi";
+			objFormData.formName = "test";
+			
+
+			var objParam = new Object();
+			objParam.dataset_0 = JSON.stringify(mysuitData.fn_dataset(5));
+			objParam.Key_101 = "Test parameter data";
+
+			objFormData.parameter = objParam;
+			console.log(objParam)
+			arrParamList.push(objFormData);
+			arrParamList.push(objFormData);
+			objMultiData.UB_FORMLIST_INFO = encodeURIComponent(JSON.stringify(arrParamList));
+
+			objMultiData.accessKey ="";				// (필수) 리포트 접속 키값
+			objMultiData.saasDivision  ="";			// T:Test(개발) O(Default): Operation(운영)
+			objMultiData.magellanCommonDoc=''; 		// 공통서식 여부
+
+			mysuitModule.gfn_reportCall(objMultiData, gUrl + "/MYSUIT/UView5/index.jsp", "if_report"); // iframe으로 호출
+		}
+
+		//파일 다운로드 (단건,다건);
+		function fn_exportFile() {
+			var objMultiData = new Object();
+			var arrParamList = new Array();
+
+			var objFormData = new Object();
+			objFormData.projectName = "multi";
+			objFormData.formName = "test";
+
+			var objParam = new Object();
+			objParam.dataset_0 = JSON.stringify(mysuitData.fn_dataset(5));
+			objParam.Key_101 = "Test parameter data";
+
+			objFormData.parameter = objParam;
+			arrParamList.push(objFormData);
+			arrParamList.push(objFormData);
+
+			objMultiData = { METHOD_NAME: "exportServerSide", CALL: "VIEWER5", FILE_TYPE: "exec" };
+			objMultiData.EXPORT_RESULT_TYPE = "FILE";          // FILE : Stream 
+			objMultiData.UB_EXPORT_FILE_TYPE = "PDF";			// 파일 확장자
+			objMultiData.MULTI_FORM_TYPE = "M";             // 멀티여부 필수 (M : 하나의 파일로 생성 , S : 각각의 파일로 생성) 
+			objMultiData.UB_FORMLIST_INFO = JSON.stringify(arrParamList); // 멀티 레포트 호출 파라미터
+
+			objMultiData.accessKey ="";				// (필수) 리포트 접속 키값
+			objMultiData.saasDivision  ="";			// T:Test(개발) O(Default): Operation(운영)
+			objMultiData.magellanCommonDoc=''; 		// 공통서식 여부	// 공통서식 여부
+
+			mysuitModule.gfn_exportServerSide(objMultiData, gUrl + "/MYSUIT/ubiform.do");
+		}
+
+		//PDF 출력
+		function fn_pdf_Print() {
+			var objMultiData = new Object();
+			var arrParamList = new Array();
+
+			var objFormData = new Object();
+			objFormData.projectName = "multi";
+			objFormData.formName = "test";
+
+			var objParam = new Object();
+			objParam.dataset_0 = JSON.stringify(mysuitData.fn_dataset(5));
+			objParam.Key_101 = "Test parameter data";
+
+			objFormData.parameter = objParam;
+			arrParamList.push(objFormData);
+			arrParamList.push(objFormData);
+
+			objMultiData = { METHOD_NAME: "exportServerSide", CALL: "VIEWER5", FILE_TYPE: "exec" };
+			objMultiData.EXPORT_RESULT_TYPE = "PRINT";         // (필수) return type 
+			objMultiData.UB_EXPORT_FILE_TYPE = "PRINT";		 // (필수) 파일 확장자
+			objMultiData.MULTI_FORM_TYPE = "M";             // (필수) 멀티여부 
+			objMultiData.UB_FORMLIST_INFO = JSON.stringify(arrParamList); // 멀티 레포트 호출 파라미터
+
+			objMultiData.accessKey ="";				// (필수) 리포트 접속 키값
+			objMultiData.saasDivision  ="";			// T:Test(개발) O(Default): Operation(운영)
+			objMultiData.magellanCommonDoc=''; 		// 공통서식 여부
+
+			mysuitModule.gfn_pdf_Print(objMultiData, gUrl + "/MYSUIT/ubiform.do");
+		}
+	</script>
+
+</head>
+
+<body>
+	<p> - Magellan Mysuit Report - </p>
+
+	<div>
+		<button onclick="fn_reportCall()">싱글 레포트 호출</button>
+		<button onclick="fn_reportCall_multi()">멀티 레포트 호출</button>
+		<button onclick="fn_exportFile()">파일 다운로드</button>
+		<button onclick="fn_pdf_Print()">PDF 출력</button>
+	</div>
+
+	<iframe id="if_report" name="if_report" style="width:1000px; height:500px;"></iframe>
+</body>
+
+</html>

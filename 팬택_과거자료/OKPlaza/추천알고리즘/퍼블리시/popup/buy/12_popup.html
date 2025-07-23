@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta charset="UTF-8">
+	<title>OKplaza</title>
+	<link rel="shortcut icon" type="image/x-icon" href="" id="paviC"./>
+	<link rel="stylesheet" type="text/css" href="../..//css/buy/okplaza_ui.css">
+	<!-- Font Awesome Solid + Brands -->
+	<link href="../../css/buy/fontawesome-free-5.10.0-web/css/fontawesome.css" rel="stylesheet">
+	<link href="../../css/buy/fontawesome-free-5.10.0-web/css/all.css" rel="stylesheet">
+
+	<script src="../../jq/buy/plugins.js"></script>
+	<script src="../../jq/buy/okplaza_ui.js"></script>
+
+	<!-- jQuery Grid  -->
+	<link rel="stylesheet" type="text/css" href="../../css/buy/ui.jqgrid.css"/>
+	<script type="text/javascript" src="../../jq/buy/jqgrid/i18n/grid.locale-en.js"></script>
+	<script type="text/javascript" src="../../jq/buy/jqgrid/jquery.jqGrid.js"></script>
+</head>
+
+<body>
+
+<div class="dialog_content popWrap" title="개인정보 상세" style="width:850px;">
+	<div class="ui-dialog-titlebar">
+		<span class="ui-dialog-title">개인정보 상세</span>
+		<!-- <button class="btnClose">닫기</button> -->
+	</div>
+
+	<div class="dialogInner">
+		<div class="tableSection">
+			<div class="tableWrap type02 mt0 no-bd pb0">
+				<table>
+					<colgroup>
+						<col width="50px">
+						<col width="150px">
+						<col width="200px">
+						<col width="200px">
+						<col width="auto">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>동의</th>
+							<th>구분</th>
+							<th>항목</th>
+							<th>목적</th>
+							<th>기간</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class="vm tc"><span class="ui_chk"><input type="checkbox" id="privacyChk" /><label for="privacyChk"></label></span></td>
+							<td class="vm"><strong>회원관리</strong></td>
+							<td>사업자등록번호, 법인명(단체명), 대표자, 기업연월일, 법인등록번호, 사업장소재지, 본점소재지. 업태, 업종, 우편번호, 주소, 이메일, 담당자연락처, 신용등급, 사업자등록증, 기업신용등급평가서</td>
+							<td>회원사(구매/공급사업 자) 등록,회원제 서비스이용에 따른 회원식별, 회원의 부정이용 방지와 비인가 사용 방지 및 중복가입방지, 가입의사 획인,고객상담/고객불만 접수 및 처 리 및 분쟁조정을 위한 기록보존, 고지사항 전달 아이디 (I D) 부정 사용 방지,부정거래 방지</td>
+							<td rowspan="3" class="vm">회원탈퇴 또는 개인정보 유효기간도래 시 까지보관<br /><br />단, 관계 법령에 따라 고객님의 개인정보를 보존하여야 하는 경우, 회사는 해당 법령에서 정한 기간 동안 보관합니다. </td>
+						</tr>
+						<tr>
+							<td class="vm tc"><span class="ui_chk"><input type="checkbox" id="privacyChk2" /><label for="privacyChk2"></label></span></td>
+							<td class="vm"><strong>서비스 제공에 관한<br />계약의 이행 및 안내</strong></td>
+							<td>사용자명, 휴대전화번호(회선번호), 이메일주소, 주문자 이름, 주문자 휴대전화전호(회선번호), 수취인성명, 수취인 연락처, 배송지 주소</td>
+							<td>회원간 거래 서비스 제공, 주문상품에 대한 배송, 주문 대금 안내 및 대금결제요청/추심, 부정거래방지, 주문정보제공</td>
+						</tr>
+						<tr>
+							<td class="vm tc"><span class="ui_chk"><input type="checkbox" id="privacyChk3" /><label for="privacyChk3"></label></span></td>
+							<td class="vm"><strong>서비스개발/안내 및<br />이벤트/마케팅 활용 </strong></td>
+							<td>사업자등록번호, 법인명(단체명), 대표자, 기업연월일, 법인등록번호, 사업장소재지, 본점소재지. 업태, 업종, 우편번호</td>
+							<td>회원사(구매/공급사업 자) 등록,회원제 서비스이용에 따른 회원식별, 회원의 부정이용 방지와 비인가 사용 방지 및 중복가입방지, 가입의사 획인,고객상담/고객불만 접수 및 처 리 및 분쟁조정을 위한 기록보존, 고지사항 전달 아이디 (I D) 부정 사용 방지,부정거래 방지</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		<div class="btnWrap">
+			<button type="button" class="c_gray">닫기</button>
+		</div>
+	</div>
+</div> <!-- // .dialog_content -->
+
+</body>
+</html>

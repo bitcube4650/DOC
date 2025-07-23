@@ -1,0 +1,26 @@
+테스트 계정
+1. www.okplaza.kr
+	- 씨제이텔레콤 SKT A망 2군(일반고객사)
+	- 양진동 / zz11hh22 / Bitcube#123 / 010-4311-3369 / james@bitcube.co.kr
+	
+2. admin.okplaza.kr
+	- 운영사
+	- System / agent1 / Bitcube#123 / 010-4311-3369 / james@bitcube.co.kr
+	
+3. www.oksafety.kr
+	- 안전자재 고객사
+	- SK브로드밴드_안전보건_테스트 / skb_safe / skb_safe#123 / 010-4311-3369 / james@bitcube.co.kr
+	
+	
+	
+/upload/image/asdlfasdkfasf.jsp
+
+<%= img_url %>/upload/image/asdlfasdkfasf.jsp
+
+11/12일 9~15시 서버 작업 => 작업계획서
+
+
+
+
+백인근 Mg
+	=> 유지보수 일감 연기 요청
