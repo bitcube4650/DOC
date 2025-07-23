@@ -1,0 +1,97 @@
+CREATE TABLE CTR_FAQ (
+	FAQ_ID int NOT NULL COMMENT 'FAQ일련번호',
+	SITE_TP varchar(20) NOT NULL DEFAULT 'BITMP' COMMENT '게시사이트',
+	SVC_TP varchar(20) NULL COMMENT '게시서비스',
+	TITLE varchar(200) NULL COMMENT '제목',
+	ANSWER varchar(4000) NULL COMMENT '답변',
+	INSERT_USER_ID varchar(10) NULL COMMENT '등록자',
+	INSERT_DT datetime NULL COMMENT '등록일',
+	DISP_YN varchar(1) DEFAULT 'Y' NULL COMMENT '게시여부_YN',
+	PRIMARY KEY (FAQ_ID)                                            
+)
+COMMENT = 'FAQ 관리';
+
+CREATE TABLE CTR_REQUEST (
+	REQ_ID int NOT NULL COMMENT '일련번호',
+	SITE_TP VARchar(20) NOT NULL DEFAULT 'BITMP' COMMENT '게시사이트',
+	BORG_ID varchar(20) NULL COMMENT '요청사업장ID',
+	REQ_TITLE varchar(255) NULL COMMENT '요청제목',
+	REQ_CONTENTS text NULL COMMENT '요청내용',
+	REQ_USER_ID varchar(20) NULL COMMENT '요청자',
+	REQ_DT datetime NULL COMMENT '요청일',
+	REPLY_USER_ID varchar(20) NULL COMMENT '답변자',
+	REPLY_DT datetime NULL COMMENT '답변일',
+	ATTACH_SEQ1 varchar(50) NULL COMMENT '첨부파일1',
+	ATTACH_SEQ2 varchar(50) NULL COMMENT '첨부파일2',
+	ATTACH_SEQ3 varchar(50) NULL COMMENT '첨부파일3',
+	ATTACH_SEQ4 varchar(50) NULL COMMENT '첨부파일4',
+	REPLY_CONTENTS text NULL COMMENT '답변내용',
+	REPLY_ST_CD varchar(20) NOT NULL DEFAULT '1' COMMENT '처리상태 (STAT_FLAG_CODE)',
+	REPLY_ATTACH_SEQ1 varchar(50) NULL COMMENT '답변첨부파일1',
+	REPLY_ATTACH_SEQ2 varchar(50) NULL COMMENT '답변첨부파일2',
+	REPLY_ATTACH_SEQ3 varchar(50) NULL COMMENT '답변첨부파일3',
+	REPLY_ATTACH_SEQ4 varchar(50) NULL COMMENT '답변첨부파일4',
+	REQ_TEL_NO varchar(150) NULL COMMENT '등록자연락처',
+	PRIMARY KEY (REQ_ID)                                              
+)
+COMMENT = '요구사항 목록';
+
+CREATE TABLE CTR_NOTICE_BOARD (
+	BOARD_ID int NOT NULL COMMENT '일련번호',
+	BOARD_TP_CD varchar(20) NOT NULL DEFAULT '0102' COMMENT '게시유형 (BOARD_TYPE)',
+	BOARD_TITLE varchar(255) NOT NULL COMMENT '제목',
+	BOARD_CONTENTS text NULL COMMENT '내용',
+	ATTACH_SEQ1 varchar(50) NULL COMMENT '첨부파일1',
+	ATTACH_SEQ2 varchar(50) NULL COMMENT '첨부파일2',
+	ATTACH_SEQ3 varchar(50) NULL COMMENT '첨부파일3',
+	ATTACH_SEQ4 varchar(50) NULL COMMENT '첨부파일4',
+	HIT_CNT int NULL COMMENT '조회수',
+	INSERT_USER_ID varchar(20) NOT NULL COMMENT '등록자ID',
+	INSERT_DT datetime NOT NULL COMMENT '등록일시',
+	UPDATE_USER_ID varchar(20) NULL COMMENT '수정자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시',
+	INSERT_BORG_ID varchar(10) NULL COMMENT '등록자 조직ID',
+	TOP_BOARD_ID int NOT NULL COMMENT '최상위일련변호',
+	PAR_BOARD_ID int NOT NULL COMMENT '상위일련번호',
+	PASSWORD varchar(20) NULL COMMENT '비밀번호',
+	BOARD_SVC_TP_CD varchar(20) NOT NULL COMMENT '게시 서비스 구분 (BOARD_BORG_TYPE)',
+	POPUP_START_DT datetime NULL COMMENT '팝업시작일',
+	POPUP_END_DT datetime NULL COMMENT '팝업종료일',
+	IMPORTANT_YN varchar(1) DEFAULT 'N' NOT NULL COMMENT '중요여부',
+	EMERGENCY_YN varchar(1) DEFAULT 'N' NOT NULL COMMENT '긴급공지여부',
+	POP_WIDTH int DEFAULT 868 NOT NULL COMMENT '팝업가로사이즈',
+	POP_HEIGHT int DEFAULT 550 NOT NULL COMMENT '팝업세로사이즈',
+	CONTENTS_SCROLL_YN varchar(1) DEFAULT 'Y' NOT NULL COMMENT '내용스크롤여부',
+	CONTENTS_HEIGHT int DEFAULT 400 NOT NULL COMMENT '내용세로사이즈',
+	TOP_FIX_YN varchar(1) DEFAULT 'N' NOT NULL COMMENT '상단고정여부',
+	PRIMARY KEY (BOARD_ID)                                                       
+)
+COMMENT = '공지게시판';
+
+CREATE TABLE CTR_REPAIR_MANAGE (
+	REPAIR_ID int NOT NULL COMMENT '유지보수 일련번호',
+	DISP_NM varchar(200) NULL COMMENT '화면명',
+	REPAIR_ST_CD varchar(20) NOT NULL DEFAULT '0' COMMENT '처리상태 (REPAIR_STAT)',
+	REQ_BORG_ID varchar(10) NULL COMMENT '요청조직ID',
+	REQ_USER_ID varchar(10) NULL COMMENT '요정자ID',
+	REQ_DT datetime NULL COMMENT '요청일',
+	REQ_CONTENTS varchar(4000) NULL COMMENT '요청내용',
+	ATTACH1_ID int NULL COMMENT '첨부1',
+	ATTACH2_ID int NULL COMMENT '첨부2',
+	CONFIRM_USER_ID varchar(10) NULL COMMENT '확인자ID',
+	CONFIRM_DT datetime NULL COMMENT '확인일시',
+	HANDLE_USER_ID varchar(10) NULL COMMENT '처리자ID',
+	HANDLE_DT datetime NULL COMMENT '처리일시',
+	HANDLE_CONTENTS varchar(4000) NULL COMMENT '처리내용',
+	INSERT_USER_ID varchar(10) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	UPDATE_USER_ID varchar(10) NULL COMMENT '수정자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일',
+	REPAIR_TP_CD varchar(20) NOT NULL DEFAULT '90' COMMENT '유지보수구분 (REPAIR_TYPE)',
+	IMPORTANT_YN varchar(1) NOT NULL DEFAULT 'N' COMMENT '우선순위여부',
+	EXPECT_MAN_DAY int NULL COMMENT '예상공수',
+	REPAIR_SITE varchar(10) DEFAULT '1' NOT NULL COMMENT '유지보수사이트 구분',
+	PRIMARY KEY (REPAIR_ID)                                                     
+)
+COMMENT = '유지보수실적관리';
+

@@ -1,0 +1,500 @@
+CREATE TABLE ORG_REQ_BRANCHS (
+	BRANCH_ID varchar(10) NOT null primary KEY COMMENT '사업장ID',
+	GROUP_ID varchar(10) NULL COMMENT '그룹ID',
+	CLIENT_ID varchar(10) NULL COMMENT '법인ID',
+	CLIENT_NM varchar(100) NULL COMMENT '법인명',
+	CLIENT_CD varchar(10) NULL COMMENT '법인코드',
+	REG_ST varchar(10) NULL COMMENT '등록상태',
+	AREA_TP_CD varchar(10) NULL COMMENT '권역 (DELI_AREA_CODE)',
+	BIZ_NO varchar(150) NULL COMMENT '사업자등록번호',
+	REGIST_NO varchar(150) NULL COMMENT '법인등록번호',
+	INDUTY varchar(100) NULL COMMENT '업종',
+	BIZCND varchar(100) NULL COMMENT '업태',
+	PRESSENT_NM varchar(50) NULL COMMENT '대표자명',
+	PHONE_NO varchar(150) NULL COMMENT '대표전화번호',
+	EMAIL varchar(150) NULL COMMENT '회사이메일',
+	HOMEPAGE varchar(100) NULL COMMENT '홈페이지',
+	ZIP_NO varchar(150) NULL COMMENT '우편번호',
+	ADRES varchar(500) NULL COMMENT '주소',
+	ADRES_DTL varchar(500) NULL COMMENT '주소상세',
+	FAX_NO varchar(150) NULL COMMENT '팩스번호',
+	LOGIN_AUTH_TP varchar(10) NULL COMMENT '로그인인증',
+	ORDER_AUTH_TP varchar(10) NULL COMMENT '주문요청인증',
+	REFRN_DESC varchar(3000) NULL COMMENT '참조사항',
+	PAY_BILL_TP_CD varchar(10) NULL COMMENT '지급조건 (PAYMCONDCODE)',
+	PAY_BILL_DAY varchar(2) NULL COMMENT '결제일자',
+	ACNT_MNG_NM varchar(50) NULL COMMENT '회계담당자명',
+	ACNT_MOBILE_NO varchar(150) NULL COMMENT '회계이동전화번호',
+	BANK_CD varchar(10) NULL COMMENT '은행코드 (BANKCD)',
+	RECIPIENT varchar(100) NULL COMMENT '예금주명',
+	ACNT_NO varchar(150) NULL COMMENT '계좌번호',
+	BIZ_NO_ATTACH_SEQ varchar(10) NULL COMMENT '사업자등록첨부',
+	CREDIT_EVL_ATTACH_SEQ varchar(10) NULL COMMENT '신용평가서첨부',
+	ETC_ATTACH_SEQ1 varchar(10) NULL COMMENT '기타첨부1',
+	ETC_ATTACH_SEQ2 varchar(10) NULL COMMENT '기타첨부2',
+	ETC_ATTACH_SEQ3 varchar(10) NULL COMMENT '기타첨부3',
+	INSERT_DT datetime NULL COMMENT '등록일자',
+	CONFIRM_USER_ID varchar(10) NULL COMMENT '요청확인자',
+	CONFIRM_DT datetime NULL COMMENT '요청확인일자',
+	STAFF_USER_ID varchar(10) NULL COMMENT '실무확인자',
+	STAFF_DT datetime NULL COMMENT '실무확인일자',
+	APP_USER_ID varchar(10) NULL COMMENT '승인자',
+	APP_DATE datetime NULL COMMENT '승인일자',
+	WORK_ID int NULL COMMENT '구매유형ID',
+	ACNT_MNG_USER_ID varchar(10) NULL COMMENT '채권관리운영자ID',
+	NEW_BIZ_DESC varchar(100) NULL COMMENT '신규사업협력사 상세설명',
+	CLIENT_REQ_DESC varchar(100) NULL COMMENT '고객사요청 상세설명',
+	ETC_DESC varchar(100) NULL COMMENT '기타 상세설명',
+	GROUP_BIZ_APP_ATTACH_SEQ varchar(10) NULL COMMENT '그룹사업품의 첨부',
+	WORK_ATTACH_SEQ varchar(10) NULL COMMENT '공사계약서 첨부',
+	NEW_BIZ_ATTACH_SEQ varchar(10) NULL COMMENT '신규사업품의 첨부',
+	REQ_DETAIL_ATTACH_SEQ varchar(10) NULL COMMENT '요청내역서 첨부',
+	ETC_ATTACH_SEQ varchar(10) NULL COMMENT '기타첨부',
+	LOAN_LIMIT_AMT decimal(15,2) NULL COMMENT '여신한도',
+	TRUST_GRADE varchar(10) NULL COMMENT '신용등급',
+	GUARANTEE_ATTACH_SEQ varchar(10) NULL COMMENT '담보내용 첨부',
+	APP1_COMMENT varchar(3000) NULL COMMENT '1차승인의견',
+	APP_LAST_COMMENT varchar(3000) NULL COMMENT '최종승인의견'
+)                           
+COMMENT='사업장 등록요청';
+
+CREATE TABLE ORG_REQ_VENDORS (
+	VENDOR_ID varchar(10) NOT null primary KEY COMMENT '공급사ID',
+	VENDOR_NM varchar(100) NULL COMMENT '공급사명',
+	VENDOR_CD varchar(10) NULL COMMENT '공급사코드',
+	REG_ST varchar(10) NULL COMMENT '등록상태',
+	AREA_TP_CD varchar(10) NULL COMMENT '권역 (DELI_AREA_CODE)',
+	BIZ_NO varchar(150) NULL COMMENT '사업자등록번호',
+	REGIST_NO varchar(150) NULL COMMENT '법인등록번호',
+	INDUTY varchar(100) NULL COMMENT '업종',
+	BIZCND varchar(100) NULL COMMENT '업태',
+	PRESSENT_NM varchar(100) NULL COMMENT '대표자명',
+	PHONE_NO varchar(150) NULL COMMENT '대표전화번호',
+	EMAIL varchar(150) NULL COMMENT '회사이메일',
+	HOMEPAGE varchar(100) NULL COMMENT '홈페이지',
+	ZIP_NO varchar(150) NULL COMMENT '우편번호',
+	ADRES varchar(500) NULL COMMENT '주소',
+	ADRES_DTL varchar(500) NULL COMMENT '상세주소',
+	FAX_NO varchar(150) NULL COMMENT '팩스번호',
+	LOGIN_AUTH_TP varchar(10) NULL COMMENT '로그인인증',
+	REFRN_DESC varchar(1000) NULL COMMENT '참조사항',
+	PAY_BILL_TP_CD varchar(10) NULL COMMENT '지급조건 (PAYMCONDCODE)',
+	PAY_BILL_DAY varchar(2) NULL COMMENT '결제일자',
+	ACNT_MNG_NM varchar(50) NULL COMMENT '회계담당자명',
+	ACNT_MOBILE_NO varchar(150) NULL COMMENT '회계이동전화',
+	BANK_CD varchar(10) NULL COMMENT '은행코드 (BANKCD)',
+	RECIPIENT varchar(100) NULL COMMENT '예금주명',
+	ACNT_NO varchar(150) NULL COMMENT '계좌번호',
+	BIZ_NO_ATTACH_SEQ varchar(10) NULL COMMENT '사업자등록첨부',
+	CREDIT_EVL_ATTACH_SEQ varchar(10) NULL COMMENT '신용평가서첨부',
+	ACNT_NO_ATTACH_SEQ varchar(10) NULL COMMENT '통장사본첨부',
+	ETC_ATTACH_SEQ1 varchar(10) NULL COMMENT '기타첨부1',
+	COMPANY_ATTACH_SEQ varchar(10) NULL COMMENT '회사소개서 첨부',
+	INSERT_DT datetime NULL COMMENT '등록일자',
+	CONFIRM_USER_ID varchar(10) NULL COMMENT '요청확인자',
+	CONFIRM_DT datetime NULL COMMENT '요청확인일자',
+	STAFF_USER_ID varchar(10) NULL COMMENT '실무확인자',
+	STAFF_DT datetime NULL COMMENT '실무확인일자',
+	APP_USER_ID varchar(10) NULL COMMENT '승인자',
+	APP_DT datetime NULL COMMENT '승인일자',
+	CLASSIFY varchar(50) NULL COMMENT '규격서/절자서 구분',
+	ETC_ATTACH_SEQ2 varchar(10) NULL COMMENT '기타첨부2',
+	SUPPLY_TP varchar(10) NULL COMMENT '공급유형',
+	SEL_REASON_CD varchar(10) NULL COMMENT '선정사유코드',
+	NEW_BIZ_DESC varchar(100) NULL COMMENT '신규사업협력사상세설명',
+	CLIENT_REQ_DESC varchar(100) NULL COMMENT '고객사요청상세설명',
+	ETC_DESC varchar(100) NULL COMMENT '기타상세설명',
+	BIZ_APP_ATTACH_SEQ varchar(10) NULL COMMENT '사업품의첨부파일',
+	REQ_DETAIL_ATTACH_SEQ varchar(10) NULL COMMENT '요청내역서첨부파일',
+	ETC_ATTACH_SEQ varchar(10) NULL COMMENT '기타첨부파일',
+	MAIN_ITEM varchar(200) NULL COMMENT '주요품목',
+	SUPPLY_SCALE varchar(200) NULL COMMENT '공급규모',
+	APP1_COMMENT varchar(3000) NULL COMMENT '1차승인의견',
+	APP_LAST_COMMENT varchar(3000) NULL COMMENT '최종승인의견',
+	TRUST_GRADE varchar(10) NULL COMMENT '신용등급',
+    BIZ_TP varchar(1) NULL COMMENT '개인/법인',
+	ACNT_EMAIL varchar(150) NULL COMMENT '회계담당자이메일',
+	OPEN_DT datetime NULL COMMENT '개업연월일',
+	SALE_MNG_NM varchar(100) NULL COMMENT '영업담당자명',
+	SALE_MNG_PHONE_NO varchar(150) NULL COMMENT '영업담당자전화번호',
+	SALE_MNG_EMAIL varchar(150) NULL COMMENT '영업담당자이메일'
+)                    
+COMMENT='공급사 등록요청';
+
+CREATE TABLE ORG_SITE (
+	SITE_ID int NOT null primary KEY COMMENT '사이트ID',
+	SITE_NM varchar(100) NULL COMMENT '사이트명',
+	SITE_DESC varchar(500) NULL COMMENT '사이트설명',
+	CSS varchar(20) NULL COMMENT 'CSS',
+	LOGO_ID varchar(100) NULL COMMENT '로고이미지ID',
+	RECOMM_GOODS_YN varchar(1) DEFAULT 'Y' NULL COMMENT '추천특가상품 사용 여부',
+	SALE_RATE int DEFAULT 0 NULL COMMENT '특가상품 기준 할인율',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	UPDATE_USER_ID varchar(20) NULL COMMENT '수정자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시'
+)
+COMMENT='구매사 사이트';
+
+CREATE TABLE ORG_SITE_TEMP (
+	SITE_ID int NOT null primary KEY COMMENT '사이트ID',
+	SITE_NM varchar(100) NULL COMMENT '사이트명',
+	SITE_DESC varchar(500) NULL COMMENT '사이트설명',
+	CSS varchar(20) NULL COMMENT 'CSS',
+	LOGO_ID varchar(100) NULL COMMENT '로고이미지ID',
+	RECOMM_GOODS_YN varchar(1) DEFAULT 'Y' NULL COMMENT '추천특가상품 사용 여부',
+	SALE_RATE int DEFAULT 0 NULL COMMENT '특가상품 기준 할인율',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	UPDATE_USER_ID varchar(20) NULL COMMENT '수정자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시',
+	APPLY_YN varchar(1) NULL COMMENT '반영여부'
+)
+COMMENT='구매사 사이트 임시';
+
+CREATE TABLE ORG_SITE_BANNER (
+	SITE_ID int NOT NULL COMMENT '사이트ID',
+	BANNER_NM varchar(100) NOT NULL COMMENT '배너명',
+	BANNER_FL varchar(1) DEFAULT 0 NOT NULL COMMENT '배너플래그',
+	SEARCH_WORD varchar(100) NULL COMMENT '배너링크값',
+	DISP_NO int NULL COMMENT '순서',
+	BANNER_ID varchar(10) NULL COMMENT '배너이미지ID',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	primary key (SITE_ID, BANNER_NM, BANNER_FL)
+)
+COMMENT='구매사 사이트 배너';
+
+CREATE TABLE ORG_SITE_BANNER_TEMP (
+	SITE_ID int NOT NULL COMMENT '사이트ID',
+	BANNER_NM varchar(100) NOT NULL COMMENT '배너명',
+	BANNER_FL varchar(1) DEFAULT 0 NOT NULL COMMENT '배너플래그',
+	SEARCH_WORD varchar(100) NULL COMMENT '배너링크값',
+	DISP_NO int NULL COMMENT '순서',
+	BANNER_ID varchar(10) NULL COMMENT '배너이미지ID',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	primary key (SITE_ID, BANNER_NM, BANNER_FL)
+)
+COMMENT='구매사 사이트 배너 임시';
+
+CREATE TABLE ORG_BORGS_USERS (
+	USER_ID varchar(10) NOT NULL COMMENT '사용자ID',
+	BORG_ID varchar(10) NOT NULL COMMENT '조직ID',
+	LOGIN_ID varchar(30) NULL COMMENT '로그인ID',
+	IS_DEFAULT VARCHAR(1) NULL COMMENT '기본조직여부',
+	INSERT_DT datetime NULL COMMENT '생성일시',
+	USE_YN char(1) DEFAULT 'Y' NOT null COMMENT '사용여부',
+	primary key (USER_ID, BORG_ID)
+)
+COMMENT='사용자 소속 조직';
+
+CREATE TABLE ORG_BORGS_USERS_ROLES (
+	ROLE_ID int NOT NULL COMMENT '권한ID',
+	BORG_ID varchar(10) NOT NULL COMMENT '조직ID',
+	USER_ID varchar(10) NOT NULL COMMENT '사용자ID',
+	IS_DEFAULT VARCHAR(1) NULL COMMENT '기본권한여부',
+	primary key (ROLE_ID, BORG_ID, USER_ID)
+)
+COMMENT='사용자 조직 역할';
+
+CREATE TABLE ORG_BORGS_USERS_ROLES_HIST (
+	ROLE_ID int NOT NULL COMMENT '권한ID',
+	BORG_ID varchar(10) NOT NULL COMMENT '조직ID',
+	USER_ID varchar(10) NOT NULL COMMENT '사용자ID',
+	IS_DEFAULT VARCHAR(1) NULL COMMENT '기본권한여부',
+	INSERT_USER_ID varchar(10) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일'
+)
+COMMENT='사용자 조직 역할 이력';
+
+CREATE TABLE ORG_BRANCHS (
+	BRANCH_ID varchar(10) NOT NULL primary key COMMENT '사업장ID',
+	BRANCH_NM varchar(100) NULL COMMENT '사업장명',
+	BRANCH_CD varchar(10) NULL COMMENT '사업장코드',
+	AREA_TP_CD varchar(10) NULL COMMENT '권역 (DELI_AREA_CODE)',
+	BRANCH_GRAD varchar(10) NULL COMMENT '회원사등급',
+	BIZ_NO varchar(150) NULL COMMENT '사업자등록번호',
+	REGIST_NO varchar(150) NULL COMMENT '법인등록번호',
+	INDUTY varchar(100) NULL COMMENT '업종',
+	BIZCND varchar(100) NULL COMMENT '업태',
+	PRESSENT_NM varchar(50) NULL COMMENT '대표자명',
+	PHONE_NO varchar(150) NULL COMMENT '대표전화번호',
+	EMAIL varchar(150) NULL COMMENT '회사이메일',
+	HOMEPAGE varchar(100) NULL COMMENT '홈페이지',
+	ZIP_NO varchar(150) NULL COMMENT '우편번호',
+	ADRES varchar(500) NULL COMMENT '주소',
+	ADRES_DTL varchar(500) NULL COMMENT '주소상세',
+	FAX_NO varchar(150) NULL COMMENT '팩스번호',
+	LOGIN_AUTH_TP varchar(10) NULL COMMENT '로그인인증',
+	ORDER_AUTH_TP varchar(10) NULL COMMENT '주문요청인증',
+	REFRN_DESC varchar(3000) NULL COMMENT '참조사항',
+	PAY_BILL_TP_CD varchar(10) NULL COMMENT '지급조건 (PAYMCONDCODE)',
+	PAY_BILL_DAY varchar(2) NULL COMMENT '결제일자',
+	IS_PREPAY varchar(1) DEFAULT '0' NULL COMMENT '선입금여부',
+	ACNT_MNG_NM varchar(50) NULL COMMENT '회계담당자명',
+	ACNT_MOBILE_NO varchar(150) NULL COMMENT '회계이동전화번호',
+	BANK_CD varchar(10) NULL COMMENT '은행코드 (BANKCD)',
+	RECIPIENT varchar(100) NULL COMMENT '예금주명',
+	ACNT_NO varchar(150) NULL COMMENT '계좌번호',
+	BIZ_NO_ATTACH_SEQ varchar(10) NULL COMMENT '사업자등록첨부',
+	CREDIT_EVL_ATTACH_SEQ varchar(10) NULL COMMENT '신용평가서첨부',
+	ETC_ATTACH_SEQ1 varchar(10) NULL COMMENT '기타첨부1',
+	ETC_ATTACH_SEQ2 varchar(10) NULL COMMENT '기타첨부2',
+	ETC_ATTACH_SEQ3 varchar(10) NULL COMMENT '기타첨부3',
+	WORK_ID int NULL COMMENT '사업유형ID',
+	ACNT_MNG_USER_ID varchar(10) NULL COMMENT '채권관리운영자ID',
+	IS_ORDER_LIMIT varchar(1) DEFAULT '0' NOT NULL COMMENT '사업장주문제한여부',
+	PAY_CLOSE_PERIOD int NULL COMMENT '대금결제만기일',
+	EBILL_EMAIL varchar(150) NULL COMMENT '전자세금계산서 이메일',
+	IS_BUDGET varchar(1) DEFAULT '0' NOT NULL COMMENT '예산관리여부',
+	BIZ_TP char(1) NULL COMMENT '개인/법인',
+	OPEN_DT datetime NULL COMMENT '개업연월일',
+	WORK_MNG_NM varchar(50) NULL COMMENT '공사담당자명',
+	WORK_MNG_TEL_NO varchar(150) NULL COMMENT '공사담당자연락처',
+	WORK_MNG_EMAIL varchar(150) NULL COMMENT '공사담당자이메일'
+)                                                                           
+COMMENT='사업장';
+
+CREATE TABLE ORG_BRANCHS_HIST (
+	BRANCHS_HIST_ID varchar(10) NOT null primary key COMMENT '이력ID',
+	HIST_USER_ID varchar(10) NOT NULL COMMENT '변경자ID',
+	HIST_DATE datetime NOT NULL COMMENT '변경일',
+	HIST_REASON varchar(200) NULL COMMENT '변경사유',
+	BRANCH_ID varchar(10) NOT NULL COMMENT '사업장ID',
+	BRANCH_NM varchar(100) NULL COMMENT '사업장명',
+	BRANCH_CD varchar(10) NULL COMMENT '사업장코드',
+	AREA_TP_CD varchar(10) NULL COMMENT '권역 (DELI_AREA_CODE)',
+	BRANCH_GRAD varchar(10) NULL COMMENT '회원사등급',
+	BIZ_NO varchar(150) NULL COMMENT '사업자등록번호',
+	REGIST_NO varchar(150) NULL COMMENT '법인등록번호',
+	INDUTY varchar(100) NULL COMMENT '업종',
+	BIZCND varchar(100) NULL COMMENT '업태',
+	PRESSENT_NM varchar(50) NULL COMMENT '대표자명',
+	PHONE_NO varchar(150) NULL COMMENT '대표전화번호',
+	EMAIL varchar(150) NULL COMMENT '회사이메일',
+	HOMEPAGE varchar(100) NULL COMMENT '홈페이지',
+	ZIP_NO varchar(150) NULL COMMENT '우편번호',
+	ADRES varchar(500) NULL COMMENT '주소',
+	ADRES_DTL varchar(500) NULL COMMENT '주소상세',
+	FAX_NO varchar(150) NULL COMMENT '팩스번호',
+	LOGIN_AUTH_TP varchar(10) NULL COMMENT '로그인인증',
+	ORDER_AUTH_TP varchar(10) NULL COMMENT '주문요청인증',
+	REFRN_DESC varchar(3000) NULL COMMENT '참조사항',
+	PAY_BILL_TP_CD varchar(10) NULL COMMENT '지급조건 (PAYMCONDCODE)',
+	PAY_BILL_DAY varchar(2) NULL COMMENT '결제일자',
+	IS_PREPAY varchar(1) DEFAULT '0' NOT NULL COMMENT '선입금여부',
+	ACNT_MNG_NM varchar(50) NULL COMMENT '회계담당자명',
+	ACNT_MOBILE_NO varchar(150) NULL COMMENT '회계이동전화번호',
+	BANK_CD varchar(10) NULL COMMENT '은행코드 (BANKCD)',
+	RECIPIENT varchar(100) NULL COMMENT '예금주명',
+	ACNT_NO varchar(150) NULL COMMENT '계좌번호',
+	BIZ_NO_ATTACH_SEQ varchar(10) NULL COMMENT '사업자등록첨부',
+	CREDIT_EVL_ATTACH_SEQ varchar(10) NULL COMMENT '신용평가서첨부',
+	ETC_ATTACH_SEQ1 varchar(10) NULL COMMENT '기타첨부1',
+	ETC_ATTACH_SEQ2 varchar(10) NULL COMMENT '기타첨부2',
+	ETC_ATTACH_SEQ3 varchar(10) NULL COMMENT '기타첨부3',
+	WORK_ID int NULL COMMENT '사업유형ID',
+	ACNT_MNG_USER_ID varchar(10) NULL COMMENT '채권관리운영자ID',
+	IS_ORDER_LIMIT varchar(1) DEFAULT '0' NOT NULL COMMENT '사업장주문제한여부',
+	PAY_CLOSE_PERIOD int NULL COMMENT '결제만기일',
+	EBILL_EMAIL varchar(150) NULL COMMENT '전자세금계산서 이메일',
+	IS_BUDGET varchar(1) DEFAULT '0' NOT NULL COMMENT '예산관리여부',
+	BIZ_TP char(1) NULL COMMENT '개인/법인',
+	OPEN_DT datetime NULL COMMENT '개업연월일',
+	CLT_AREA_TP_CD varchar(10) NULL COMMENT '법인권역 (DELI_AREA_CODE)',
+	WORK_MNG_NM varchar(50) NULL COMMENT '공사담당자명',
+	WORK_MNG_TEL_NO varchar(150) NULL COMMENT '공사담당자연락처',
+	WORK_MNG_EMAIL varchar(150) NULL COMMENT '공사담당자이메일'
+)                  
+COMMENT='사업장 이력';
+
+CREATE TABLE ORG_USERS (
+	USER_ID varchar(10) NOT NULL primary key COMMENT '사용자ID',
+	LOGIN_ID varchar(30) NULL COMMENT '로그인ID',
+	EMP_NO varchar(30) NULL COMMENT '사번',
+	PWD varchar(100) NULL COMMENT '비밀번호',
+	USER_NM varchar(100) NULL COMMENT '사용자명',
+	LOGIN_RANDOM_NO varchar(100) NULL COMMENT '로그인난수',
+	GRADE_NM varchar(50) NULL COMMENT '직급명',
+	TEL_NO varchar(150) NULL COMMENT '전화번호',
+	MOBILE_NO varchar(150) NULL COMMENT '핸드폰번호',
+	IS_LOGIN varchar(1) not null default '1' COMMENT '활성화여부',
+	EMAIL varchar(150) NULL COMMENT '이메일',
+	INSERT_DT datetime NULL COMMENT '생성일시',
+	INSERT_USER_ID varchar(10) NULL COMMENT '생성자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시',
+	UPDATE_USER_ID varchar(10) NULL COMMENT '수정자ID',
+	IS_USE varchar(1) NULL COMMENT '사용여부',
+	CLOSE_REASON varchar(500) NULL COMMENT '종료사유',
+	USER_NOTE varchar(500) NULL COMMENT '참고사항',
+	LOGIN_CNT int DEFAULT 0 NULL COMMENT '로그인횟수',
+	LAST_LOGIN_DT datetime NULL COMMENT '최종로그인일시',
+	PWD_CHG_DATE datetime NULL COMMENT '암호변경일시',
+	NOTE1 varchar(100) NULL COMMENT '비고1',
+	NOTE2 varchar(100) NULL COMMENT '비고2',
+	APP_USER_YN varchar(1) NULL default 'N' COMMENT '결재자YN'
+)                  
+COMMENT='사용자정보';
+
+insert into ORG_USERS (USER_ID, LOGIN_ID, PWD, USER_NM, MOBILE_NO)
+VALUES('2', 'agent1', '1111', '테스트', '01000000000');
+
+
+
+CREATE TABLE ORG_USERS_BACKUP (
+	USER_ID varchar(10) NOT NULL COMMENT '사용자ID',
+	LOGIN_ID varchar(30) NULL COMMENT '로그인ID',
+	EMP_NO varchar(30) NULL COMMENT '사번',
+	PWD varchar(100) NULL COMMENT '비밀번호',
+	USER_NM varchar(100) NULL COMMENT '사용자명',
+	LOGIN_RANDOM_NO varchar(100) NULL COMMENT '로그인난수',
+	GRADE_NM varchar(50) NULL COMMENT '직급명',
+	TEL_NO varchar(150) NULL COMMENT '전화번호',
+	MOBILE_NO varchar(150) NULL COMMENT '핸드폰번호',
+	IS_LOGIN varchar(1) NULL COMMENT '활성화여부',
+	EMAIL varchar(200) NULL COMMENT '이메일',
+	INSERT_DT datetime NULL COMMENT '생성일시',
+	INSERT_USER_ID varchar(10) NULL COMMENT '생성자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시',
+	UPDATE_USER_ID varchar(10) NULL COMMENT '수정자ID',
+	IS_USE varchar(1) NULL COMMENT '사용여부',
+	CLOSE_REASON varchar(500) NULL COMMENT '종료사유',
+	USER_NOTE varchar(500) NULL COMMENT '참고사항',
+	LOGIN_CNT int NULL COMMENT '로그인횟수',
+	LAST_LOGIN_DT datetime NULL COMMENT '최종로그인일시',
+	PWD_CHG_DATE datetime NULL COMMENT '암호변경일시',
+	NOTE1 varchar(100) NULL COMMENT '비고1',
+	NOTE2 varchar(100) NULL COMMENT '비고2',
+	APP_USER_YN varchar(1) NULL COMMENT '결재자YN',
+	BACKUP_DT datetime NULL COMMENT '백업생성일시'
+)                                                                         
+COMMENT='사용자 백업';
+
+CREATE TABLE ORG_USERS_LOG (
+	USER_ID varchar(10) NOT NULL COMMENT '사용자ID',
+	LOGIN_ID varchar(30) NULL COMMENT '로그인ID',
+	EMP_NO varchar(30) NULL COMMENT '사번',
+	PWD varchar(100) NULL COMMENT '비밀번호',
+	USER_NM varchar(100) NULL COMMENT '사용자명',
+	LOGIN_RANDOM_NO varchar(100) NULL COMMENT '로그인난수',
+	GRADE_NM varchar(50) NULL COMMENT '직급명',
+	TEL_NO varchar(150) NULL COMMENT '전화번호',
+	MOBILE_NO varchar(150) NULL COMMENT '핸드폰번호',
+	IS_LOGIN varchar(1) NULL COMMENT '활성화여부',
+	EMAIL varchar(150) NULL COMMENT '이메일',
+	INSERT_DT datetime NULL COMMENT '생성일시',
+	INSERT_USER_ID varchar(10) NULL COMMENT '생성자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시',
+	UPDATE_USER_ID varchar(10) NULL COMMENT '수정자ID',
+	IS_USE varchar(1) NULL COMMENT '사용여부',
+	CLOSE_REASON varchar(500) NULL COMMENT '종료사유',
+	USER_NOTE varchar(500) NULL COMMENT '참고사항',
+	LOGIN_CNT int NULL COMMENT '로그인횟수',
+	LAST_LOGIN_DT datetime NULL COMMENT '최종로그인일시',
+	PWD_CHG_DATE datetime NULL COMMENT '암호변경일시',
+	NOTE1 varchar(100) NULL COMMENT '비고1',
+	NOTE2 varchar(100) NULL COMMENT '비고2',
+	APP_USER_YN varchar(1) NULL COMMENT '결재자YN',
+	HIST_INSERT_USER_ID varchar(10) NULL COMMENT '이력등록자',
+	HIST_INSERT_DT datetime NULL COMMENT '이력등록일'
+)                                                               
+COMMENT='사용자 로그';
+
+CREATE TABLE ORG_VENDORS (
+	VENDOR_ID varchar(10) NOT NULL primary key COMMENT '공급사ID',
+	VENDOR_NM varchar(100) NULL COMMENT '공급사명',
+	VENDOR_CD varchar(10) NULL COMMENT '공급사코드',
+	AREA_TP_CD varchar(10) NULL COMMENT '권역 (DELI_AREA_CODE)',
+	BIZ_NO varchar(150) NULL COMMENT '사업자등록번호',
+	REGIST_NO varchar(150) NULL COMMENT '법인등록번호',
+	INDUTY varchar(100) NULL COMMENT '업종',
+	BIZCND varchar(100) NULL COMMENT '업태',
+	PRESSENT_NM varchar(100) NULL COMMENT '대표자명',
+	PHONE_NO varchar(150) NULL COMMENT '대표전화번호',
+	EMAIL varchar(150) NULL COMMENT '회사이메일',
+	HOMEPAGE varchar(100) NULL COMMENT '홈페이지',
+	ZIP_NO varchar(150) NULL COMMENT '우편번호',
+	ADRES varchar(500) NULL COMMENT '주소',
+	ADRES_DTL varchar(500) NULL COMMENT '상세주소',
+	FAX_NO varchar(150) NULL COMMENT '팩스번호',
+	LOGIN_AUTH_TP varchar(10) NULL COMMENT '로그인인증',
+	REFRN_DESC varchar(1000) NULL COMMENT '참조사항',
+	PAY_BILL_TP_CD varchar(10) NULL COMMENT '지급조건 (PAYMCONDCODE)',
+	PAY_BILL_DAY varchar(2) NULL COMMENT '결제일자',
+	ACNT_MNG_NM varchar(50) NULL COMMENT '회계담당자명',
+	ACNT_MOBILE_NO varchar(150) NULL COMMENT '회계이동전화',
+	BANK_CD varchar(10) NULL COMMENT '은행코드 (BANKCD)',
+	RECIPIENT varchar(100) NULL COMMENT '예금주명',
+	ACNT_NO varchar(150) NULL COMMENT '계좌번호',
+	BIZ_NO_ATTACH_SEQ varchar(10) NULL COMMENT '사업자등록첨부',
+	CREDIT_EVL_ATTACH_SEQ varchar(10) NULL COMMENT '신용평가서첨부',
+	ACNT_NO_ATTACH_SEQ varchar(10) NULL COMMENT '통장사본첨부',
+	ETC_ATTACH_SEQ1 varchar(10) NULL COMMENT '기타첨부1',
+	COMPANY_ATTACH_SEQ varchar(10) NULL COMMENT '회사소개서 첨부',
+	BILL_USER_NM varchar(30) NULL COMMENT '세금계산서 담당자명',
+	BILL_USER_EMAIL varchar(150) NULL COMMENT '세금계산서 담당자 이메일',
+	BILL_USER_TEL_NO varchar(150) NULL COMMENT '세금계산서 담당자 전화번호',
+	ETC_ATTACH_SEQ2 varchar(10) NULL COMMENT '기타첨부2',
+	TRUST_GRADE varchar(10) NULL COMMENT '신용등급',
+	BIZ_TP char(1) NULL COMMENT '개인/법인',
+	OPEN_DT datetime NULL COMMENT '개업일',
+	WORK_MNG_NM varchar(50) NULL COMMENT '영업담당자명',
+	WORK_MNG_TEL_NO varchar(150) NULL COMMENT '영업담당자연락처',
+	WORK_MNG_EMAIL varchar(150) NULL COMMENT '영업담당자이메일',
+	B2C_SELL_YN varchar(1) DEFAULT 'N' null COMMENT '팬타온 판매여부'
+)                                                                                    
+COMMENT='공급사';
+
+CREATE TABLE ORG_BRANCH_TYPE (
+	WORK_ID int NOT NULL primary key COMMENT '사업유형ID',
+	USER_ID varchar(10) NULL COMMENT '사용자ID',
+	WORK_NM varchar(50) NULL COMMENT '사업유형명',
+	CONTRACT_CD varchar(20) NULL COMMENT '계약구분 코드 (CONTRACT_SPECIAL)',
+	WORK_KIND_CD varchar(20) NULL COMMENT '사업그룹 코드 (WORK_KIND)',
+	IS_USE varchar(1) not null default '1' COMMENT '사용여부',
+	DISP_NO int NULL COMMENT '순서',
+	CUST_CATE_MAST_CD varchar(3) NULL COMMENT '구매사 카테고리 마스터CD',
+	SITE_ID int DEFAULT '1' NULL COMMENT '사이트ID',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	UPDATE_USER_ID varchar(20) NULL COMMENT '수정자ID',
+	UPDATE_DT datetime NULL COMMENT '수정일시'
+)                    
+COMMENT='사업유형';
+
+CREATE TABLE ORG_RECOMM_GOODS (
+	WORK_ID int NOT NULL COMMENT '구매유형ID',
+	GOOD_IDEN_NO VARCHAR(20) NOT NULL COMMENT '상품코드',
+	VENDOR_ID varchar(20) DEFAULT '0' NOT NULL COMMENT '공급사ID',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	primary key (WORK_ID, GOOD_IDEN_NO, VENDOR_ID)
+)
+COMMENT='추천특가상품';
+
+CREATE TABLE ORG_RECOMM_GOODS_TEMP (
+	WORK_ID int NOT NULL COMMENT '구매유형ID',
+	GOOD_IDEN_NO VARCHAR(20) NOT NULL COMMENT '상품코드',
+	VENDOR_ID varchar(20) DEFAULT '0' NOT NULL COMMENT '공급사ID',
+	INSERT_USER_ID varchar(20) NULL COMMENT '등록자ID',
+	INSERT_DT datetime NULL COMMENT '등록일시',
+	primary key (WORK_ID, GOOD_IDEN_NO, VENDOR_ID)
+)
+COMMENT='추천특가상품 임시';
+
+CREATE TABLE ORG_CLIENT_INFO_HIST (
+	HIST_ID varchar(10) NOT null primary key COMMENT '히스토리ID',
+	BORG_ID varchar(10) NOT NULL COMMENT '조직ID',
+	IS_USE varchar(1) NULL COMMENT '사용여부',
+	IS_PREPAY varchar(1) NULL COMMENT '선입금여부',
+	PRE_PAY_REASON varchar(200) NULL COMMENT '선입금사유',
+	IS_ORD_LIMIT varchar(1) NULL COMMENT '주문제한여부',
+	ORD_LIMIT_REASON varchar(200) NULL COMMENT '주문제한사유',
+	HIST_USER_ID varchar(10) NOT NULL COMMENT '등록자ID',
+	HIST_DT datetime NOT NULL COMMENT '등록일',
+	IS_LOAN varchar(1) NULL COMMENT '여신사용여부',
+	LOAN_REASON varchar(200) NULL COMMENT '여신사용변경사유',
+	ADJUST_DAY varchar(10) NULL COMMENT '마감일'
+)
+COMMENT='법인 정보 이력';
