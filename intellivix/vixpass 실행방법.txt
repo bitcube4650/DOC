@@ -1,0 +1,41 @@
+https://github.com/kang-minz/vixpass_web.git
+https://github.com/kang-minz/vixpass_was.git
+
+jdk 17
+spring boot
+maria db
+vue, vite
+
+vscode was
+gradlew bootRun --args='--spring.profiles.active=local'
+
+vscode web
+node 버전 20.19.4 (nvm 설치 권장, node 버전 와리가리 가능)
+npm install -D vite@6.2.0 --legacy-peer-deps 실행
+npm run localhost
+
+db
+docker 설치 후 실행해서 확인(좌측에 containers 메뉴가 보여야 함)
+sap-installer 압축파일을 c드라이브에 압축풀고 install.bat 실행
+docker containers에 was,web,db 등등 설치가 되는데, 여기서 db만 사용할거임
+docker에서 db를 켜야 dbeaver에서 연결 가능.
+dbeaver에서 해당 db를 연결 후 기존 SAP 데이터베이스 우클릭 -> 도구 -> restore database
+-> dump-SAP-202507290954.sql로 덮어쓰기 (해당 db로는 없는컬럼이 존재해서 개발하기 어려움)
+
+update users
+set user_pw = 'e0e031629f857a9e330dd6f20f4158fc639986a8ee726a28efd6c153fc04f4e6ccd1c395462b74e993f0d5192145b72fe20a923fcdcbf6aacd308f12be6831fe'
+where user_id = 'admin'
+
+수행 후 admin / 1111 로그인
+
+--------------------------------------
+SDK 제공
+UMX_HL_JAVA_SDK_v1.9.0_JAR_d202401113\sample_web\web
+start.bat 실행 시 localhost:8080 실행이 됨.
+홍채인식기기 ip : 192.168.0.57 
+id, pw 필요없음. 접속하면 접속됨 (동시 접속이 불가능해보이므로 데이터가 안나온다 싶으면 접속해제 후 재 접속)
+
+소스는 
+UMX_HL_JAVA_SDK_v1.9.0_JAR_d202401113\sample_console\src\Main.java 보거나
+D:\works\intellivix\UMX_HL_JAVA_SDK_v1.9.0_JAR_d202401113\sample_web\device-sample 을 vscode로 열어서 보면 됨
+Documentation 폴더에 api 정보가 있긴하나...도움은 별 안됨
